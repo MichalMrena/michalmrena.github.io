@@ -6,10 +6,13 @@
     --font-size: 18px;
 }
 
+html {
+    margin-left: calc(100vw - 100%);
+}
+
 body {
     font-family: 'Times New Roman', Times, serif;
     font-size: var(--font-size);
-    /* border: 1px solid black; */
 }
 
 body a {
@@ -26,6 +29,11 @@ body p {
     text-align: justify;
     text-indent: 30px;
     line-height: 135%;
+}
+
+.colorful-letter {
+    color: blueviolet;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 800px) {
