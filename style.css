@@ -4,10 +4,18 @@
     --link-hover-color: red;
     --font-size-menu: 22px;
     --font-size: 18px;
+    --border-color: gray;
+    --date-color: gray;
 }
 
 html {
     margin-left: calc(100vw - 100%);
+}
+
+body nav a {
+    color: var(--link-color-menu);
+    font-size: var(--font-size-menu);
+    text-decoration: none;
 }
 
 body {
@@ -31,12 +39,30 @@ body p {
     line-height: 135%;
 }
 
-.colorful-letter {
-    color: blueviolet;
+article {
+    border-bottom: 1px solid var(--border-color);
+}
+
+article:first-child {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+article h2 {
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.short-article-date {
+    font-style: italic;
+    color: var(--date-color);
+}
+
+.highlighted-letter {
     font-weight: bold;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
     body {
         width: 600px;
         margin: 0 auto;
@@ -52,11 +78,55 @@ body p {
     }
 
     nav a {
-        color: var(--link-color-menu);
-        font-size: var(--font-size-menu);
-        text-decoration: none;
         display: inline-block;
         margin-left: 20px;
         margin-right: 20px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    body {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    nav {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    main img {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    nav {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    nav a {
+        text-align: center;
+        display: block;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    main img {
+        width: 100%;
+        max-width: 600px;
     }
 }
