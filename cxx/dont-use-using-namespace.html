@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MM | C++</title>
+        <base href="file://///wsl.localhost/Ubuntu-20.04/home/mrena/Projects/michalmrena.github.io/">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/code.css">
+    </head>
+    <body>
+        <header>
+            <p style="color: orange; font-weight: bold; text-align: center;">
+                Under construction.
+            </p>
+        </header>
+
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="cxx.html">C++</a>
+            <a href="teddy.html">TeDDy</a>
+        </nav>
+
+        <main>
+            <article class="article-long">
+                <h1>Don't use using namespace</h1>
+                <p>
+                    Each programming tutorial starts with the famouse "Hello World!" example. If you type "c++ hello world" into the Google you will probably find something like the following code:
+                </p>
+<pre><code class="code-block"><span class="code-preprocessor">#include <span class="code-string">&lt;iostream&gt;</span></span>
+
+<span class="code-keyword">using</span> <span class="code-keyword">namespace</span> std;
+
+<span class="code-prim-type">int</span> <span class="code-function">main</span>()
+{
+    cout &lt;&lt; <span class="code-string">"Hello, World!"</span> &lt;&lt; endl;
+    <span class="code-keyword">return</span> <span class="code-num-literal">0</span>;
+}</code></pre>
+                <p>
+                    This introduces a bad practice of importing whole <code>std</code> namespace into global scope.
+                </p>
+            </article>
+        </main>
+    </body>
+</html>

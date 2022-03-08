@@ -1,0 +1,32 @@
+pre {
+    margin: 0px;
+}
+
+code.code-block {
+    font-family: 'Consolas', Courier, monospace;
+    line-height: 100%;
+    display: block;
+    background-color: aliceblue;
+    padding: 15px;
+
+}
+
+.code-keyword {
+    color: rgb(0, 0, 255);
+}
+
+.code-string {
+    color: rgb(163, 21, 21);
+}
+
+.code-function {
+    color: rgb(121, 94, 39);
+}
+
+.code-prim-type {
+    color: rgb(0, 0, 255);
+}
+
+.code-num-literal {
+    color: rgb(9, 134, 88);
+}

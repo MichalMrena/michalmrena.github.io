@@ -15,7 +15,7 @@ html {
 body nav a {
     color: var(--link-color-menu);
     font-size: var(--font-size-menu);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 body {
@@ -39,21 +39,30 @@ body p {
     line-height: 135%;
 }
 
-article {
+article.article-short {
     border-bottom: 1px solid var(--border-color);
 }
 
-article:first-child {
+.short-articles article:first-child {
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }
 
-article h2 {
+article.article-short h2 {
     margin-top: 5px;
     margin-bottom: 2px;
+    font-size: 22px;
 }
 
-.short-article-date {
+article p {
+    margin-top: 5px;
+}
+
+article.article-long h1 {
+    font-size: 24px;
+}
+
+.article-short-date {
     font-style: italic;
     color: var(--date-color);
 }
