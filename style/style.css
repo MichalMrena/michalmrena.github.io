@@ -60,9 +60,18 @@ article p {
 
 article.article-long h1 {
     font-size: 24px;
+    margin-bottom: 5px;
 }
 
-.article-short-date {
+article.article-long h4 {
+    margin-bottom: 5px;
+}
+
+article.article-long ul {
+    margin-top: 5px;
+}
+
+.article-short-date, .article-long-date {
     font-style: italic;
     color: var(--date-color);
 }

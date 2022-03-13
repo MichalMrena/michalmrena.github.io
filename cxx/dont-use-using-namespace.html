@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>MM | C++</title>
-        <base href="file://///wsl.localhost/Ubuntu-20.04/home/mrena/Projects/michalmrena.github.io/">
-        <link rel="stylesheet" href="style/style.css">
-        <link rel="stylesheet" href="style/code.css">
+        <base href="https://michalmrena.github.io/">
+        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../style/code.css">
     </head>
     <body>
         <header>
@@ -24,8 +24,9 @@
         <main>
             <article class="article-long">
                 <h1>Don't use using namespace</h1>
+                <span class="article-long-date">5.3.2022</span>
                 <p>
-                    Each programming tutorial starts with the famouse "Hello World!" example. If you type "c++ hello world" into the Google you will probably find something like the following code:
+                    Each programming tutorial starts with the famous "Hello World!" example. If you type "c++ hello world" into the Google you will probably find something like the following code:
                 </p>
 <pre><code class="code-block"><span class="code-preprocessor">#include <span class="code-string">&lt;iostream&gt;</span></span>
 
@@ -33,12 +34,20 @@
 
 <span class="code-prim-type">int</span> <span class="code-function">main</span>()
 {
-    cout &lt;&lt; <span class="code-string">"Hello, World!"</span> &lt;&lt; endl;
+    <span class="code-variable">cout</span> &lt;&lt; <span class="code-string">"Hello, World!"</span> &lt;&lt; <span class="code-variable">endl</span>;
     <span class="code-keyword">return</span> <span class="code-num-literal">0</span>;
 }</code></pre>
                 <p>
-                    This introduces a bad practice of importing whole <code>std</code> namespace into global scope.
+                    If you declare <code class="code-inline">using namespace std;</code> you can use functions, classes and objects from the <code class="code-inline">std</code> namespace without specifying <code class="code-inline">std::</code> before a name. However, this means that you can't use the same name for your class or function. Even worse, if you import two namespaces and both of them happens to contain a function with the same name a call to the function is ambiguous and you need to disambiguate it by using the namespace prefix anyway. Last but not least, and this is more of an opinion than a best practice, the code looks less C++-ish without namespace prefixes. If you look at any serious C++ codebase, the code will probably contain the namespace prefixes. It makes a code more readable since you immediately see from where a given class or function comes from.
                 </p>
+                <p>
+                    <code class="code-inline">std::</code> <code class="code-inline">boost::</code> nested <code class="code-inline">std::chrono::</code> <code class="code-inline">std::filesystem::</code> or <code class="code-inline">std::ranges::views</code>.
+                </p>
+                <h4>Further reading:</h4>
+                <ul>
+                    <li><a href="https://en.cppreference.com/w/cpp/language/namespace">https://en.cppreference.com/w/cpp/language/namespace</a></li>
+                    <li><a href="https://stackoverflow.com/questions/1452721/why-is-using-namespace-std-considered-bad-practice">https://stackoverflow.com/questions/1452721/why-is-using-namespace-std-considered-bad-practice</a></li>
+                </ul>
             </article>
         </main>
     </body>
