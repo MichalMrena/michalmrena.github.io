@@ -19,6 +19,14 @@ code.code-inline {
     color: rgb(0, 0, 255);
 }
 
+.code-control-keyword {
+    color: rgb(175, 0, 219);
+}
+
+.code-type {
+    color: rgb(38, 127, 153);
+}
+
 .code-string {
     color: rgb(163, 21, 21);
 }
