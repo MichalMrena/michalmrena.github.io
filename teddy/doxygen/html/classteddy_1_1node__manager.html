@@ -12,6 +12,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -36,17 +41,37 @@
 var searchBox = new SearchBox("searchBox", "search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,8 +104,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structteddy_1_1node__manager_1_1common__init.html">common_init</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structteddy_1_1node__manager_1_1common__init"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1node__manager.html#structteddy_1_1node__manager_1_1common__init">common_init</a></td></tr>
+<tr class="separator:structteddy_1_1node__manager_1_1common__init"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -114,6 +139,9 @@ auto&#160;</td><td class="memItemRight" valign="bottom"><b>set_cache_ratio</b> (
 <tr class="memitem:ab8afcff1df7f6400e6f6105d91b1b944"><td class="memItemLeft" align="right" valign="top"><a id="ab8afcff1df7f6400e6f6105d91b1b944" name="ab8afcff1df7f6400e6f6105d91b1b944"></a>
 auto&#160;</td><td class="memItemRight" valign="bottom"><b>set_pool_ratio</b> (double) -&gt; void</td></tr>
 <tr class="separator:ab8afcff1df7f6400e6f6105d91b1b944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acefb353efe1d3ad6e27a2a0d37a276f5"><td class="memItemLeft" align="right" valign="top"><a id="acefb353efe1d3ad6e27a2a0d37a276f5" name="acefb353efe1d3ad6e27a2a0d37a276f5"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>set_gc_ratio</b> (double) -&gt; void</td></tr>
+<tr class="separator:acefb353efe1d3ad6e27a2a0d37a276f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae98438ebbedec05301a54d62194c9160"><td class="memItemLeft" align="right" valign="top"><a id="ae98438ebbedec05301a54d62194c9160" name="ae98438ebbedec05301a54d62194c9160"></a>
 auto&#160;</td><td class="memItemRight" valign="bottom"><b>set_auto_reorder</b> (bool) -&gt; void</td></tr>
 <tr class="separator:ae98438ebbedec05301a54d62194c9160"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,6 +151,9 @@ auto&#160;</td><td class="memItemRight" valign="bottom"><b>get_terminal_node</b>
 <tr class="memitem:adacbcb9950c8f1a5795313fc2fa6aff9"><td class="memItemLeft" align="right" valign="top"><a id="adacbcb9950c8f1a5795313fc2fa6aff9" name="adacbcb9950c8f1a5795313fc2fa6aff9"></a>
 auto&#160;</td><td class="memItemRight" valign="bottom"><b>terminal_node</b> (uint_t) -&gt; <a class="el" href="classteddy_1_1node.html">node_t</a> *</td></tr>
 <tr class="separator:adacbcb9950c8f1a5795313fc2fa6aff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56607f07aef54421e6654b1fb8341518"><td class="memItemLeft" align="right" valign="top"><a id="a56607f07aef54421e6654b1fb8341518" name="a56607f07aef54421e6654b1fb8341518"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>special_node</b> (uint_t) -&gt; <a class="el" href="classteddy_1_1node.html">node_t</a> *</td></tr>
+<tr class="separator:a56607f07aef54421e6654b1fb8341518"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f2297b70ab6d97f7923626dabab0fae"><td class="memItemLeft" align="right" valign="top"><a id="a8f2297b70ab6d97f7923626dabab0fae" name="a8f2297b70ab6d97f7923626dabab0fae"></a>
 auto&#160;</td><td class="memItemRight" valign="bottom"><b>internal_node</b> (index_t, sons_t &amp;&amp;) -&gt; <a class="el" href="classteddy_1_1node.html">node_t</a> *</td></tr>
 <tr class="separator:a8f2297b70ab6d97f7923626dabab0fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,19 +210,19 @@ template&lt;utils::i_gen F&gt; </td></tr>
 <tr class="memitem:a7091345a9c0b6811b130950ce029cc69"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>make_sons</b> (index_t, F &amp;&amp;) -&gt; sons_t</td></tr>
 <tr class="separator:a7091345a9c0b6811b130950ce029cc69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af73a12f8936b6505171ad48071451709"><td class="memTemplParams" colspan="2"><a id="af73a12f8936b6505171ad48071451709" name="af73a12f8936b6505171ad48071451709"></a>
-template&lt;class NodeOp &gt; </td></tr>
+template&lt;node_op&lt; <a class="el" href="classteddy_1_1node.html">node_t</a> &gt; NodeOp&gt; </td></tr>
 <tr class="memitem:af73a12f8936b6505171ad48071451709"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>for_each_son</b> (<a class="el" href="classteddy_1_1node.html">node_t</a> *, NodeOp &amp;&amp;) const -&gt; void</td></tr>
 <tr class="separator:af73a12f8936b6505171ad48071451709"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d3b6ed7c8cb13ad43a87caed576e18b"><td class="memTemplParams" colspan="2"><a id="a1d3b6ed7c8cb13ad43a87caed576e18b" name="a1d3b6ed7c8cb13ad43a87caed576e18b"></a>
-template&lt;class NodeOp &gt; </td></tr>
+template&lt;node_op&lt; <a class="el" href="classteddy_1_1node.html">node_t</a> &gt; NodeOp&gt; </td></tr>
 <tr class="memitem:a1d3b6ed7c8cb13ad43a87caed576e18b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>for_each_son</b> (index_t, sons_t const &amp;, NodeOp &amp;&amp;) const -&gt; void</td></tr>
 <tr class="separator:a1d3b6ed7c8cb13ad43a87caed576e18b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3712dc1a0cf2ecc75b6dad720f1ad19"><td class="memTemplParams" colspan="2"><a id="aa3712dc1a0cf2ecc75b6dad720f1ad19" name="aa3712dc1a0cf2ecc75b6dad720f1ad19"></a>
-template&lt;class NodeOp &gt; </td></tr>
+template&lt;node_op&lt; <a class="el" href="classteddy_1_1node.html">node_t</a> &gt; NodeOp&gt; </td></tr>
 <tr class="memitem:aa3712dc1a0cf2ecc75b6dad720f1ad19"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>for_each_node</b> (NodeOp &amp;&amp;) const -&gt; void</td></tr>
 <tr class="separator:aa3712dc1a0cf2ecc75b6dad720f1ad19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5757909269eff093ea36403b7fbec6c"><td class="memTemplParams" colspan="2"><a id="ad5757909269eff093ea36403b7fbec6c" name="ad5757909269eff093ea36403b7fbec6c"></a>
-template&lt;class NodeOp &gt; </td></tr>
+template&lt;node_op&lt; <a class="el" href="classteddy_1_1node.html">node_t</a> &gt; NodeOp&gt; </td></tr>
 <tr class="memitem:ad5757909269eff093ea36403b7fbec6c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>for_each_terminal_node</b> (NodeOp &amp;&amp;) const -&gt; void</td></tr>
 <tr class="separator:ad5757909269eff093ea36403b7fbec6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a1b7788a8436398008b933f91a80a3d"><td class="memTemplParams" colspan="2"><a id="a1a1b7788a8436398008b933f91a80a3d" name="a1a1b7788a8436398008b933f91a80a3d"></a>
@@ -203,15 +234,15 @@ template&lt;bin_op O&gt; </td></tr>
 <tr class="memitem:a305bb1ac5fe1c77de1fa12dfb047ae54"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cache_put</b> (<a class="el" href="classteddy_1_1node.html">node_t</a> *, <a class="el" href="classteddy_1_1node.html">node_t</a> *, <a class="el" href="classteddy_1_1node.html">node_t</a> *) -&gt; void</td></tr>
 <tr class="separator:a305bb1ac5fe1c77de1fa12dfb047ae54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32accd38e7bf911169c68b3572658bae"><td class="memTemplParams" colspan="2"><a id="a32accd38e7bf911169c68b3572658bae" name="a32accd38e7bf911169c68b3572658bae"></a>
-template&lt;class NodeOp &gt; </td></tr>
+template&lt;node_op&lt; <a class="el" href="classteddy_1_1node.html">node_t</a> &gt; NodeOp&gt; </td></tr>
 <tr class="memitem:a32accd38e7bf911169c68b3572658bae"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>traverse_pre</b> (<a class="el" href="classteddy_1_1node.html">node_t</a> *, NodeOp &amp;&amp;) const -&gt; void</td></tr>
 <tr class="separator:a32accd38e7bf911169c68b3572658bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a146b0f4fe51e57b62d71282281b60b30"><td class="memTemplParams" colspan="2"><a id="a146b0f4fe51e57b62d71282281b60b30" name="a146b0f4fe51e57b62d71282281b60b30"></a>
-template&lt;class NodeOp &gt; </td></tr>
+template&lt;node_op&lt; <a class="el" href="classteddy_1_1node.html">node_t</a> &gt; NodeOp&gt; </td></tr>
 <tr class="memitem:a146b0f4fe51e57b62d71282281b60b30"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>traverse_post</b> (<a class="el" href="classteddy_1_1node.html">node_t</a> *, NodeOp &amp;&amp;) const -&gt; void</td></tr>
 <tr class="separator:a146b0f4fe51e57b62d71282281b60b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af84107ad1f01eff3df94a4c0366ccd2f"><td class="memTemplParams" colspan="2"><a id="af84107ad1f01eff3df94a4c0366ccd2f" name="af84107ad1f01eff3df94a4c0366ccd2f"></a>
-template&lt;class NodeOp &gt; </td></tr>
+template&lt;node_op&lt; <a class="el" href="classteddy_1_1node.html">node_t</a> &gt; NodeOp&gt; </td></tr>
 <tr class="memitem:af84107ad1f01eff3df94a4c0366ccd2f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>traverse_level</b> (<a class="el" href="classteddy_1_1node.html">node_t</a> *, NodeOp &amp;&amp;) const -&gt; void</td></tr>
 <tr class="separator:af84107ad1f01eff3df94a4c0366ccd2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc15d245425e0d5e3d2bba0edf4006b1"><td class="memItemLeft" align="right" valign="top"><a id="afc15d245425e0d5e3d2bba0edf4006b1" name="afc15d245425e0d5e3d2bba0edf4006b1"></a>
@@ -228,13 +259,29 @@ Static Public Member Functions</h2></td></tr>
 static auto&#160;</td><td class="memItemRight" valign="bottom"><b>dec_ref_count</b> (<a class="el" href="classteddy_1_1node.html">node_t</a> *) -&gt; void</td></tr>
 <tr class="separator:a328a20ad6afe73055591bea05688fff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<hr/><h2 class="groupheader">Class Documentation</h2>
+<a name="structteddy_1_1node__manager_1_1common__init" id="structteddy_1_1node__manager_1_1common__init"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structteddy_1_1node__manager_1_1common__init">&#9670;&nbsp;</a></span>teddy::node_manager::common_init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct teddy::node_manager::common_init</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><div class="compoundTemplParams">template&lt;class Data, degree Degree, domain Domain&gt;<br />
+struct teddy::node_manager&lt; Data, Degree, Domain &gt;::common_init</div></div>
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/mrena/Projects/DecisionDiagrams/include/teddy/impl/<a class="el" href="node__manager_8hpp_source.html">node_manager.hpp</a></li>
+<li><a class="el" href="node__manager_8hpp_source.html">node_manager.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Tue Apr 12 2022 19:32:04 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

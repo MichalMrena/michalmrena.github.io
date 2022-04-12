@@ -5,13 +5,18 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TeDDy: teddy::imdd_manager Struct Reference</title>
+<title>TeDDy: teddy::imdd_manager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -36,17 +41,37 @@
 var searchBox = new SearchBox("searchBox", "search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -70,7 +95,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="structteddy_1_1imdd__manager-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">teddy::imdd_manager Struct Reference</div></div>
+  <div class="headertitle"><div class="title">teddy::imdd_manager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -121,6 +146,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9669d1358d90dc81f5b7205589fd89bd inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a9669d1358d90dc81f5b7205589fd89bd">from_vector</a> (R &amp;&amp;vector) -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td></tr>
 <tr class="memdesc:a9669d1358d90dc81f5b7205589fd89bd inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates diagram from a truth vector of a function.  <a href="classteddy_1_1diagram__manager.html#a9669d1358d90dc81f5b7205589fd89bd">More...</a><br /></td></tr>
 <tr class="separator:a9669d1358d90dc81f5b7205589fd89bd inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6fcd5c565211fe4b5b435829cb7f741 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#aa6fcd5c565211fe4b5b435829cb7f741">to_vector</a> (<a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;d) const -&gt; std::vector&lt; uint_t &gt;</td></tr>
+<tr class="memdesc:aa6fcd5c565211fe4b5b435829cb7f741 inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates truth vector from the diagram.  <a href="classteddy_1_1diagram__manager.html#aa6fcd5c565211fe4b5b435829cb7f741">More...</a><br /></td></tr>
+<tr class="separator:aa6fcd5c565211fe4b5b435829cb7f741 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91818259bbfb7a387a33778696833d54 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a91818259bbfb7a387a33778696833d54">to_vector_g</a> (<a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;d, O out) const -&gt; void</td></tr>
+<tr class="memdesc:a91818259bbfb7a387a33778696833d54 inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates truth vector from the diagram.  <a href="classteddy_1_1diagram__manager.html#a91818259bbfb7a387a33778696833d54">More...</a><br /></td></tr>
+<tr class="separator:a91818259bbfb7a387a33778696833d54 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1553a94121ed1941075723197cc3cde inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#aa1553a94121ed1941075723197cc3cde">from_pla</a> (<a class="el" href="classteddy_1_1pla__file.html">pla_file</a> const &amp;file, fold_type foldType=fold_type::Tree) -&gt; second_t&lt; Foo, std::vector&lt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> &gt; &gt;</td></tr>
 <tr class="memdesc:aa1553a94121ed1941075723197cc3cde inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates BDDs defined by PLA file.  <a href="classteddy_1_1diagram__manager.html#aa1553a94121ed1941075723197cc3cde">More...</a><br /></td></tr>
 <tr class="separator:aa1553a94121ed1941075723197cc3cde inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,6 +231,15 @@ auto&#160;</td><td class="memItemRight" valign="bottom"><b>sift</b> () -&gt; voi
 <tr class="memitem:a046100716dc71e5d9f2fb08b66c6101b inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a046100716dc71e5d9f2fb08b66c6101b">get_domains</a> () const -&gt; std::vector&lt; uint_t &gt;</td></tr>
 <tr class="memdesc:a046100716dc71e5d9f2fb08b66c6101b inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return domains of variables.  <a href="classteddy_1_1diagram__manager.html#a046100716dc71e5d9f2fb08b66c6101b">More...</a><br /></td></tr>
 <tr class="separator:a046100716dc71e5d9f2fb08b66c6101b inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0">set_cache_ratio</a> (double ratio) -&gt; void</td></tr>
+<tr class="memdesc:a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0 inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the relative cache size w.r.t the number of nodes.  <a href="classteddy_1_1diagram__manager.html#a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0">More...</a><br /></td></tr>
+<tr class="separator:a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00111b3f863d6ccf6503b15e372acbb1 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a00111b3f863d6ccf6503b15e372acbb1">set_pool_ratio</a> (double ratio) -&gt; void</td></tr>
+<tr class="memdesc:a00111b3f863d6ccf6503b15e372acbb1 inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets ratio used in calculation of size of the new node pool.  <a href="classteddy_1_1diagram__manager.html#a00111b3f863d6ccf6503b15e372acbb1">More...</a><br /></td></tr>
+<tr class="separator:a00111b3f863d6ccf6503b15e372acbb1 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110856ce25c5aa8af6c36ffc3c753c97 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a110856ce25c5aa8af6c36ffc3c753c97">set_gc_ratio</a> (double ratio) -&gt; void</td></tr>
+<tr class="memdesc:a110856ce25c5aa8af6c36ffc3c753c97 inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets ratio used to determine new node pool allocation.  <a href="classteddy_1_1diagram__manager.html#a110856ce25c5aa8af6c36ffc3c753c97">More...</a><br /></td></tr>
+<tr class="separator:a110856ce25c5aa8af6c36ffc3c753c97 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12278af62ce8151192671d2524d314e8 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top"><a id="a12278af62ce8151192671d2524d314e8" name="a12278af62ce8151192671d2524d314e8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>diagram_manager</b> (<a class="el" href="classteddy_1_1diagram__manager.html">diagram_manager</a> const &amp;)=delete</td></tr>
 <tr class="separator:a12278af62ce8151192671d2524d314e8 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,13 +260,17 @@ Additional Inherited Members</h2></td></tr>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>diagram_t</b> = <a class="el" href="classteddy_1_1diagram.html">diagram</a>&lt; void, Degree &gt;</td></tr>
 <tr class="memdesc:afd258af2e42689cd3887b7c7acd7c64a inherit pub_types_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for the diagram type used in the functions of this manager. <br /></td></tr>
 <tr class="separator:afd258af2e42689cd3887b7c7acd7c64a inherit pub_types_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_types_classteddy_1_1diagram__manager"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classteddy_1_1diagram__manager')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager&lt; void, degrees::mixed, domains::mixed &gt;</a></td></tr>
+<tr class="memitem:a6e5142fac56713fea1a5f9a1cb3d9235 inherit pro_types_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top"><a id="a6e5142fac56713fea1a5f9a1cb3d9235" name="a6e5142fac56713fea1a5f9a1cb3d9235"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>node_t</b> = typename <a class="el" href="classteddy_1_1diagram.html">diagram</a>&lt; void, Degree &gt;::node_t</td></tr>
+<tr class="separator:a6e5142fac56713fea1a5f9a1cb3d9235 inherit pro_types_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classteddy_1_1diagram__manager"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classteddy_1_1diagram__manager')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager&lt; void, degrees::mixed, domains::mixed &gt;</a></td></tr>
-<tr class="memitem:a25f26c7692d20cd0ab7bbdecc4ecf0be inherit pro_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top"><a id="a25f26c7692d20cd0ab7bbdecc4ecf0be" name="a25f26c7692d20cd0ab7bbdecc4ecf0be"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>diagram_manager</b> (std::size_t vars, std::size_t nodes, std::vector&lt; index_t &gt; order)</td></tr>
-<tr class="separator:a25f26c7692d20cd0ab7bbdecc4ecf0be inherit pro_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a142dcaed3f5e4db7d18b2c85e0215005 inherit pro_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top"><a id="a142dcaed3f5e4db7d18b2c85e0215005" name="a142dcaed3f5e4db7d18b2c85e0215005"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>diagram_manager</b> (std::size_t vars, std::size_t nodes, <a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a>, std::vector&lt; index_t &gt; order)</td></tr>
-<tr class="separator:a142dcaed3f5e4db7d18b2c85e0215005 inherit pro_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a758eea9c06be3976755406bd7f0864d8 inherit pro_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a758eea9c06be3976755406bd7f0864d8">diagram_manager</a> (std::size_t varCount, std::size_t initNodeCount, std::vector&lt; index_t &gt; order)</td></tr>
+<tr class="memdesc:a758eea9c06be3976755406bd7f0864d8 inherit pro_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes diagram manager.  <a href="classteddy_1_1diagram__manager.html#a758eea9c06be3976755406bd7f0864d8">More...</a><br /></td></tr>
+<tr class="separator:a758eea9c06be3976755406bd7f0864d8 inherit pro_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b066703eeabf11003f4c850e9bb18cb inherit pro_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a9b066703eeabf11003f4c850e9bb18cb">diagram_manager</a> (std::size_t varCount, std::size_t initNodeCount, <a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a> ds, std::vector&lt; index_t &gt; order)</td></tr>
+<tr class="memdesc:a9b066703eeabf11003f4c850e9bb18cb inherit pro_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes diagram manager.  <a href="classteddy_1_1diagram__manager.html#a9b066703eeabf11003f4c850e9bb18cb">More...</a><br /></td></tr>
+<tr class="separator:a9b066703eeabf11003f4c850e9bb18cb inherit pro_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classteddy_1_1diagram__manager"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classteddy_1_1diagram__manager')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager&lt; void, degrees::mixed, domains::mixed &gt;</a></td></tr>
 <tr class="memitem:ab98034c8b05644fa852e15b2d08b18fb inherit pro_attribs_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top"><a id="ab98034c8b05644fa852e15b2d08b18fb" name="ab98034c8b05644fa852e15b2d08b18fb"></a>
 <a class="el" href="classteddy_1_1node__manager.html">node_manager</a>&lt; void, Degree, Domain &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nodes_</b></td></tr>
@@ -295,13 +339,13 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>diagram_t</b> = <a c
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/mrena/Projects/DecisionDiagrams/include/teddy/<a class="el" href="teddy_8hpp_source.html">teddy.hpp</a></li>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="teddy_8hpp_source.html">teddy.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Tue Apr 12 2022 19:32:04 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

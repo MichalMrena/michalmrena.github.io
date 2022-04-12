@@ -12,6 +12,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -36,17 +41,67 @@
 var searchBox = new SearchBox("searchBox", "search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li class="current"><a href="functions.html"><span>Class&#160;Members</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow3" class="tabs2">
+    <ul class="tablist">
+      <li><a href="functions.html"><span>All</span></a></li>
+      <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="#index_a"><span>a</span></a></li>
+      <li><a href="#index_b"><span>b</span></a></li>
+      <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_d"><span>d</span></a></li>
+      <li><a href="#index_e"><span>e</span></a></li>
+      <li><a href="#index_f"><span>f</span></a></li>
+      <li><a href="#index_g"><span>g</span></a></li>
+      <li><a href="#index_i"><span>i</span></a></li>
+      <li><a href="#index_l"><span>l</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
+      <li><a href="#index_o"><span>o</span></a></li>
+      <li><a href="#index_p"><span>p</span></a></li>
+      <li><a href="#index_r"><span>r</span></a></li>
+      <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
+      <li><a href="#index_u"><span>u</span></a></li>
+      <li><a href="#index_v"><span>v</span></a></li>
+      <li class="current"><a href="#index__7E"><span>~</span></a></li>
+    </ul>
+  </div>
 </div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -67,7 +122,7 @@ $(function() {
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>apply()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#aebf3532838e05900b7432755efdcd7ba">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
-<li>availability()&#160;:&#160;<a class="el" href="classteddy_1_1reliability__manager.html#ad2df9bef6cb2b085bcf3ff98b0085a04">teddy::reliability_manager&lt; Degree, Domain &gt;</a></li>
+<li>availability()&#160;:&#160;<a class="el" href="classteddy_1_1reliability__manager.html#a292741961f0abe5bead4928ec64d4316">teddy::reliability_manager&lt; Degree, Domain &gt;</a></li>
 </ul>
 
 
@@ -88,10 +143,8 @@ $(function() {
 <li>dependency_set()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#a16f8c50b47d09e4bf1f0aa6ca40f9161">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
 <li>dependency_set_g()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#ad82787c7afc4231a5b384a0561ce3f35">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
 <li>diagram()&#160;:&#160;<a class="el" href="classteddy_1_1diagram.html#a1f9bc889c425e6b024c37d15e822fe92">teddy::diagram&lt; Data, D &gt;</a></li>
+<li>diagram_manager()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#a758eea9c06be3976755406bd7f0864d8">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
 <li>dpbd()&#160;:&#160;<a class="el" href="classteddy_1_1reliability__manager.html#a4c1b56f754c0a42ce859f4654b721066">teddy::reliability_manager&lt; Degree, Domain &gt;</a></li>
-<li>dpbd_i_3()&#160;:&#160;<a class="el" href="classteddy_1_1reliability__manager.html#a40f760bd5a3596587e7aef1551c12464">teddy::reliability_manager&lt; Degree, Domain &gt;</a></li>
-<li>dpbds()&#160;:&#160;<a class="el" href="classteddy_1_1reliability__manager.html#a1a3d9eab481735711b7f075a3ba4efd1">teddy::reliability_manager&lt; Degree, Domain &gt;</a></li>
-<li>dpbds_i_3()&#160;:&#160;<a class="el" href="classteddy_1_1reliability__manager.html#a8597a9617e85dcb714456acfd0b75a59">teddy::reliability_manager&lt; Degree, Domain &gt;</a></li>
 </ul>
 
 
@@ -123,6 +176,12 @@ $(function() {
 
 
 <h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>idpbd_type_1_decrease()&#160;:&#160;<a class="el" href="classteddy_1_1reliability__manager.html#ac7d792b36536f7ae5c7b841f55342577">teddy::reliability_manager&lt; Degree, Domain &gt;</a></li>
+<li>idpbd_type_1_increase()&#160;:&#160;<a class="el" href="classteddy_1_1reliability__manager.html#a1f2c66e71cff3ce89b95bb6a418144f2">teddy::reliability_manager&lt; Degree, Domain &gt;</a></li>
+<li>idpbd_type_2_decrease()&#160;:&#160;<a class="el" href="classteddy_1_1reliability__manager.html#ad14e7525a4e21f021ac54da5c0710c8d">teddy::reliability_manager&lt; Degree, Domain &gt;</a></li>
+<li>idpbd_type_2_increase()&#160;:&#160;<a class="el" href="classteddy_1_1reliability__manager.html#abd37e96ec47dcc0647a81b374298b995">teddy::reliability_manager&lt; Degree, Domain &gt;</a></li>
+<li>idpbd_type_3_decrease()&#160;:&#160;<a class="el" href="classteddy_1_1reliability__manager.html#a8b4b48dff3da9f16144a7258201b49fd">teddy::reliability_manager&lt; Degree, Domain &gt;</a></li>
+<li>idpbd_type_3_increase()&#160;:&#160;<a class="el" href="classteddy_1_1reliability__manager.html#a20d7e11b73edb2c23ce349281693ea4c">teddy::reliability_manager&lt; Degree, Domain &gt;</a></li>
 <li>ifmdd_manager()&#160;:&#160;<a class="el" href="structteddy_1_1ifmdd__manager.html#ab5641ef1230f3c7d35b1eeae57788016">teddy::ifmdd_manager&lt; PMax &gt;</a></li>
 <li>ifmss_manager()&#160;:&#160;<a class="el" href="structteddy_1_1ifmss__manager.html#af2a7eda20370de4983ef249c9a929a37">teddy::ifmss_manager&lt; PMax &gt;</a></li>
 <li>imdd_manager()&#160;:&#160;<a class="el" href="structteddy_1_1imdd__manager.html#ab7795914dbc60312f84dbed4e27cf4b6">teddy::imdd_manager</a></li>
@@ -171,15 +230,19 @@ $(function() {
 <li>satisfy_all()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#ad55989bcdfa979cc9f6b1c5907bf1c49">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
 <li>satisfy_all_g()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#a8430495ba45748c6c3e8158e757e39ed">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
 <li>satisfy_count()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#a3666b0ee69571cb6e25f1600ba157824">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
+<li>set_cache_ratio()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
+<li>set_gc_ratio()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#a110856ce25c5aa8af6c36ffc3c753c97">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
+<li>set_pool_ratio()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#a00111b3f863d6ccf6503b15e372acbb1">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
 <li>sift()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#a745059ebf952a92062988a212a19221e">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
 <li>structural_importance()&#160;:&#160;<a class="el" href="classteddy_1_1reliability__manager.html#a25569ce230e2e9b253e4f1dd5f161052">teddy::reliability_manager&lt; Degree, Domain &gt;</a></li>
-<li>structural_importances()&#160;:&#160;<a class="el" href="classteddy_1_1reliability__manager.html#a4ef251bbac5f69f9b097cd270ffce790">teddy::reliability_manager&lt; Degree, Domain &gt;</a></li>
 <li>swap()&#160;:&#160;<a class="el" href="classteddy_1_1diagram.html#a31f113643228c9bf98945b589bdf1c49">teddy::diagram&lt; Data, D &gt;</a></li>
 </ul>
 
 
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
 <li>to_dot_graph()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#a9a02749d3a2902adb581b7b064a78064">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
+<li>to_vector()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#aa6fcd5c565211fe4b5b435829cb7f741">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
+<li>to_vector_g()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#a91818259bbfb7a387a33778696833d54">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
 <li>transform()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#a23f96df9de5b148a0dc0fb97cdf996e3">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
 <li>tree_fold()&#160;:&#160;<a class="el" href="classteddy_1_1diagram__manager.html#a366cfc607825c26e5bacc8eba2a3eebe">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></li>
 </ul>
@@ -204,7 +267,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Tue Apr 12 2022 19:32:04 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

@@ -12,6 +12,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -36,17 +41,37 @@
 var searchBox = new SearchBox("searchBox", "search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -70,6 +95,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classteddy_1_1diagram__manager-members.html">List of all members</a>  </div>
@@ -125,6 +151,13 @@ requires (is_bdd&lt;Degree&gt;)</td></tr>
 <tr class="memitem:a9669d1358d90dc81f5b7205589fd89bd"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a9669d1358d90dc81f5b7205589fd89bd">from_vector</a> (R &amp;&amp;vector) -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td></tr>
 <tr class="memdesc:a9669d1358d90dc81f5b7205589fd89bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates diagram from a truth vector of a function.  <a href="classteddy_1_1diagram__manager.html#a9669d1358d90dc81f5b7205589fd89bd">More...</a><br /></td></tr>
 <tr class="separator:a9669d1358d90dc81f5b7205589fd89bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6fcd5c565211fe4b5b435829cb7f741"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#aa6fcd5c565211fe4b5b435829cb7f741">to_vector</a> (<a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;d) const -&gt; std::vector&lt; uint_t &gt;</td></tr>
+<tr class="memdesc:aa6fcd5c565211fe4b5b435829cb7f741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates truth vector from the diagram.  <a href="classteddy_1_1diagram__manager.html#aa6fcd5c565211fe4b5b435829cb7f741">More...</a><br /></td></tr>
+<tr class="separator:aa6fcd5c565211fe4b5b435829cb7f741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91818259bbfb7a387a33778696833d54"><td class="memTemplParams" colspan="2">template&lt;std::output_iterator&lt; uint_t &gt; O&gt; </td></tr>
+<tr class="memitem:a91818259bbfb7a387a33778696833d54"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a91818259bbfb7a387a33778696833d54">to_vector_g</a> (<a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;d, O out) const -&gt; void</td></tr>
+<tr class="memdesc:a91818259bbfb7a387a33778696833d54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates truth vector from the diagram.  <a href="classteddy_1_1diagram__manager.html#a91818259bbfb7a387a33778696833d54">More...</a><br /></td></tr>
+<tr class="separator:a91818259bbfb7a387a33778696833d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1553a94121ed1941075723197cc3cde"><td class="memTemplParams" colspan="2">template&lt;class Foo  = void&gt; <br />
 requires (is_bdd&lt;Degree&gt;)</td></tr>
 <tr class="memitem:aa1553a94121ed1941075723197cc3cde"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#aa1553a94121ed1941075723197cc3cde">from_pla</a> (<a class="el" href="classteddy_1_1pla__file.html">pla_file</a> const &amp;file, fold_type foldType=fold_type::Tree) -&gt; second_t&lt; Foo, std::vector&lt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> &gt; &gt;</td></tr>
@@ -220,6 +253,15 @@ auto&#160;</td><td class="memItemRight" valign="bottom"><b>sift</b> () -&gt; voi
 <tr class="memitem:a046100716dc71e5d9f2fb08b66c6101b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a046100716dc71e5d9f2fb08b66c6101b">get_domains</a> () const -&gt; std::vector&lt; uint_t &gt;</td></tr>
 <tr class="memdesc:a046100716dc71e5d9f2fb08b66c6101b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return domains of variables.  <a href="classteddy_1_1diagram__manager.html#a046100716dc71e5d9f2fb08b66c6101b">More...</a><br /></td></tr>
 <tr class="separator:a046100716dc71e5d9f2fb08b66c6101b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0">set_cache_ratio</a> (double ratio) -&gt; void</td></tr>
+<tr class="memdesc:a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the relative cache size w.r.t the number of nodes.  <a href="classteddy_1_1diagram__manager.html#a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0">More...</a><br /></td></tr>
+<tr class="separator:a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00111b3f863d6ccf6503b15e372acbb1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a00111b3f863d6ccf6503b15e372acbb1">set_pool_ratio</a> (double ratio) -&gt; void</td></tr>
+<tr class="memdesc:a00111b3f863d6ccf6503b15e372acbb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets ratio used in calculation of size of the new node pool.  <a href="classteddy_1_1diagram__manager.html#a00111b3f863d6ccf6503b15e372acbb1">More...</a><br /></td></tr>
+<tr class="separator:a00111b3f863d6ccf6503b15e372acbb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110856ce25c5aa8af6c36ffc3c753c97"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a110856ce25c5aa8af6c36ffc3c753c97">set_gc_ratio</a> (double ratio) -&gt; void</td></tr>
+<tr class="memdesc:a110856ce25c5aa8af6c36ffc3c753c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets ratio used to determine new node pool allocation.  <a href="classteddy_1_1diagram__manager.html#a110856ce25c5aa8af6c36ffc3c753c97">More...</a><br /></td></tr>
+<tr class="separator:a110856ce25c5aa8af6c36ffc3c753c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12278af62ce8151192671d2524d314e8"><td class="memItemLeft" align="right" valign="top"><a id="a12278af62ce8151192671d2524d314e8" name="a12278af62ce8151192671d2524d314e8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>diagram_manager</b> (<a class="el" href="classteddy_1_1diagram__manager.html">diagram_manager</a> const &amp;)=delete</td></tr>
 <tr class="separator:a12278af62ce8151192671d2524d314e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -233,14 +275,20 @@ auto&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a cla
 auto&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classteddy_1_1diagram__manager.html">diagram_manager</a> &amp;&amp;) -&gt; <a class="el" href="classteddy_1_1diagram__manager.html">diagram_manager</a> &amp;=default</td></tr>
 <tr class="separator:a61bcd5b2615a1be03a951353666f9db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-types" name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:a6e5142fac56713fea1a5f9a1cb3d9235"><td class="memItemLeft" align="right" valign="top"><a id="a6e5142fac56713fea1a5f9a1cb3d9235" name="a6e5142fac56713fea1a5f9a1cb3d9235"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>node_t</b> = typename <a class="el" href="classteddy_1_1diagram.html">diagram</a>&lt; Data, Degree &gt;::node_t</td></tr>
+<tr class="separator:a6e5142fac56713fea1a5f9a1cb3d9235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a25f26c7692d20cd0ab7bbdecc4ecf0be"><td class="memItemLeft" align="right" valign="top"><a id="a25f26c7692d20cd0ab7bbdecc4ecf0be" name="a25f26c7692d20cd0ab7bbdecc4ecf0be"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>diagram_manager</b> (std::size_t vars, std::size_t nodes, std::vector&lt; index_t &gt; order)</td></tr>
-<tr class="separator:a25f26c7692d20cd0ab7bbdecc4ecf0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a142dcaed3f5e4db7d18b2c85e0215005"><td class="memItemLeft" align="right" valign="top"><a id="a142dcaed3f5e4db7d18b2c85e0215005" name="a142dcaed3f5e4db7d18b2c85e0215005"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>diagram_manager</b> (std::size_t vars, std::size_t nodes, <a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a>, std::vector&lt; index_t &gt; order)</td></tr>
-<tr class="separator:a142dcaed3f5e4db7d18b2c85e0215005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a758eea9c06be3976755406bd7f0864d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a758eea9c06be3976755406bd7f0864d8">diagram_manager</a> (std::size_t varCount, std::size_t initNodeCount, std::vector&lt; index_t &gt; order)</td></tr>
+<tr class="memdesc:a758eea9c06be3976755406bd7f0864d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes diagram manager.  <a href="classteddy_1_1diagram__manager.html#a758eea9c06be3976755406bd7f0864d8">More...</a><br /></td></tr>
+<tr class="separator:a758eea9c06be3976755406bd7f0864d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b066703eeabf11003f4c850e9bb18cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a9b066703eeabf11003f4c850e9bb18cb">diagram_manager</a> (std::size_t varCount, std::size_t initNodeCount, <a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a> ds, std::vector&lt; index_t &gt; order)</td></tr>
+<tr class="memdesc:a9b066703eeabf11003f4c850e9bb18cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes diagram manager.  <a href="classteddy_1_1diagram__manager.html#a9b066703eeabf11003f4c850e9bb18cb">More...</a><br /></td></tr>
+<tr class="separator:a9b066703eeabf11003f4c850e9bb18cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -251,7 +299,603 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class Data, degree Degree, domain Domain&gt;<br />
 class teddy::diagram_manager&lt; Data, Degree, Domain &gt;</div><p >Base class for all diagram managers that generically implements all of the algorithms. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a758eea9c06be3976755406bd7f0864d8" name="a758eea9c06be3976755406bd7f0864d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a758eea9c06be3976755406bd7f0864d8">&#9670;&nbsp;</a></span>diagram_manager() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; <br />
+requires (<a class="el" href="structteddy_1_1domains_1_1is__fixed.html">domains::is_fixed</a>&lt;Domain&gt;()())</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::diagram_manager </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>varCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>initNodeCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; index_t &gt;&#160;</td>
+          <td class="paramname"><em>order</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes diagram manager. </p>
+<p >This overload is for managers that have fixed domains (known at copile time).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">varCount</td><td>Number of variables. </td></tr>
+    <tr><td class="paramname">initNodeCount</td><td>Number of nodes that is pre-allocated. </td></tr>
+    <tr><td class="paramname">order</td><td>Order of variables. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9b066703eeabf11003f4c850e9bb18cb" name="a9b066703eeabf11003f4c850e9bb18cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b066703eeabf11003f4c850e9bb18cb">&#9670;&nbsp;</a></span>diagram_manager() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; <br />
+requires (domains::is_mixed&lt;Domain&gt;()())</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::diagram_manager </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>varCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>initNodeCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a>&#160;</td>
+          <td class="paramname"><em>ds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; index_t &gt;&#160;</td>
+          <td class="paramname"><em>order</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes diagram manager. </p>
+<p >This overload is for managers that have mixed domains specified by the <code>ds</code> paramter.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">varCount</td><td>Number of variables. </td></tr>
+    <tr><td class="paramname">initNodeCount</td><td>Number of nodes that is pre-allocated. </td></tr>
+    <tr><td class="paramname">ds</td><td>Domains of varibales. </td></tr>
+    <tr><td class="paramname">order</td><td>Order of variables. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8e5541e448620e4e39eb9f0314a5276d" name="a8e5541e448620e4e39eb9f0314a5276d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e5541e448620e4e39eb9f0314a5276d">&#9670;&nbsp;</a></span>constant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::constant </td>
+          <td>(</td>
+          <td class="paramtype">uint_t&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates diagram representing constant function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>Value of the constant function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram representing constant function. </dd></dl>
+
+</div>
+</div>
+<a id="a53b279ab997be99c116f6a38d20200e9" name="a53b279ab997be99c116f6a38d20200e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53b279ab997be99c116f6a38d20200e9">&#9670;&nbsp;</a></span>variable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::variable </td>
+          <td>(</td>
+          <td class="paramtype">index_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates diagram representing function of single variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Index of the variable. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram of a function of single variable. </dd></dl>
+
+</div>
+</div>
+<a id="a4505f796689fd32385ddae310e8d9843" name="a4505f796689fd32385ddae310e8d9843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4505f796689fd32385ddae310e8d9843">&#9670;&nbsp;</a></span>variable_not()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; <br />
+requires (is_bdd&lt;Degree&gt;)</div>
+<div class="memtemplate">
+template&lt;class Foo &gt; <br />
+requires (is_bdd&lt;Degree&gt;)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::variable_not </td>
+          <td>(</td>
+          <td class="paramtype">index_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> -&gt; second_t&lt;Foo, <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates BDD representing function of complemented variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Index of the variable. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram of a function of single variable. </dd></dl>
+
+</div>
+</div>
+<a id="accd754f605dfcab429b6f1d857076219" name="accd754f605dfcab429b6f1d857076219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accd754f605dfcab429b6f1d857076219">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">index_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates diagram representing function of single variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Index of the variable. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram of a function of single variable. </dd></dl>
+
+</div>
+</div>
+<a id="a1f9f8421cd7f33c11f6487e81683c7a1" name="a1f9f8421cd7f33c11f6487e81683c7a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f9f8421cd7f33c11f6487e81683c7a1">&#9670;&nbsp;</a></span>variables() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;std::convertible_to&lt; index_t &gt; T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::variables </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>is</em></td><td>)</td>
+          <td> -&gt; std::vector&lt;<a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates vector of diagrams representing functions of single variables. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>integral type convertible to unsgined int. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is</td><td>initializer list of indices. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of diagrams. </dd></dl>
+
+</div>
+</div>
+<a id="a80f56f39c209510b6602ab6863e30899" name="a80f56f39c209510b6602ab6863e30899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80f56f39c209510b6602ab6863e30899">&#9670;&nbsp;</a></span>variables() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;std::input_iterator I, std::sentinel_for&lt; I &gt; S&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::variables </td>
+          <td>(</td>
+          <td class="paramtype">I&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">S&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; std::vector&lt;<a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates vector of diagrams representing functions of single variables. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>iterator type for the input range. </td></tr>
+    <tr><td class="paramname">S</td><td>sentinel type for <code>I</code> . (end iterator) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>iterator to the first element of range of indices represented by integral type convertible to unsgined int. </td></tr>
+    <tr><td class="paramname">last</td><td>sentinel for <code>first</code> (end iterator). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of diagrams. </dd></dl>
+
+</div>
+</div>
+<a id="ae647e6868fb5c739e5646635d5523562" name="ae647e6868fb5c739e5646635d5523562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae647e6868fb5c739e5646635d5523562">&#9670;&nbsp;</a></span>variables() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;std::ranges::input_range Is&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::variables </td>
+          <td>(</td>
+          <td class="paramtype">Is const &amp;&#160;</td>
+          <td class="paramname"><em>is</em></td><td>)</td>
+          <td> -&gt; std::vector&lt;<a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates vector of diagrams representing functions of single variables. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Is</td><td>range of indices represented by integral type convertible to unsigned int. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is</td><td>range of Ts (e.g. std::vector&lt;unsigned int&gt;). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of diagrams. </dd></dl>
+
+</div>
+</div>
+<a id="a926f78f0cea41fd1d3b0ab71d3ff732c" name="a926f78f0cea41fd1d3b0ab71d3ff732c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a926f78f0cea41fd1d3b0ab71d3ff732c">&#9670;&nbsp;</a></span>from_vector() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;std::input_iterator I, std::sentinel_for&lt; I &gt; S&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::from_vector </td>
+          <td>(</td>
+          <td class="paramtype">I&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">S&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates diagram from a truth vector of a function. </p>
+<p >Example for the function f(x) = max(x0, x1, x2): </p><div class="fragment"><div class="line"><span class="comment">// Truth table:</span></div>
+<div class="line">+----+----+----+----+---+----+-----+----+---+</div>
+<div class="line">| x1 | x2 | x3 | f  | _ | x1 |  x2 | x3 | f |</div>
+<div class="line">+----+----+----+----+---+----+-----+----+---+</div>
+<div class="line">| 0  | 0  | 0  | 0  |   | 1  |  0  | 0  | 1 |</div>
+<div class="line">| 0  | 0  | 1  | 1  |   | 1  |  0  | 1  | 1 |</div>
+<div class="line">| 0  | 0  | 2  | 2  |   | 1  |  0  | 2  | 2 |</div>
+<div class="line">| 0  | 1  | 0  | 1  |   | 1  |  1  | 0  | 1 |</div>
+<div class="line">| 0  | 1  | 1  | 1  |   | 1  |  1  | 1  | 1 |</div>
+<div class="line">| 0  | 1  | 2  | 2  |   | 1  |  1  | 2  | 2 |</div>
+<div class="line">+----+----+----+----+---+----+-----+----+---+</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="comment">// Truth vector:</span></div>
+<div class="line">[0 1 2 1 1 2 1 1 2 1 1 2]</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="comment">// Teddy code:</span></div>
+<div class="line"><a class="code hl_class" href="structteddy_1_1ifmdd__manager.html">teddy::ifmdd_manager&lt;3&gt;</a> manager(3, 100, {2, 2, 3});</div>
+<div class="line">std::vector&lt;unsigned int&gt; vec {0, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 2};</div>
+<div class="line"><a class="code hl_typedef" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> f = manager.from_vector(vec);</div>
+<div class="ttc" id="aclassteddy_1_1diagram__manager_html_afd258af2e42689cd3887b7c7acd7c64a"><div class="ttname"><a href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">teddy::diagram_manager::diagram_t</a></div><div class="ttdeci">diagram&lt; Data, Degree &gt; diagram_t</div><div class="ttdoc">Alias for the diagram type used in the functions of this manager.</div><div class="ttdef"><b>Definition:</b> diagram_manager.hpp:51</div></div>
+<div class="ttc" id="astructteddy_1_1ifmdd__manager_html"><div class="ttname"><a href="structteddy_1_1ifmdd__manager.html">teddy::ifmdd_manager</a></div><div class="ttdoc">Diagram manager for creation and manipulation of (integer) Multi-valued Decision Diagrams (iMDDs).</div><div class="ttdef"><b>Definition:</b> teddy.hpp:105</div></div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>Iterator type for the input range. </td></tr>
+    <tr><td class="paramname">S</td><td>Sentinel type for <code>I</code> . (end iterator) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>iterator to the first element of the truth vector. </td></tr>
+    <tr><td class="paramname">last</td><td>sentinel for <code>first</code> . (end iterator) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram representing function given by the truth vector. </dd></dl>
+
+</div>
+</div>
+<a id="a9669d1358d90dc81f5b7205589fd89bd" name="a9669d1358d90dc81f5b7205589fd89bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9669d1358d90dc81f5b7205589fd89bd">&#9670;&nbsp;</a></span>from_vector() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;std::ranges::input_range R&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::from_vector </td>
+          <td>(</td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>vector</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates diagram from a truth vector of a function. </p>
+<p >See the other overload for details.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">R</td><td>Type of the range that contains the truth vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>Range representing the truth vector. Elements of the range must be convertible to unsigned int. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram representing function given by the truth vector. </dd></dl>
+
+</div>
+</div>
+<a id="aa6fcd5c565211fe4b5b435829cb7f741" name="aa6fcd5c565211fe4b5b435829cb7f741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6fcd5c565211fe4b5b435829cb7f741">&#9670;&nbsp;</a></span>to_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::to_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td> const -&gt; std::vector&lt;uint_t&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates truth vector from the diagram. </p>
+<p >Significance of variables is the same as in the <code>from_vector</code> function i.e. variable on the last level of the diagram is least significant. The following assertion holds: </p><div class="fragment"><div class="line">assert(manager.from_vector(manager.to_vector(d)))</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Diagram. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of ints representing truth vector. </dd></dl>
+
+</div>
+</div>
+<a id="a91818259bbfb7a387a33778696833d54" name="a91818259bbfb7a387a33778696833d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91818259bbfb7a387a33778696833d54">&#9670;&nbsp;</a></span>to_vector_g()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;std::output_iterator&lt; teddy::uint_t &gt; O&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::to_vector_g </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">O&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const -&gt; void</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates truth vector from the diagram. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">O</td><td>Output iterator type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Diagram. </td></tr>
+    <tr><td class="paramname">out</td><td>Output iterator that is used to output the truth vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa1553a94121ed1941075723197cc3cde" name="aa1553a94121ed1941075723197cc3cde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1553a94121ed1941075723197cc3cde">&#9670;&nbsp;</a></span>from_pla()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; <br />
+requires (is_bdd&lt;Degree&gt;)</div>
+<div class="memtemplate">
+template&lt;class Foo &gt; <br />
+requires (is_bdd&lt;Degree&gt;)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::from_pla </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classteddy_1_1pla__file.html">pla_file</a> const &amp;&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">fold_type&#160;</td>
+          <td class="paramname"><em>foldType</em> = <code>fold_type::Tree</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; second_t&lt;Foo, std::vector&lt;<a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a>&gt;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates BDDs defined by PLA file. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Foo</td><td>Dummy template to enable SFINE. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>PLA file loaded in the instance of <code><a class="el" href="classteddy_1_1pla__file.html" title="Representation of a PLA file.">pla_file</a></code> class. </td></tr>
+    <tr><td class="paramname">foldType</td><td>fold type used in diagram creation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of diagrams. </dd></dl>
+
+</div>
+</div>
 <a id="aebf3532838e05900b7432755efdcd7ba" name="aebf3532838e05900b7432755efdcd7ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aebf3532838e05900b7432755efdcd7ba">&#9670;&nbsp;</a></span>apply()</h2>
 
@@ -307,8 +951,8 @@ template&lt;bin_op Op&gt; </div>
 <div class="line"><span class="comment">// Examples:</span></div>
 <div class="line">manager.apply&lt;<a class="code hl_struct" href="structteddy_1_1ops_1_1AND.html">teddy::ops::AND</a>&gt;(bdd1, bdd2);</div>
 <div class="line">manager.apply&lt;<a class="code hl_struct" href="structteddy_1_1ops_1_1PLUS.html">teddy::ops::PLUS&lt;4&gt;</a>&gt;(mdd1, mdd2);</div>
-<div class="ttc" id="astructteddy_1_1ops_1_1AND_html"><div class="ttname"><a href="structteddy_1_1ops_1_1AND.html">teddy::ops::AND</a></div><div class="ttdef"><b>Definition:</b> operators.hpp:182</div></div>
-<div class="ttc" id="astructteddy_1_1ops_1_1PLUS_html"><div class="ttname"><a href="structteddy_1_1ops_1_1PLUS.html">teddy::ops::PLUS</a></div><div class="ttdef"><b>Definition:</b> operators.hpp:211</div></div>
+<div class="ttc" id="astructteddy_1_1ops_1_1AND_html"><div class="ttname"><a href="structteddy_1_1ops_1_1AND.html">teddy::ops::AND</a></div><div class="ttdef"><b>Definition:</b> operators.hpp:187</div></div>
+<div class="ttc" id="astructteddy_1_1ops_1_1PLUS_html"><div class="ttname"><a href="structteddy_1_1ops_1_1PLUS.html">teddy::ops::PLUS</a></div><div class="ttdef"><b>Definition:</b> operators.hpp:216</div></div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Op</td><td>Binary operation. </td></tr>
@@ -326,438 +970,50 @@ template&lt;bin_op Op&gt; </div>
 
 </div>
 </div>
-<a id="ad4fc29c3a924316ea2f6c15b33425be3" name="ad4fc29c3a924316ea2f6c15b33425be3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4fc29c3a924316ea2f6c15b33425be3">&#9670;&nbsp;</a></span>cofactor()</h2>
+<a id="a97fe617cf5cc1872e36fd0dca87a7e85" name="a97fe617cf5cc1872e36fd0dca87a7e85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97fe617cf5cc1872e36fd0dca87a7e85">&#9670;&nbsp;</a></span>left_fold() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Data , degree Degree, domain Domain&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::cofactor </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;&#160;</td>
-          <td class="paramname"><em>d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">index_t&#160;</td>
-          <td class="paramname"><em>i</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint_t&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calculates cofactor of the functions. </p>
-<p >Calculates cofactor of the function i.e. fixes value of the <code>i</code> th variable to the value <code>val</code> .</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">d</td><td>Diagram representing the function. </td></tr>
-    <tr><td class="paramname">i</td><td>Index of the variable to be fixed. </td></tr>
-    <tr><td class="paramname">val</td><td>Value to which the <code>i</code> th varibale should be fixed. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Diagram representing cofactor of the function. </dd></dl>
-
-</div>
-</div>
-<a id="a8e5541e448620e4e39eb9f0314a5276d" name="a8e5541e448620e4e39eb9f0314a5276d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e5541e448620e4e39eb9f0314a5276d">&#9670;&nbsp;</a></span>constant()</h2>
-
-<div class="memitem">
-<div class="memproto">
 <div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; </div>
+template&lt;bin_op Op, std::ranges::input_range R&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::constant </td>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::left_fold </td>
           <td>(</td>
-          <td class="paramtype">uint_t&#160;</td>
-          <td class="paramname"><em>v</em></td><td>)</td>
+          <td class="paramtype">R const &amp;&#160;</td>
+          <td class="paramname"><em>range</em></td><td>)</td>
           <td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates diagram representing constant function. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">v</td><td>Value of the constant function. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Diagram representing constant function. </dd></dl>
-
-</div>
-</div>
-<a id="a16f8c50b47d09e4bf1f0aa6ca40f9161" name="a16f8c50b47d09e4bf1f0aa6ca40f9161"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16f8c50b47d09e4bf1f0aa6ca40f9161">&#9670;&nbsp;</a></span>dependency_set()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::dependency_set </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;&#160;</td>
-          <td class="paramname"><em>d</em></td><td>)</td>
-          <td> const -&gt; std::vector&lt;index_t&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enumerates indices of variables that the function depends on. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">d</td><td>Diagram representing the function. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Vector of indices. </dd></dl>
-
-</div>
-</div>
-<a id="ad82787c7afc4231a5b384a0561ce3f35" name="ad82787c7afc4231a5b384a0561ce3f35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad82787c7afc4231a5b384a0561ce3f35">&#9670;&nbsp;</a></span>dependency_set_g()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;std::output_iterator&lt; index_t &gt; O&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::dependency_set_g </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;&#160;</td>
-          <td class="paramname"><em>d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">O&#160;</td>
-          <td class="paramname"><em>out</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const -&gt; void</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enumerates indices of variables that the function depends on. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
+<p>Merges diagams in a range using the <code>apply</code> function and binary operation. </p>
+<p >Uses left fold order of evaluation (sequentially from the left).</p>
+<div class="fragment"><div class="line"><span class="comment">// Example:</span></div>
+<div class="line">std::vector&lt;diagram_t&gt; vs = manager.variables({0, 1, 2});</div>
+<div class="line"><a class="code hl_typedef" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> product = manager.left_fold&lt;teddy::ops&gt;(vs);</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">O</td><td>Output iterator type. </td></tr>
+    <tr><td class="paramname">Op</td><td>Binary operation. </td></tr>
+    <tr><td class="paramname">R</td><td>Range containing diagrams (e.g. std::vector&lt;diagram_t&gt;). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">d</td><td>Diagram representing the function. </td></tr>
-    <tr><td class="paramname">out</td><td>Output iterator that is used to output indices. </td></tr>
+    <tr><td class="paramname">range</td><td>Input range of diagrams to be merged. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Vector of indices. </dd></dl>
-
-</div>
-</div>
-<a id="a4bfe9fc16e8da13779b5485e2b682c96" name="a4bfe9fc16e8da13779b5485e2b682c96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bfe9fc16e8da13779b5485e2b682c96">&#9670;&nbsp;</a></span>evaluate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;in_var_values Vars&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::evaluate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;&#160;</td>
-          <td class="paramname"><em>d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Vars const &amp;&#160;</td>
-          <td class="paramname"><em>vs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const -&gt; uint_t</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Evaluates value of the function represented by the diagram. </p>
-<p >Complexity is <code>O(n)</code> where <code>n</code> is the number of variables.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Vars</td><td>Container type that defines operator[] and returns value convertible to unsigned int. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">d</td><td>Diagram. </td></tr>
-    <tr><td class="paramname">vs</td><td>Container holding values of variables. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Value of the function represented by <code>d</code> for variable values given in <code>vs</code> . </dd></dl>
-
-</div>
-</div>
-<a id="aa1553a94121ed1941075723197cc3cde" name="aa1553a94121ed1941075723197cc3cde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1553a94121ed1941075723197cc3cde">&#9670;&nbsp;</a></span>from_pla()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; <br />
-requires (is_bdd&lt;Degree&gt;)</div>
-<div class="memtemplate">
-template&lt;class Foo &gt; <br />
-requires (is_bdd&lt;Degree&gt;)</div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::from_pla </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classteddy_1_1pla__file.html">pla_file</a> const &amp;&#160;</td>
-          <td class="paramname"><em>file</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">fold_type&#160;</td>
-          <td class="paramname"><em>foldType</em> = <code>fold_type::Tree</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; second_t&lt;Foo, std::vector&lt;<a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a>&gt;&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates BDDs defined by PLA file. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Foo</td><td>Dummy template to enable SFINE. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">file</td><td>PLA file loaded in the instance of <code><a class="el" href="classteddy_1_1pla__file.html" title="Representation of a PLA file.">pla_file</a></code> class. </td></tr>
-    <tr><td class="paramname">foldType</td><td>fold type used in diagram creation. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Vector of diagrams. </dd></dl>
-
-</div>
-</div>
-<a id="a926f78f0cea41fd1d3b0ab71d3ff732c" name="a926f78f0cea41fd1d3b0ab71d3ff732c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a926f78f0cea41fd1d3b0ab71d3ff732c">&#9670;&nbsp;</a></span>from_vector() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;std::input_iterator I, std::sentinel_for&lt; I &gt; S&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::from_vector </td>
-          <td>(</td>
-          <td class="paramtype">I&#160;</td>
-          <td class="paramname"><em>first</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">S&#160;</td>
-          <td class="paramname"><em>last</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates diagram from a truth vector of a function. </p>
-<p >Example for the function f(x) = max(x0, x1, x2): </p><div class="fragment"><div class="line"><span class="comment">// Truth table:</span></div>
-<div class="line">+----+----+----+----+---+----+-----+----+---+</div>
-<div class="line">| x1 | x2 | x3 | f  | _ | x1 |  x2 | x3 | f |</div>
-<div class="line">+----+----+----+----+---+----+-----+----+---+</div>
-<div class="line">| 0  | 0  | 0  | 0  |   | 1  |  0  | 0  | 1 |</div>
-<div class="line">| 0  | 0  | 1  | 1  |   | 1  |  0  | 1  | 1 |</div>
-<div class="line">| 0  | 0  | 2  | 2  |   | 1  |  0  | 2  | 2 |</div>
-<div class="line">| 0  | 1  | 0  | 1  |   | 1  |  1  | 0  | 1 |</div>
-<div class="line">| 0  | 1  | 1  | 1  |   | 1  |  1  | 1  | 1 |</div>
-<div class="line">| 0  | 1  | 2  | 2  |   | 1  |  1  | 2  | 2 |</div>
-<div class="line">+----+----+----+----+---+----+-----+----+---+</div>
-</div><!-- fragment --><div class="fragment"><div class="line"><span class="comment">// Truth vector:</span></div>
-<div class="line">[0 1 2 1 1 2 1 1 2 1 1 2]</div>
-</div><!-- fragment --><div class="fragment"><div class="line"><span class="comment">// Teddy code:</span></div>
-<div class="line"><a class="code hl_struct" href="structteddy_1_1ifmdd__manager.html">teddy::ifmdd_manager&lt;3&gt;</a> manager(3, 100, {2, 2, 3});</div>
-<div class="line">std::vector&lt;unsigned int&gt; vec {0, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 2};</div>
-<div class="line"><a class="code hl_typedef" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> f = manager.from_vector(vec);</div>
-<div class="ttc" id="aclassteddy_1_1diagram__manager_html_afd258af2e42689cd3887b7c7acd7c64a"><div class="ttname"><a href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">teddy::diagram_manager::diagram_t</a></div><div class="ttdeci">diagram&lt; Data, Degree &gt; diagram_t</div><div class="ttdoc">Alias for the diagram type used in the functions of this manager.</div><div class="ttdef"><b>Definition:</b> diagram_manager.hpp:50</div></div>
-<div class="ttc" id="astructteddy_1_1ifmdd__manager_html"><div class="ttname"><a href="structteddy_1_1ifmdd__manager.html">teddy::ifmdd_manager</a></div><div class="ttdoc">Diagram manager for creation and manipulation of (integer) Multi-valued Decision Diagrams (iMDDs).</div><div class="ttdef"><b>Definition:</b> teddy.hpp:101</div></div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">first</td><td>iterator to the first element of the truth vector. </td></tr>
-    <tr><td class="paramname">last</td><td>sentinel for <code>first</code> . (end iterator) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Diagram representing function given by the truth vector. </dd></dl>
-
-</div>
-</div>
-<a id="a9669d1358d90dc81f5b7205589fd89bd" name="a9669d1358d90dc81f5b7205589fd89bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9669d1358d90dc81f5b7205589fd89bd">&#9670;&nbsp;</a></span>from_vector() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;std::ranges::input_range R&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::from_vector </td>
-          <td>(</td>
-          <td class="paramtype">R &amp;&amp;&#160;</td>
-          <td class="paramname"><em>vector</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates diagram from a truth vector of a function. </p>
-<p >See the other overload for details.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">R</td><td>Type of the range that contains the truth vector. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vector</td><td>Range representing the truth vector. Elements of the range must be convertible to unsigned int. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Diagram representing function given by the truth vector. </dd></dl>
-
-</div>
-</div>
-<a id="a7cf99b292c8f0e9a77e3c9559aac81e1" name="a7cf99b292c8f0e9a77e3c9559aac81e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cf99b292c8f0e9a77e3c9559aac81e1">&#9670;&nbsp;</a></span>gc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::gc</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Runs garbage collection. </p>
-<p >Forces the garbage collection to run which removes nodes that are not referenced from the unique tables. These nodes, however, are not deallocated. See implementation details on github for details. GC is run automatically so you probably won't need to run this function yourself. </p>
-
-</div>
-</div>
-<a id="a046100716dc71e5d9f2fb08b66c6101b" name="a046100716dc71e5d9f2fb08b66c6101b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a046100716dc71e5d9f2fb08b66c6101b">&#9670;&nbsp;</a></span>get_domains()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::get_domains</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return domains of variables. </p>
-<p >In case of <code><a class="el" href="structteddy_1_1bdd__manager.html" title="Diagram manager for creation and manipulation of Binary Decision Diagrams.">bdd_manager</a></code> and <code><a class="el" href="structteddy_1_1mdd__manager.html" title="Diagram manager for creation and manipulation of Multi-valued Decision Diagrams.">mdd_manager</a></code> domains of each variable is the same i.e. 2 or P. In case of <code><a class="el" href="structteddy_1_1imdd__manager.html" title="Diagram manager for creation and manipulation of (integer) Multi-valued Decision Diagrams (iMDDs).">imdd_manager</a></code> and <code><a class="el" href="structteddy_1_1ifmdd__manager.html" title="Diagram manager for creation and manipulation of (integer) Multi-valued Decision Diagrams (iMDDs).">ifmdd_manager</a></code> the domains are the same as set in the constructor.</p>
-<dl class="section return"><dt>Returns</dt><dd>Vector of domains. </dd></dl>
-
-</div>
-</div>
-<a id="a961fea54d7c7ccefb2dee2bb6e0d155f" name="a961fea54d7c7ccefb2dee2bb6e0d155f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a961fea54d7c7ccefb2dee2bb6e0d155f">&#9670;&nbsp;</a></span>get_order()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::get_order</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns current order of variables. </p>
-<p >If no sifting was performed in between call to the constructor and call to this function then the order is the same as specified in the constructor.</p>
-<dl class="section return"><dt>Returns</dt><dd>Vector of indices. Index at l-th position is the index of variable at l-th level of the diagram. </dd></dl>
-
-</div>
-</div>
-<a id="a384f1b204158d92c60fc90cc91bc3084" name="a384f1b204158d92c60fc90cc91bc3084"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a384f1b204158d92c60fc90cc91bc3084">&#9670;&nbsp;</a></span>get_var_count()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::get_var_count</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns number of variables for this manager set in the constructor. </p>
-<dl class="section return"><dt>Returns</dt><dd>Number of variables. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram representing merger of all diagrams from the range. </dd></dl>
 
 </div>
 </div>
 <a id="a9954a79a74936ba6494ec15c1cc517e3" name="a9954a79a74936ba6494ec15c1cc517e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9954a79a74936ba6494ec15c1cc517e3">&#9670;&nbsp;</a></span>left_fold() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9954a79a74936ba6494ec15c1cc517e3">&#9670;&nbsp;</a></span>left_fold() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -811,20 +1067,20 @@ template&lt;bin_op Op, std::input_iterator I, std::sentinel_for&lt; I &gt; S&gt;
 
 </div>
 </div>
-<a id="a97fe617cf5cc1872e36fd0dca87a7e85" name="a97fe617cf5cc1872e36fd0dca87a7e85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97fe617cf5cc1872e36fd0dca87a7e85">&#9670;&nbsp;</a></span>left_fold() <span class="overload">[2/2]</span></h2>
+<a id="a366cfc607825c26e5bacc8eba2a3eebe" name="a366cfc607825c26e5bacc8eba2a3eebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a366cfc607825c26e5bacc8eba2a3eebe">&#9670;&nbsp;</a></span>tree_fold() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Data , degree Degree, domain Domain&gt; </div>
 <div class="memtemplate">
-template&lt;bin_op Op, std::ranges::input_range R&gt; </div>
+template&lt;bin_op Op, std::ranges::random_access_range R&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::left_fold </td>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::tree_fold </td>
           <td>(</td>
-          <td class="paramtype">R const &amp;&#160;</td>
+          <td class="paramtype">R &amp;&#160;</td>
           <td class="paramname"><em>range</em></td><td>)</td>
           <td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
         </tr>
@@ -832,10 +1088,10 @@ template&lt;bin_op Op, std::ranges::input_range R&gt; </div>
 </div><div class="memdoc">
 
 <p>Merges diagams in a range using the <code>apply</code> function and binary operation. </p>
-<p >Uses left fold order of evaluation (sequentially from the left).</p>
+<p >Uses tree fold order of evaluation ((d1 op d2) op (d3 op d4) ...) . Tree fold uses the input range <code>range</code> to store some intermediate results. <code>range</code> is left in valid but unspecified state.</p>
 <div class="fragment"><div class="line"><span class="comment">// Example:</span></div>
 <div class="line">std::vector&lt;diagram_t&gt; vs = manager.variables({0, 1, 2});</div>
-<div class="line"><a class="code hl_typedef" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> product = manager.left_fold&lt;teddy::ops&gt;(vs);</div>
+<div class="line"><a class="code hl_typedef" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> product = manager.tree_fold&lt;teddy::ops&gt;(vs);</div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Op</td><td>Binary operation. </td></tr>
@@ -845,7 +1101,7 @@ template&lt;bin_op Op, std::ranges::input_range R&gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">range</td><td>Input range of diagrams to be merged. </td></tr>
+    <tr><td class="paramname">range</td><td>Random access range of diagrams to be merged. (e.g. std::vector) </td></tr>
   </table>
   </dd>
 </dl>
@@ -853,111 +1109,188 @@ template&lt;bin_op Op, std::ranges::input_range R&gt; </div>
 
 </div>
 </div>
-<a id="a0df9c68f93bd16f27f48503a8c2f2652" name="a0df9c68f93bd16f27f48503a8c2f2652"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0df9c68f93bd16f27f48503a8c2f2652">&#9670;&nbsp;</a></span>node_count() <span class="overload">[1/2]</span></h2>
+<a id="af84d0aa56905007fa98c48cd2b9f9ae0" name="af84d0aa56905007fa98c48cd2b9f9ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af84d0aa56905007fa98c48cd2b9f9ae0">&#9670;&nbsp;</a></span>tree_fold() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Data , degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;bin_op Op, std::random_access_iterator I, std::sentinel_for&lt; I &gt; S&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::node_count</td>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::tree_fold </td>
+          <td>(</td>
+          <td class="paramtype">I&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">S&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns number of nodes that are currently used by the manager. </p>
-<p >This function returns number of nodes that are currently stored in the unique tables. Total number of allocated nodes might and probably will be higher. See implementation details on github for details.</p>
-<dl class="section return"><dt>Returns</dt><dd>Number of nodes. </dd></dl>
+<p>Merges diagams in a range using the <code>apply</code> function and binary operation. </p>
+<p >Uses tree fold order of evaluation ((d1 op d2) op (d3 op d4) ...) . Tree fold uses the input range <code>range</code> to store some intermediate results. <code>range</code> is left in valid but unspecified state.</p>
+<div class="fragment"><div class="line"><span class="comment">// Example:</span></div>
+<div class="line">std::vector&lt;diagram_t&gt; vs = manager.variables({0, 1, 2});</div>
+<div class="line"><a class="code hl_typedef" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> product = manager.tree_fold&lt;teddy::ops&gt;(</div>
+<div class="line">    vs.begin(), vs.end());</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Op</td><td>Binary operation. </td></tr>
+    <tr><td class="paramname">I</td><td>Range iterator type. </td></tr>
+    <tr><td class="paramname">S</td><td>Sentinel type for <code>I</code> (end iterator). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>Random access iterator to the first diagram. </td></tr>
+    <tr><td class="paramname">last</td><td>Sentinel for <code>first</code> (end iterator). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram representing merger of all diagrams from the range. </dd></dl>
 
 </div>
 </div>
-<a id="a0860d5b2f122192aa2fd9df902eef0a8" name="a0860d5b2f122192aa2fd9df902eef0a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0860d5b2f122192aa2fd9df902eef0a8">&#9670;&nbsp;</a></span>node_count() <span class="overload">[2/2]</span></h2>
+<a id="a4bfe9fc16e8da13779b5485e2b682c96" name="a4bfe9fc16e8da13779b5485e2b682c96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bfe9fc16e8da13779b5485e2b682c96">&#9670;&nbsp;</a></span>evaluate()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Data , degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;in_var_values Vars&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::node_count </td>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::evaluate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;&#160;</td>
-          <td class="paramname"><em>d</em></td><td>)</td>
-          <td> const -&gt; std::size_t</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vars const &amp;&#160;</td>
+          <td class="paramname"><em>vs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const -&gt; uint_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns number of nodes in the diagram including terminal nodes. </p>
+<p>Evaluates value of the function represented by the diagram. </p>
+<p >Complexity is <code>O(n)</code> where <code>n</code> is the number of variables.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Vars</td><td>Container type that defines operator[] and returns value convertible to unsigned int. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">d</td><td>Diagram. </td></tr>
+    <tr><td class="paramname">vs</td><td>Container holding values of variables. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Number of node. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Value of the function represented by <code>d</code> for variable values given in <code>vs</code> . </dd></dl>
 
 </div>
 </div>
-<a id="accd754f605dfcab429b6f1d857076219" name="accd754f605dfcab429b6f1d857076219"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accd754f605dfcab429b6f1d857076219">&#9670;&nbsp;</a></span>operator()()</h2>
+<a id="a3666b0ee69571cb6e25f1600ba157824" name="a3666b0ee69571cb6e25f1600ba157824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3666b0ee69571cb6e25f1600ba157824">&#9670;&nbsp;</a></span>satisfy_count() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::operator() </td>
-          <td>(</td>
-          <td class="paramtype">index_t&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates diagram representing function of single variable. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">i</td><td>Index of the variable. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Diagram of a function of single variable. </dd></dl>
-
-</div>
-</div>
-<a id="aa8212efb76cbca99945984f7ee4b9f6c" name="aa8212efb76cbca99945984f7ee4b9f6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8212efb76cbca99945984f7ee4b9f6c">&#9670;&nbsp;</a></span>reduce()</h2>
-
-<div class="memitem">
-<div class="memproto">
+template&lt;class Data , degree Degree, domain Domain&gt; <br />
+requires (is_bdd&lt;Degree&gt;)</div>
 <div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; </div>
+template&lt;class Foo &gt; <br />
+requires (is_bdd&lt;Degree&gt;)</div>
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::reduce </td>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::satisfy_count </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> &amp;&#160;</td>
           <td class="paramname"><em>d</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
+          <td> -&gt; second_t&lt;Foo, std::size_t&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Reduces diagrams to its canonical form. </p>
-<p >You probably won't need to call this.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">d</td><td>Diagram. </td></tr>
+<p>Calculates number of variable assignments for which the functions evaluates to 1. </p>
+<p >Complexity is <code>O</code>(|d|) where <code>|d|</code> is the number of nodes.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Foo</td><td>Dummy parameter to enable SFINE. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Diagram in a reduced canonical form. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Diagram representing the function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of different variable assignments for which the the function represented by <code>d</code> evaluates to 1. </dd></dl>
+
+</div>
+</div>
+<a id="a6aa0e1f258555c41e9de4462b55f20be" name="a6aa0e1f258555c41e9de4462b55f20be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aa0e1f258555c41e9de4462b55f20be">&#9670;&nbsp;</a></span>satisfy_count() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::satisfy_count </td>
+          <td>(</td>
+          <td class="paramtype">uint_t&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; std::size_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates number of variable assignments for which the functions evaluates to certain value. </p>
+<p >Complexity is <code>O</code>(|d|) where <code>|d|</code> is the number of nodes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>Value of the function. </td></tr>
+    <tr><td class="paramname">d</td><td>Diagram representing the function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of different variable assignments for which the the function represented by <code>d</code> evaluates to <code>val</code> . </dd></dl>
 
 </div>
 </div>
@@ -1110,48 +1443,8 @@ template&lt;out_var_values Vars, std::output_iterator&lt; Vars &gt; O&gt; </div>
 
 </div>
 </div>
-<a id="a3666b0ee69571cb6e25f1600ba157824" name="a3666b0ee69571cb6e25f1600ba157824"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3666b0ee69571cb6e25f1600ba157824">&#9670;&nbsp;</a></span>satisfy_count() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; <br />
-requires (is_bdd&lt;Degree&gt;)</div>
-<div class="memtemplate">
-template&lt;class Foo &gt; <br />
-requires (is_bdd&lt;Degree&gt;)</div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::satisfy_count </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>d</em></td><td>)</td>
-          <td> -&gt; second_t&lt;Foo, std::size_t&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calculates number of variable assignments for which the functions evaluates to 1. </p>
-<p >Complexity is <code>O</code>(|d|) where <code>|d|</code> is the number of nodes.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Foo</td><td>Dummy parameter to enable SFINE. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">d</td><td>Diagram representing the function. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Number of different variable assignments for which the the function represented by <code>d</code> evaluates to 1. </dd></dl>
-
-</div>
-</div>
-<a id="a6aa0e1f258555c41e9de4462b55f20be" name="a6aa0e1f258555c41e9de4462b55f20be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6aa0e1f258555c41e9de4462b55f20be">&#9670;&nbsp;</a></span>satisfy_count() <span class="overload">[2/2]</span></h2>
+<a id="ad4fc29c3a924316ea2f6c15b33425be3" name="ad4fc29c3a924316ea2f6c15b33425be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4fc29c3a924316ea2f6c15b33425be3">&#9670;&nbsp;</a></span>cofactor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1159,35 +1452,251 @@ requires (is_bdd&lt;Degree&gt;)</div>
 template&lt;class Data , degree Degree, domain Domain&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::satisfy_count </td>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::cofactor </td>
           <td>(</td>
-          <td class="paramtype">uint_t&#160;</td>
-          <td class="paramname"><em>val</em>, </td>
+          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>d</em>&#160;</td>
+          <td class="paramtype">index_t&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint_t&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> -&gt; std::size_t</td>
+          <td></td><td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calculates number of variable assignments for which the functions evaluates to certain value. </p>
-<p >Complexity is <code>O</code>(|d|) where <code>|d|</code> is the number of nodes.</p>
+<p>Calculates cofactor of the functions. </p>
+<p >Calculates cofactor of the function i.e. fixes value of the <code>i</code> th variable to the value <code>val</code> .</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">val</td><td>Value of the function. </td></tr>
+    <tr><td class="paramname">d</td><td>Diagram representing the function. </td></tr>
+    <tr><td class="paramname">i</td><td>Index of the variable to be fixed. </td></tr>
+    <tr><td class="paramname">val</td><td>Value to which the <code>i</code> th varibale should be fixed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram representing cofactor of the function. </dd></dl>
+
+</div>
+</div>
+<a id="a23f96df9de5b148a0dc0fb97cdf996e3" name="a23f96df9de5b148a0dc0fb97cdf996e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23f96df9de5b148a0dc0fb97cdf996e3">&#9670;&nbsp;</a></span>transform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;uint_to_bool F&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::transform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>f</em> = <code>utils::not_zero</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transforms values of the function. </p>
+<div class="fragment"><div class="line"><span class="comment">// Example of the call with 4-valued MDD.</span></div>
+<div class="line">manager.transform(diagram, [](<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> v)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> 3 - v;</div>
+<div class="line">});</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">F</td><td>Type of the transformation function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Diagram representing the function. </td></tr>
+    <tr><td class="paramname">f</td><td>Transformation function that is applied to values of the function. Default value keeps 0 and transform everything else to 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram representing transformed function. </dd></dl>
+
+</div>
+</div>
+<a id="a16f8c50b47d09e4bf1f0aa6ca40f9161" name="a16f8c50b47d09e4bf1f0aa6ca40f9161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16f8c50b47d09e4bf1f0aa6ca40f9161">&#9670;&nbsp;</a></span>dependency_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::dependency_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td> const -&gt; std::vector&lt;index_t&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerates indices of variables that the function depends on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
     <tr><td class="paramname">d</td><td>Diagram representing the function. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Number of different variable assignments for which the the function represented by <code>d</code> evaluates to <code>val</code> . </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of indices. </dd></dl>
+
+</div>
+</div>
+<a id="ad82787c7afc4231a5b384a0561ce3f35" name="ad82787c7afc4231a5b384a0561ce3f35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad82787c7afc4231a5b384a0561ce3f35">&#9670;&nbsp;</a></span>dependency_set_g()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;std::output_iterator&lt; index_t &gt; O&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::dependency_set_g </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">O&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const -&gt; void</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerates indices of variables that the function depends on. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">O</td><td>Output iterator type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Diagram representing the function. </td></tr>
+    <tr><td class="paramname">out</td><td>Output iterator that is used to output indices. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of indices. </dd></dl>
+
+</div>
+</div>
+<a id="aa8212efb76cbca99945984f7ee4b9f6c" name="aa8212efb76cbca99945984f7ee4b9f6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8212efb76cbca99945984f7ee4b9f6c">&#9670;&nbsp;</a></span>reduce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::reduce </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reduces diagrams to its canonical form. </p>
+<p >You probably won't need to call this.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Diagram. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram in a reduced canonical form. </dd></dl>
+
+</div>
+</div>
+<a id="a0df9c68f93bd16f27f48503a8c2f2652" name="a0df9c68f93bd16f27f48503a8c2f2652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0df9c68f93bd16f27f48503a8c2f2652">&#9670;&nbsp;</a></span>node_count() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::node_count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns number of nodes that are currently used by the manager. </p>
+<p >This function returns number of nodes that are currently stored in the unique tables. Total number of allocated nodes might and probably will be higher. See implementation details on github for details.</p>
+<dl class="section return"><dt>Returns</dt><dd>Number of nodes. </dd></dl>
+
+</div>
+</div>
+<a id="a0860d5b2f122192aa2fd9df902eef0a8" name="a0860d5b2f122192aa2fd9df902eef0a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0860d5b2f122192aa2fd9df902eef0a8">&#9670;&nbsp;</a></span>node_count() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::node_count </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td> const -&gt; std::size_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns number of nodes in the diagram including terminal nodes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Diagram. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of node. </dd></dl>
 
 </div>
 </div>
@@ -1260,158 +1769,8 @@ template&lt;class Data , degree Degree, domain Domain&gt; </div>
 
 </div>
 </div>
-<a id="a23f96df9de5b148a0dc0fb97cdf996e3" name="a23f96df9de5b148a0dc0fb97cdf996e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23f96df9de5b148a0dc0fb97cdf996e3">&#9670;&nbsp;</a></span>transform()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;uint_to_bool F&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::transform </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;&#160;</td>
-          <td class="paramname"><em>d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">F&#160;</td>
-          <td class="paramname"><em>f</em> = <code>utils::not_zero</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Transforms values of the function. </p>
-<div class="fragment"><div class="line"><span class="comment">// Example of the call with 4-valued MDD.</span></div>
-<div class="line">manager.transform(diagram, [](<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> v)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> 3 - v;</div>
-<div class="line">});</div>
-</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">F</td><td>Type of the transformation function. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">d</td><td>Diagram representing the function. </td></tr>
-    <tr><td class="paramname">f</td><td>Transformation function that is applied to values of the function. Default value keeps 0 and transform everything else to 1. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Diagram representing transformed function. </dd></dl>
-
-</div>
-</div>
-<a id="af84d0aa56905007fa98c48cd2b9f9ae0" name="af84d0aa56905007fa98c48cd2b9f9ae0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af84d0aa56905007fa98c48cd2b9f9ae0">&#9670;&nbsp;</a></span>tree_fold() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;bin_op Op, std::random_access_iterator I, std::sentinel_for&lt; I &gt; S&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::tree_fold </td>
-          <td>(</td>
-          <td class="paramtype">I&#160;</td>
-          <td class="paramname"><em>first</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">S&#160;</td>
-          <td class="paramname"><em>last</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Merges diagams in a range using the <code>apply</code> function and binary operation. </p>
-<p >Uses tree fold order of evaluation ((d1 op d2) op (d3 op d4) ...) . Tree fold uses the input range <code>range</code> to store some intermediate results. <code>range</code> is left in valid but unspecified state.</p>
-<div class="fragment"><div class="line"><span class="comment">// Example:</span></div>
-<div class="line">std::vector&lt;diagram_t&gt; vs = manager.variables({0, 1, 2});</div>
-<div class="line"><a class="code hl_typedef" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> product = manager.tree_fold&lt;teddy::ops&gt;(</div>
-<div class="line">    vs.begin(), vs.end());</div>
-</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Op</td><td>Binary operation. </td></tr>
-    <tr><td class="paramname">I</td><td>Range iterator type. </td></tr>
-    <tr><td class="paramname">S</td><td>Sentinel type for <code>I</code> (end iterator). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">first</td><td>Random access iterator to the first diagram. </td></tr>
-    <tr><td class="paramname">last</td><td>Sentinel for <code>first</code> (end iterator). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Diagram representing merger of all diagrams from the range. </dd></dl>
-
-</div>
-</div>
-<a id="a366cfc607825c26e5bacc8eba2a3eebe" name="a366cfc607825c26e5bacc8eba2a3eebe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a366cfc607825c26e5bacc8eba2a3eebe">&#9670;&nbsp;</a></span>tree_fold() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;bin_op Op, std::ranges::random_access_range R&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::tree_fold </td>
-          <td>(</td>
-          <td class="paramtype">R &amp;&#160;</td>
-          <td class="paramname"><em>range</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Merges diagams in a range using the <code>apply</code> function and binary operation. </p>
-<p >Uses tree fold order of evaluation ((d1 op d2) op (d3 op d4) ...) . Tree fold uses the input range <code>range</code> to store some intermediate results. <code>range</code> is left in valid but unspecified state.</p>
-<div class="fragment"><div class="line"><span class="comment">// Example:</span></div>
-<div class="line">std::vector&lt;diagram_t&gt; vs = manager.variables({0, 1, 2});</div>
-<div class="line"><a class="code hl_typedef" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> product = manager.tree_fold&lt;teddy::ops&gt;(vs);</div>
-</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Op</td><td>Binary operation. </td></tr>
-    <tr><td class="paramname">R</td><td>Range containing diagrams (e.g. std::vector&lt;diagram_t&gt;). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">range</td><td>Random access range of diagrams to be merged. (e.g. std::vector) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Diagram representing merger of all diagrams from the range. </dd></dl>
-
-</div>
-</div>
-<a id="a53b279ab997be99c116f6a38d20200e9" name="a53b279ab997be99c116f6a38d20200e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53b279ab997be99c116f6a38d20200e9">&#9670;&nbsp;</a></span>variable()</h2>
+<a id="a7cf99b292c8f0e9a77e3c9559aac81e1" name="a7cf99b292c8f0e9a77e3c9559aac81e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cf99b292c8f0e9a77e3c9559aac81e1">&#9670;&nbsp;</a></span>gc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1419,190 +1778,170 @@ template&lt;bin_op Op, std::ranges::random_access_range R&gt; </div>
 template&lt;class Data , degree Degree, domain Domain&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::variable </td>
-          <td>(</td>
-          <td class="paramtype">index_t&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::gc</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates diagram representing function of single variable. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">i</td><td>Index of the variable. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Diagram of a function of single variable. </dd></dl>
+<p>Runs garbage collection. </p>
+<p >Forces the garbage collection to run which removes nodes that are not referenced from the unique tables. These nodes, however, are not deallocated. See implementation details on github for details. GC is run automatically so you probably won't need to run this function yourself. </p>
 
 </div>
 </div>
-<a id="a4505f796689fd32385ddae310e8d9843" name="a4505f796689fd32385ddae310e8d9843"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4505f796689fd32385ddae310e8d9843">&#9670;&nbsp;</a></span>variable_not()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Data , degree Degree, domain Domain&gt; <br />
-requires (is_bdd&lt;Degree&gt;)</div>
-<div class="memtemplate">
-template&lt;class Foo &gt; <br />
-requires (is_bdd&lt;Degree&gt;)</div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::variable_not </td>
-          <td>(</td>
-          <td class="paramtype">index_t&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
-          <td> -&gt; second_t&lt;Foo, <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates BDD representing function of complemented variable. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">i</td><td>Index of the variable. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Diagram of a function of single variable. </dd></dl>
-
-</div>
-</div>
-<a id="a80f56f39c209510b6602ab6863e30899" name="a80f56f39c209510b6602ab6863e30899"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80f56f39c209510b6602ab6863e30899">&#9670;&nbsp;</a></span>variables() <span class="overload">[1/3]</span></h2>
+<a id="a384f1b204158d92c60fc90cc91bc3084" name="a384f1b204158d92c60fc90cc91bc3084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a384f1b204158d92c60fc90cc91bc3084">&#9670;&nbsp;</a></span>get_var_count()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Data , degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;std::input_iterator I, std::sentinel_for&lt; I &gt; S&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::variables </td>
-          <td>(</td>
-          <td class="paramtype">I&#160;</td>
-          <td class="paramname"><em>first</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">S&#160;</td>
-          <td class="paramname"><em>last</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; std::vector&lt;<a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a>&gt;</td>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::get_var_count</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates vector of diagrams representing functions of single variables. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">I</td><td>iterator type for the input range. </td></tr>
-    <tr><td class="paramname">S</td><td>sentinel type for <code>I</code> . (end iterator) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">first</td><td>iterator to the first element of range of indices represented by integral type convertible to unsgined int. </td></tr>
-    <tr><td class="paramname">last</td><td>sentinel for <code>first</code> (end iterator). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Vector of diagrams. </dd></dl>
+<p>Returns number of variables for this manager set in the constructor. </p>
+<dl class="section return"><dt>Returns</dt><dd>Number of variables. </dd></dl>
 
 </div>
 </div>
-<a id="ae647e6868fb5c739e5646635d5523562" name="ae647e6868fb5c739e5646635d5523562"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae647e6868fb5c739e5646635d5523562">&#9670;&nbsp;</a></span>variables() <span class="overload">[2/3]</span></h2>
+<a id="a961fea54d7c7ccefb2dee2bb6e0d155f" name="a961fea54d7c7ccefb2dee2bb6e0d155f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a961fea54d7c7ccefb2dee2bb6e0d155f">&#9670;&nbsp;</a></span>get_order()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Data , degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;std::ranges::input_range Is&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::variables </td>
-          <td>(</td>
-          <td class="paramtype">Is const &amp;&#160;</td>
-          <td class="paramname"><em>is</em></td><td>)</td>
-          <td> -&gt; std::vector&lt;<a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a>&gt;</td>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::get_order</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates vector of diagrams representing functions of single variables. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Is</td><td>range of indices represented by integral type convertible to unsigned int. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">is</td><td>range of Ts (e.g. std::vector&lt;unsigned int&gt;). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Vector of diagrams. </dd></dl>
+<p>Returns current order of variables. </p>
+<p >If no sifting was performed in between call to the constructor and call to this function then the order is the same as specified in the constructor.</p>
+<dl class="section return"><dt>Returns</dt><dd>Vector of indices. Index at l-th position is the index of variable at l-th level of the diagram. </dd></dl>
 
 </div>
 </div>
-<a id="a1f9f8421cd7f33c11f6487e81683c7a1" name="a1f9f8421cd7f33c11f6487e81683c7a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f9f8421cd7f33c11f6487e81683c7a1">&#9670;&nbsp;</a></span>variables() <span class="overload">[3/3]</span></h2>
+<a id="a046100716dc71e5d9f2fb08b66c6101b" name="a046100716dc71e5d9f2fb08b66c6101b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a046100716dc71e5d9f2fb08b66c6101b">&#9670;&nbsp;</a></span>get_domains()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Data , degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;std::convertible_to&lt; index_t &gt; T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::variables </td>
-          <td>(</td>
-          <td class="paramtype">std::initializer_list&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>is</em></td><td>)</td>
-          <td> -&gt; std::vector&lt;<a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a>&gt;</td>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::get_domains</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates vector of diagrams representing functions of single variables. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>integral type convertible to unsgined int. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Return domains of variables. </p>
+<p >In case of <code><a class="el" href="structteddy_1_1bdd__manager.html" title="Diagram manager for creation and manipulation of Binary Decision Diagrams.">bdd_manager</a></code> and <code><a class="el" href="structteddy_1_1mdd__manager.html" title="Diagram manager for creation and manipulation of Multi-valued Decision Diagrams.">mdd_manager</a></code> domains of each variable is the same i.e. 2 or P. In case of <code><a class="el" href="structteddy_1_1imdd__manager.html" title="Diagram manager for creation and manipulation of (integer) Multi-valued Decision Diagrams (iMDDs).">imdd_manager</a></code> and <code><a class="el" href="structteddy_1_1ifmdd__manager.html" title="Diagram manager for creation and manipulation of (integer) Multi-valued Decision Diagrams (iMDDs).">ifmdd_manager</a></code> the domains are the same as set in the constructor.</p>
+<dl class="section return"><dt>Returns</dt><dd>Vector of domains. </dd></dl>
+
+</div>
+</div>
+<a id="a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0" name="a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0">&#9670;&nbsp;</a></span>set_cache_ratio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::set_cache_ratio </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ratio</em></td><td>)</td>
+          <td> -&gt; void</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the relative cache size w.r.t the number of nodes. </p>
+<p >Size of the cache is calculated as: </p><div class="fragment"><div class="line">ratio * uniqueNodeCount</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">is</td><td>initializer list of indices. </td></tr>
+    <tr><td class="paramname">ratio</td><td>Number from the interval (0,oo). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Vector of diagrams. </dd></dl>
+
+</div>
+</div>
+<a id="a00111b3f863d6ccf6503b15e372acbb1" name="a00111b3f863d6ccf6503b15e372acbb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00111b3f863d6ccf6503b15e372acbb1">&#9670;&nbsp;</a></span>set_pool_ratio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::set_pool_ratio </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ratio</em></td><td>)</td>
+          <td> -&gt; void</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets ratio used in calculation of size of the new node pool. </p>
+<p >Size of the new additional pool as calculated as: </p><div class="fragment"><div class="line">ratio * initNodeCount.</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ratio</td><td>Number from the interval (0,1]. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a110856ce25c5aa8af6c36ffc3c753c97" name="a110856ce25c5aa8af6c36ffc3c753c97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a110856ce25c5aa8af6c36ffc3c753c97">&#9670;&nbsp;</a></span>set_gc_ratio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Data , degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager</a>&lt; Data, Degree, Domain &gt;::set_gc_ratio </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ratio</em></td><td>)</td>
+          <td> -&gt; void</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets ratio used to determine new node pool allocation. </p>
+<p >New pool is allocated if: </p><div class="fragment"><div class="line">garbageCollectedNodes &lt; ratio * initNodeCount</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ratio</td><td>Number from the interval [0,1]. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/mrena/Projects/DecisionDiagrams/include/teddy/impl/<a class="el" href="diagram_8hpp_source.html">diagram.hpp</a></li>
-<li>/home/mrena/Projects/DecisionDiagrams/include/teddy/impl/<a class="el" href="diagram__manager_8hpp_source.html">diagram_manager.hpp</a></li>
+<li><a class="el" href="diagram_8hpp_source.html">diagram.hpp</a></li>
+<li><a class="el" href="diagram__manager_8hpp_source.html">diagram_manager.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Tue Apr 12 2022 19:32:04 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

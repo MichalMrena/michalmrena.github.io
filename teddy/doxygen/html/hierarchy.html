@@ -12,6 +12,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -36,17 +41,37 @@
 var searchBox = new SearchBox("searchBox", "search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li class="current"><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+    </ul>
+  </div>
 </div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -105,7 +130,7 @@ $(function() {
 <tr id="row_19_0_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1ops_1_1PI__CONJ.html" target="_self">teddy::ops::PI_CONJ</a></td><td class="desc"></td></tr>
 <tr id="row_20_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_20_" class="arrow" onclick="toggleFolder('20_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1bin__op__base.html" target="_self">teddy::bin_op_base&lt; plus_mod_t&lt; P &gt; &gt;</a></td><td class="desc"></td></tr>
 <tr id="row_20_0_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1ops_1_1PLUS.html" target="_self">teddy::ops::PLUS&lt; P &gt;</a></td><td class="desc"></td></tr>
-<tr id="row_21_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1node__manager_1_1common__init.html" target="_self">teddy::node_manager&lt; Data, Degree, Domain &gt;::common_init</a></td><td class="desc"></td></tr>
+<tr id="row_21_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1node__manager.html#structteddy_1_1node__manager_1_1common__init" target="_self">teddy::node_manager&lt; Data, Degree, Domain &gt;::common_init</a></td><td class="desc"></td></tr>
 <tr id="row_22_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1cube__t.html" target="_self">teddy::cube_t</a></td><td class="desc">Bool cube </td></tr>
 <tr id="row_23_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1diagram.html" target="_self">teddy::diagram&lt; Data, D &gt;</a></td><td class="desc">Cheap wrapper for the internal diagram node type </td></tr>
 <tr id="row_24_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1diagram__manager.html" target="_self">teddy::diagram_manager&lt; Data, Degree, Domain &gt;</a></td><td class="desc">Base class for all diagram managers that generically implements all of the algorithms </td></tr>
@@ -118,7 +143,7 @@ $(function() {
 <tr id="row_25_2_0_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1imss__manager.html" target="_self">teddy::imss_manager</a></td><td class="desc">Manager for creation of (integer) Muti-valued Decision diagrams and analysis of non-homogenous Multi-state Systems </td></tr>
 <tr id="row_25_3_" class="even" style="display:none;"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_25_3_" class="arrow" onclick="toggleFolder('25_3_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1reliability__manager.html" target="_self">teddy::reliability_manager&lt; degrees::fixed&lt; P &gt;, domains::fixed&lt; P &gt; &gt;</a></td><td class="desc"></td></tr>
 <tr id="row_25_3_0_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1mss__manager.html" target="_self">teddy::mss_manager&lt; P &gt;</a></td><td class="desc">Manager for creation of Multi-valued Decision diagrams and analysis of homogenous Multi-state Systems </td></tr>
-<tr id="row_25_4_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1reliability__manager.html" target="_self">teddy::reliability_manager&lt; Degree, Domain &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_25_4_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1reliability__manager.html" target="_self">teddy::reliability_manager&lt; Degree, Domain &gt;</a></td><td class="desc">Base class for reliability managers </td></tr>
 <tr id="row_26_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_26_" class="arrow" onclick="toggleFolder('26_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1diagram__manager.html" target="_self">teddy::diagram_manager&lt; void, degrees::fixed&lt; 2 &gt;, domains::fixed&lt; 2 &gt; &gt;</a></td><td class="desc"></td></tr>
 <tr id="row_26_0_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1bdd__manager.html" target="_self">teddy::bdd_manager</a></td><td class="desc">Diagram manager for creation and manipulation of Binary Decision Diagrams </td></tr>
 <tr id="row_27_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_27_" class="arrow" onclick="toggleFolder('27_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1diagram__manager.html" target="_self">teddy::diagram_manager&lt; void, degrees::fixed&lt; P &gt;, domains::fixed&lt; P &gt; &gt;</a></td><td class="desc"></td></tr>
@@ -127,7 +152,7 @@ $(function() {
 <tr id="row_28_0_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1ifmdd__manager.html" target="_self">teddy::ifmdd_manager&lt; PMax &gt;</a></td><td class="desc">Diagram manager for creation and manipulation of (integer) Multi-valued Decision Diagrams (iMDDs) </td></tr>
 <tr id="row_29_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_29_" class="arrow" onclick="toggleFolder('29_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1diagram__manager.html" target="_self">teddy::diagram_manager&lt; void, degrees::mixed, domains::mixed &gt;</a></td><td class="desc"></td></tr>
 <tr id="row_29_0_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1imdd__manager.html" target="_self">teddy::imdd_manager</a></td><td class="desc">Diagram manager for creation and manipulation of (integer) Multi-valued Decision Diagrams (iMDDs) </td></tr>
-<tr id="row_30_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1apply__cache_1_1entry__t.html" target="_self">teddy::apply_cache&lt; Data, D &gt;::entry_t</a></td><td class="desc"></td></tr>
+<tr id="row_30_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1apply__cache.html#structteddy_1_1apply__cache_1_1entry__t" target="_self">teddy::apply_cache&lt; Data, D &gt;::entry_t</a></td><td class="desc"></td></tr>
 <tr id="row_31_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1equal__to__t.html" target="_self">teddy::equal_to_t</a></td><td class="desc"></td></tr>
 <tr id="row_32_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_32_" class="arrow" onclick="toggleFolder('32_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><b>std::false_type</b></td><td class="desc"></td></tr>
 <tr id="row_32_0_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1degrees_1_1is__fixed.html" target="_self">teddy::degrees::is_fixed&lt; T &gt;</a></td><td class="desc"></td></tr>
@@ -164,7 +189,7 @@ $(function() {
 <tr id="row_62_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1opt__member_3_01void_01_4.html" target="_self">teddy::opt_member&lt; void &gt;</a></td><td class="desc"></td></tr>
 <tr id="row_63_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1pi__conj__t.html" target="_self">teddy::pi_conj_t</a></td><td class="desc"></td></tr>
 <tr id="row_64_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1pla__file.html" target="_self">teddy::pla_file</a></td><td class="desc">Representation of a PLA file </td></tr>
-<tr id="row_65_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1pla__file_1_1pla__line.html" target="_self">teddy::pla_file::pla_line</a></td><td class="desc">Represents one line of a PLA file </td></tr>
+<tr id="row_65_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1pla__file.html#structteddy_1_1pla__file_1_1pla__line" target="_self">teddy::pla_file::pla_line</a></td><td class="desc">Represents one line of a PLA file </td></tr>
 <tr id="row_66_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1plus__mod__t.html" target="_self">teddy::plus_mod_t&lt; M &gt;</a></td><td class="desc"></td></tr>
 <tr id="row_67_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1second.html" target="_self">teddy::second&lt; class, T &gt;</a></td><td class="desc"></td></tr>
 <tr id="row_68_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1table__base.html" target="_self">teddy::table_base</a></td><td class="desc">Base class for hash tables </td></tr>
@@ -173,13 +198,13 @@ $(function() {
 <tr id="row_69_1_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1domains_1_1is__fixed_3_01fixed_3_01N_01_4_01_4.html" target="_self">teddy::domains::is_fixed&lt; fixed&lt; N &gt; &gt;</a></td><td class="desc"></td></tr>
 <tr id="row_70_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1unique__table.html" target="_self">teddy::unique_table&lt; Data, D &gt;</a></td><td class="desc">Table of unique nodes </td></tr>
 <tr id="row_71_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classteddy_1_1unique__table__it.html" target="_self">teddy::unique_table_it&lt; BucketIt, Data, D &gt;</a></td><td class="desc">Iterator for the unique table </td></tr>
-<tr id="row_72_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1value__change.html" target="_self">teddy::value_change</a></td><td class="desc"></td></tr>
+<tr id="row_72_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structteddy_1_1value__change.html" target="_self">teddy::value_change</a></td><td class="desc">Describes change of a value of a variable or a function </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Tue Apr 12 2022 19:32:04 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

@@ -5,13 +5,18 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TeDDy: /home/mrena/Projects/DecisionDiagrams/include/teddy/impl/hash_tables.hpp Source File</title>
+<title>TeDDy: hash_tables.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -36,17 +41,35 @@
 var searchBox = new SearchBox("searchBox", "search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -186,7 +209,7 @@ $(function() {
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keyword">using</span> <a class="code hl_class" href="classteddy_1_1node.html">node_t</a> = <a class="code hl_class" href="classteddy_1_1node.html">node&lt;Data, D&gt;</a>;</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="structteddy_1_1apply__cache_1_1entry__t.html">  129</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="structteddy_1_1apply__cache_1_1entry__t.html">entry_t</a></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classteddy_1_1apply__cache.html">  129</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="classteddy_1_1apply__cache.html#structteddy_1_1apply__cache_1_1entry__t">entry_t</a></div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        {</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            uint_t  oid    {};</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <a class="code hl_class" href="classteddy_1_1node.html">node_t</a>* lhs    {<span class="keyword">nullptr</span>};</div>
@@ -220,7 +243,7 @@ $(function() {
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        static auto hash (uint_t, <a class="code hl_class" href="classteddy_1_1node.html">node_t</a>*, <a class="code hl_class" href="classteddy_1_1node.html">node_t</a>*) -&gt; std::<span class="keywordtype">size_t</span>;</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    public:</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        std::vector&lt;<a class="code hl_struct" href="structteddy_1_1apply__cache_1_1entry__t.html">entry_t</a>&gt; entries_;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        std::vector&lt;<a class="code hl_struct" href="classteddy_1_1apply__cache.html#structteddy_1_1apply__cache_1_1entry__t">entry_t</a>&gt; entries_;</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        std::<span class="keywordtype">size_t</span>          size_;</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    };</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
@@ -701,15 +724,15 @@ $(function() {
 <div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span> </div>
 <div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassteddy_1_1apply__cache_html"><div class="ttname"><a href="classteddy_1_1apply__cache.html">teddy::apply_cache</a></div><div class="ttdoc">Cache for the apply opertaion.</div><div class="ttdef"><b>Definition:</b> hash_tables.hpp:124</div></div>
+<div class="ttc" id="aclassteddy_1_1apply__cache_html_structteddy_1_1apply__cache_1_1entry__t"><div class="ttname"><a href="classteddy_1_1apply__cache.html#structteddy_1_1apply__cache_1_1entry__t">teddy::apply_cache::entry_t</a></div><div class="ttdef"><b>Definition:</b> hash_tables.hpp:130</div></div>
 <div class="ttc" id="aclassteddy_1_1node_html"><div class="ttname"><a href="classteddy_1_1node.html">teddy::node</a></div><div class="ttdef"><b>Definition:</b> node.hpp:63</div></div>
 <div class="ttc" id="aclassteddy_1_1table__base_html"><div class="ttname"><a href="classteddy_1_1table__base.html">teddy::table_base</a></div><div class="ttdoc">Base class for hash tables.</div><div class="ttdef"><b>Definition:</b> hash_tables.hpp:15</div></div>
 <div class="ttc" id="aclassteddy_1_1unique__table__it_html"><div class="ttname"><a href="classteddy_1_1unique__table__it.html">teddy::unique_table_it</a></div><div class="ttdoc">Iterator for the unique table.</div><div class="ttdef"><b>Definition:</b> hash_tables.hpp:36</div></div>
 <div class="ttc" id="aclassteddy_1_1unique__table_html"><div class="ttname"><a href="classteddy_1_1unique__table.html">teddy::unique_table</a></div><div class="ttdoc">Table of unique nodes.</div><div class="ttdef"><b>Definition:</b> hash_tables.hpp:72</div></div>
-<div class="ttc" id="astructteddy_1_1apply__cache_1_1entry__t_html"><div class="ttname"><a href="structteddy_1_1apply__cache_1_1entry__t.html">teddy::apply_cache::entry_t</a></div><div class="ttdef"><b>Definition:</b> hash_tables.hpp:130</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Tue Apr 12 2022 19:32:04 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

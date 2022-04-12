@@ -12,6 +12,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -36,17 +41,37 @@
 var searchBox = new SearchBox("searchBox", "search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -76,6 +101,11 @@ $(function() {
   <div class="headertitle"><div class="title">teddy::reliability_manager&lt; Degree, Domain &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Base class for reliability managers.  
+ <a href="classteddy_1_1reliability__manager.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="reliability__manager_8hpp_source.html">reliability_manager.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for teddy::reliability_manager&lt; Degree, Domain &gt;:</div>
 <div class="dyncontent">
@@ -111,52 +141,74 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0dd9b4118601870e234be9680bc52e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a994934430505f25a44553657388e6d82"><td class="memTemplParams" colspan="2">template&lt;component_probabilities Ps&gt; </td></tr>
 <tr class="memitem:a994934430505f25a44553657388e6d82"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a994934430505f25a44553657388e6d82">probability</a> (uint_t j, Ps const &amp;ps, diagram_t &amp;sf) -&gt; double</td></tr>
-<tr class="memdesc:a994934430505f25a44553657388e6d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates probability of a system state <code>j</code> .  <a href="classteddy_1_1reliability__manager.html#a994934430505f25a44553657388e6d82">More...</a><br /></td></tr>
+<tr class="memdesc:a994934430505f25a44553657388e6d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates and returns probability of a system state <code>j</code> .  <a href="classteddy_1_1reliability__manager.html#a994934430505f25a44553657388e6d82">More...</a><br /></td></tr>
 <tr class="separator:a994934430505f25a44553657388e6d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac18d1e9ff3ceb9426e51661894993ced"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#ac18d1e9ff3ceb9426e51661894993ced">get_probability</a> (uint_t j) const -&gt; double</td></tr>
 <tr class="memdesc:ac18d1e9ff3ceb9426e51661894993ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns probability of given system state.  <a href="classteddy_1_1reliability__manager.html#ac18d1e9ff3ceb9426e51661894993ced">More...</a><br /></td></tr>
 <tr class="separator:ac18d1e9ff3ceb9426e51661894993ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2df9bef6cb2b085bcf3ff98b0085a04"><td class="memTemplParams" colspan="2">template&lt;component_probabilities Ps, class Foo  = void&gt; <br />
+<tr class="memitem:a292741961f0abe5bead4928ec64d4316"><td class="memTemplParams" colspan="2">template&lt;component_probabilities Ps, class Foo  = void&gt; <br />
 requires (is_bss&lt;Domain&gt;)</td></tr>
-<tr class="memitem:ad2df9bef6cb2b085bcf3ff98b0085a04"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#ad2df9bef6cb2b085bcf3ff98b0085a04">availability</a> (Ps const &amp;ps, diagram_t &amp;f) -&gt; second_t&lt; Foo, double &gt;</td></tr>
-<tr class="separator:ad2df9bef6cb2b085bcf3ff98b0085a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a292741961f0abe5bead4928ec64d4316"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a292741961f0abe5bead4928ec64d4316">availability</a> (Ps const &amp;ps, diagram_t &amp;sf) -&gt; second_t&lt; Foo, double &gt;</td></tr>
+<tr class="memdesc:a292741961f0abe5bead4928ec64d4316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates and returns availability of a BSS.  <a href="classteddy_1_1reliability__manager.html#a292741961f0abe5bead4928ec64d4316">More...</a><br /></td></tr>
+<tr class="separator:a292741961f0abe5bead4928ec64d4316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ea7430c6896a002c1e7636ea49e15e4"><td class="memTemplParams" colspan="2">template&lt;component_probabilities Ps&gt; </td></tr>
 <tr class="memitem:a6ea7430c6896a002c1e7636ea49e15e4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a6ea7430c6896a002c1e7636ea49e15e4">availability</a> (uint_t j, Ps const &amp;ps, diagram_t &amp;f) -&gt; double</td></tr>
+<tr class="memdesc:a6ea7430c6896a002c1e7636ea49e15e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates and returns system availability with respect to the system state <code>j</code> .  <a href="classteddy_1_1reliability__manager.html#a6ea7430c6896a002c1e7636ea49e15e4">More...</a><br /></td></tr>
 <tr class="separator:a6ea7430c6896a002c1e7636ea49e15e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a157bb776b384e6628af550d96d7fdaa1"><td class="memTemplParams" colspan="2">template&lt;class Foo  = void&gt; </td></tr>
 <tr class="memitem:a157bb776b384e6628af550d96d7fdaa1"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a157bb776b384e6628af550d96d7fdaa1">get_availability</a> () const -&gt; second_t&lt; Foo, double &gt;</td></tr>
+<tr class="memdesc:a157bb776b384e6628af550d96d7fdaa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns availability of a BSS.  <a href="classteddy_1_1reliability__manager.html#a157bb776b384e6628af550d96d7fdaa1">More...</a><br /></td></tr>
 <tr class="separator:a157bb776b384e6628af550d96d7fdaa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e6aac3a64d2b77a997d2a1fa44a8f80"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a6e6aac3a64d2b77a997d2a1fa44a8f80">get_availability</a> (uint_t j) const -&gt; double</td></tr>
+<tr class="memdesc:a6e6aac3a64d2b77a997d2a1fa44a8f80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns system availability with respect to the system state <code>j</code> .  <a href="classteddy_1_1reliability__manager.html#a6e6aac3a64d2b77a997d2a1fa44a8f80">More...</a><br /></td></tr>
 <tr class="separator:a6e6aac3a64d2b77a997d2a1fa44a8f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23eaddd3c54cd75a3972364d9081b334"><td class="memTemplParams" colspan="2">template&lt;component_probabilities Ps, class Foo  = void&gt; <br />
 requires (is_bss&lt;Degree&gt;)</td></tr>
 <tr class="memitem:a23eaddd3c54cd75a3972364d9081b334"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a23eaddd3c54cd75a3972364d9081b334">unavailability</a> (Ps const &amp;ps, diagram_t &amp;f) -&gt; second_t&lt; Foo, double &gt;</td></tr>
+<tr class="memdesc:a23eaddd3c54cd75a3972364d9081b334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates and returns unavailability of a BSS.  <a href="classteddy_1_1reliability__manager.html#a23eaddd3c54cd75a3972364d9081b334">More...</a><br /></td></tr>
 <tr class="separator:a23eaddd3c54cd75a3972364d9081b334"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f41b172814f01d970722910b4e590ed"><td class="memTemplParams" colspan="2">template&lt;component_probabilities Ps&gt; </td></tr>
 <tr class="memitem:a2f41b172814f01d970722910b4e590ed"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a2f41b172814f01d970722910b4e590ed">unavailability</a> (uint_t j, Ps const &amp;ps, diagram_t &amp;f) -&gt; double</td></tr>
+<tr class="memdesc:a2f41b172814f01d970722910b4e590ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates and returns system availability with respect to the system state <code>j</code> .  <a href="classteddy_1_1reliability__manager.html#a2f41b172814f01d970722910b4e590ed">More...</a><br /></td></tr>
 <tr class="separator:a2f41b172814f01d970722910b4e590ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24823c1f8394a6753cad4660028cb2f9"><td class="memTemplParams" colspan="2">template&lt;class Foo  = void&gt; </td></tr>
 <tr class="memitem:a24823c1f8394a6753cad4660028cb2f9"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a24823c1f8394a6753cad4660028cb2f9">get_unavailability</a> () -&gt; second_t&lt; Foo, double &gt;</td></tr>
+<tr class="memdesc:a24823c1f8394a6753cad4660028cb2f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns system unavailability of a BSS.  <a href="classteddy_1_1reliability__manager.html#a24823c1f8394a6753cad4660028cb2f9">More...</a><br /></td></tr>
 <tr class="separator:a24823c1f8394a6753cad4660028cb2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6667593d5d6cdb962408a5a027585d89"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a6667593d5d6cdb962408a5a027585d89">get_unavailability</a> (uint_t j) -&gt; double</td></tr>
+<tr class="memdesc:a6667593d5d6cdb962408a5a027585d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns system unavailability with respect to the system state <code>j</code> .  <a href="classteddy_1_1reliability__manager.html#a6667593d5d6cdb962408a5a027585d89">More...</a><br /></td></tr>
 <tr class="separator:a6667593d5d6cdb962408a5a027585d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c1b56f754c0a42ce859f4654b721066"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a4c1b56f754c0a42ce859f4654b721066">dpbd</a> (<a class="el" href="structteddy_1_1value__change.html">value_change</a> var, <a class="el" href="structteddy_1_1value__change.html">value_change</a> f, diagram_t const &amp;sf, index_t i) -&gt; diagram_t</td></tr>
+<tr class="memdesc:a4c1b56f754c0a42ce859f4654b721066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates Direct Partial Boolean Derivative.  <a href="classteddy_1_1reliability__manager.html#a4c1b56f754c0a42ce859f4654b721066">More...</a><br /></td></tr>
 <tr class="separator:a4c1b56f754c0a42ce859f4654b721066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40f760bd5a3596587e7aef1551c12464"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a40f760bd5a3596587e7aef1551c12464">dpbd_i_3</a> (<a class="el" href="structteddy_1_1value__change.html">value_change</a> var, uint_t f, diagram_t const &amp;sf, index_t i) -&gt; diagram_t</td></tr>
-<tr class="separator:a40f760bd5a3596587e7aef1551c12464"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a3d9eab481735711b7f075a3ba4efd1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a1a3d9eab481735711b7f075a3ba4efd1">dpbds</a> (<a class="el" href="structteddy_1_1value__change.html">value_change</a> var, <a class="el" href="structteddy_1_1value__change.html">value_change</a> f, diagram_t const &amp;sf) -&gt; std::vector&lt; diagram_t &gt;</td></tr>
-<tr class="separator:a1a3d9eab481735711b7f075a3ba4efd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8597a9617e85dcb714456acfd0b75a59"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a8597a9617e85dcb714456acfd0b75a59">dpbds_i_3</a> (<a class="el" href="structteddy_1_1value__change.html">value_change</a> var, uint_t f, diagram_t const &amp;sf) -&gt; std::vector&lt; diagram_t &gt;</td></tr>
-<tr class="separator:a8597a9617e85dcb714456acfd0b75a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d792b36536f7ae5c7b841f55342577"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#ac7d792b36536f7ae5c7b841f55342577">idpbd_type_1_decrease</a> (<a class="el" href="structteddy_1_1value__change.html">value_change</a> var, uint_t j, diagram_t const &amp;sf, index_t i) -&gt; diagram_t</td></tr>
+<tr class="memdesc:ac7d792b36536f7ae5c7b841f55342577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates Direct Partial Boolean Derivative of type 1.  <a href="classteddy_1_1reliability__manager.html#ac7d792b36536f7ae5c7b841f55342577">More...</a><br /></td></tr>
+<tr class="separator:ac7d792b36536f7ae5c7b841f55342577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f2c66e71cff3ce89b95bb6a418144f2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a1f2c66e71cff3ce89b95bb6a418144f2">idpbd_type_1_increase</a> (<a class="el" href="structteddy_1_1value__change.html">value_change</a> var, uint_t j, diagram_t const &amp;sf, index_t i) -&gt; diagram_t</td></tr>
+<tr class="memdesc:a1f2c66e71cff3ce89b95bb6a418144f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates Direct Partial Boolean Derivative of type 1.  <a href="classteddy_1_1reliability__manager.html#a1f2c66e71cff3ce89b95bb6a418144f2">More...</a><br /></td></tr>
+<tr class="separator:a1f2c66e71cff3ce89b95bb6a418144f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad14e7525a4e21f021ac54da5c0710c8d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#ad14e7525a4e21f021ac54da5c0710c8d">idpbd_type_2_decrease</a> (<a class="el" href="structteddy_1_1value__change.html">value_change</a> var, diagram_t const &amp;sf, index_t i) -&gt; diagram_t</td></tr>
+<tr class="memdesc:ad14e7525a4e21f021ac54da5c0710c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates Direct Partial Boolean Derivative of type 2.  <a href="classteddy_1_1reliability__manager.html#ad14e7525a4e21f021ac54da5c0710c8d">More...</a><br /></td></tr>
+<tr class="separator:ad14e7525a4e21f021ac54da5c0710c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd37e96ec47dcc0647a81b374298b995"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#abd37e96ec47dcc0647a81b374298b995">idpbd_type_2_increase</a> (<a class="el" href="structteddy_1_1value__change.html">value_change</a> var, diagram_t const &amp;sf, index_t i) -&gt; diagram_t</td></tr>
+<tr class="memdesc:abd37e96ec47dcc0647a81b374298b995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates Direct Partial Boolean Derivative of type 2.  <a href="classteddy_1_1reliability__manager.html#abd37e96ec47dcc0647a81b374298b995">More...</a><br /></td></tr>
+<tr class="separator:abd37e96ec47dcc0647a81b374298b995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b4b48dff3da9f16144a7258201b49fd"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a8b4b48dff3da9f16144a7258201b49fd">idpbd_type_3_decrease</a> (<a class="el" href="structteddy_1_1value__change.html">value_change</a> var, uint_t j, diagram_t const &amp;sf, index_t i) -&gt; diagram_t</td></tr>
+<tr class="memdesc:a8b4b48dff3da9f16144a7258201b49fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates Direct Partial Boolean Derivative of type 2.  <a href="classteddy_1_1reliability__manager.html#a8b4b48dff3da9f16144a7258201b49fd">More...</a><br /></td></tr>
+<tr class="separator:a8b4b48dff3da9f16144a7258201b49fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20d7e11b73edb2c23ce349281693ea4c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a20d7e11b73edb2c23ce349281693ea4c">idpbd_type_3_increase</a> (<a class="el" href="structteddy_1_1value__change.html">value_change</a> var, uint_t f, diagram_t const &amp;sf, index_t i) -&gt; diagram_t</td></tr>
+<tr class="memdesc:a20d7e11b73edb2c23ce349281693ea4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates Direct Partial Boolean Derivative of type 2.  <a href="classteddy_1_1reliability__manager.html#a20d7e11b73edb2c23ce349281693ea4c">More...</a><br /></td></tr>
+<tr class="separator:a20d7e11b73edb2c23ce349281693ea4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25569ce230e2e9b253e4f1dd5f161052"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a25569ce230e2e9b253e4f1dd5f161052">structural_importance</a> (diagram_t &amp;<a class="el" href="classteddy_1_1reliability__manager.html#a4c1b56f754c0a42ce859f4654b721066">dpbd</a>) -&gt; double</td></tr>
+<tr class="memdesc:a25569ce230e2e9b253e4f1dd5f161052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates Structural Importace (SI) of a component.  <a href="classteddy_1_1reliability__manager.html#a25569ce230e2e9b253e4f1dd5f161052">More...</a><br /></td></tr>
 <tr class="separator:a25569ce230e2e9b253e4f1dd5f161052"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ef251bbac5f69f9b097cd270ffce790"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a4ef251bbac5f69f9b097cd270ffce790">structural_importances</a> (std::vector&lt; diagram_t &gt; &amp;<a class="el" href="classteddy_1_1reliability__manager.html#a1a3d9eab481735711b7f075a3ba4efd1">dpbds</a>) -&gt; std::vector&lt; double &gt;</td></tr>
-<tr class="separator:a4ef251bbac5f69f9b097cd270ffce790"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2e5c8b8514f7f39fb105012d82581c9"><td class="memTemplParams" colspan="2">template&lt;out_var_values Vars&gt; </td></tr>
 <tr class="memitem:ac2e5c8b8514f7f39fb105012d82581c9"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#ac2e5c8b8514f7f39fb105012d82581c9">mcvs</a> (diagram_t const &amp;sf, uint_t j) -&gt; std::vector&lt; Vars &gt;</td></tr>
+<tr class="memdesc:ac2e5c8b8514f7f39fb105012d82581c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds all Minimal Cut Vector (MCVs) of the system with respect to the system state <code>j</code> .  <a href="classteddy_1_1reliability__manager.html#ac2e5c8b8514f7f39fb105012d82581c9">More...</a><br /></td></tr>
 <tr class="separator:ac2e5c8b8514f7f39fb105012d82581c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2944a9fb97f68d4e4d62177f48a95e16"><td class="memTemplParams" colspan="2">template&lt;out_var_values Vars, std::output_iterator&lt; Vars &gt; Out&gt; </td></tr>
 <tr class="memitem:a2944a9fb97f68d4e4d62177f48a95e16"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a2944a9fb97f68d4e4d62177f48a95e16">mcvs_g</a> (diagram_t const &amp;sf, uint_t j, Out out) -&gt; void</td></tr>
+<tr class="memdesc:a2944a9fb97f68d4e4d62177f48a95e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds all Minimal Cut Vector of the system with respect to the system state <code>j</code> .  <a href="classteddy_1_1reliability__manager.html#a2944a9fb97f68d4e4d62177f48a95e16">More...</a><br /></td></tr>
 <tr class="separator:a2944a9fb97f68d4e4d62177f48a95e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classteddy_1_1diagram__manager"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classteddy_1_1diagram__manager')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager&lt; double, Degree, Domain &gt;</a></td></tr>
 <tr class="memitem:a8e5541e448620e4e39eb9f0314a5276d inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a8e5541e448620e4e39eb9f0314a5276d">constant</a> (uint_t v) -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td></tr>
@@ -186,6 +238,12 @@ requires (is_bss&lt;Degree&gt;)</td></tr>
 <tr class="memitem:a9669d1358d90dc81f5b7205589fd89bd inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a9669d1358d90dc81f5b7205589fd89bd">from_vector</a> (R &amp;&amp;vector) -&gt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a></td></tr>
 <tr class="memdesc:a9669d1358d90dc81f5b7205589fd89bd inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates diagram from a truth vector of a function.  <a href="classteddy_1_1diagram__manager.html#a9669d1358d90dc81f5b7205589fd89bd">More...</a><br /></td></tr>
 <tr class="separator:a9669d1358d90dc81f5b7205589fd89bd inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6fcd5c565211fe4b5b435829cb7f741 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#aa6fcd5c565211fe4b5b435829cb7f741">to_vector</a> (<a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;d) const -&gt; std::vector&lt; uint_t &gt;</td></tr>
+<tr class="memdesc:aa6fcd5c565211fe4b5b435829cb7f741 inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates truth vector from the diagram.  <a href="classteddy_1_1diagram__manager.html#aa6fcd5c565211fe4b5b435829cb7f741">More...</a><br /></td></tr>
+<tr class="separator:aa6fcd5c565211fe4b5b435829cb7f741 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91818259bbfb7a387a33778696833d54 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a91818259bbfb7a387a33778696833d54">to_vector_g</a> (<a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> const &amp;d, O out) const -&gt; void</td></tr>
+<tr class="memdesc:a91818259bbfb7a387a33778696833d54 inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates truth vector from the diagram.  <a href="classteddy_1_1diagram__manager.html#a91818259bbfb7a387a33778696833d54">More...</a><br /></td></tr>
+<tr class="separator:a91818259bbfb7a387a33778696833d54 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1553a94121ed1941075723197cc3cde inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#aa1553a94121ed1941075723197cc3cde">from_pla</a> (<a class="el" href="classteddy_1_1pla__file.html">pla_file</a> const &amp;file, fold_type foldType=fold_type::Tree) -&gt; second_t&lt; Foo, std::vector&lt; <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> &gt; &gt;</td></tr>
 <tr class="memdesc:aa1553a94121ed1941075723197cc3cde inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates BDDs defined by PLA file.  <a href="classteddy_1_1diagram__manager.html#aa1553a94121ed1941075723197cc3cde">More...</a><br /></td></tr>
 <tr class="separator:aa1553a94121ed1941075723197cc3cde inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,6 +323,15 @@ auto&#160;</td><td class="memItemRight" valign="bottom"><b>sift</b> () -&gt; voi
 <tr class="memitem:a046100716dc71e5d9f2fb08b66c6101b inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a046100716dc71e5d9f2fb08b66c6101b">get_domains</a> () const -&gt; std::vector&lt; uint_t &gt;</td></tr>
 <tr class="memdesc:a046100716dc71e5d9f2fb08b66c6101b inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return domains of variables.  <a href="classteddy_1_1diagram__manager.html#a046100716dc71e5d9f2fb08b66c6101b">More...</a><br /></td></tr>
 <tr class="separator:a046100716dc71e5d9f2fb08b66c6101b inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0">set_cache_ratio</a> (double ratio) -&gt; void</td></tr>
+<tr class="memdesc:a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0 inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the relative cache size w.r.t the number of nodes.  <a href="classteddy_1_1diagram__manager.html#a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0">More...</a><br /></td></tr>
+<tr class="separator:a0cfa6eeab88b4ebb7d3ed1a4f0c9c4c0 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00111b3f863d6ccf6503b15e372acbb1 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a00111b3f863d6ccf6503b15e372acbb1">set_pool_ratio</a> (double ratio) -&gt; void</td></tr>
+<tr class="memdesc:a00111b3f863d6ccf6503b15e372acbb1 inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets ratio used in calculation of size of the new node pool.  <a href="classteddy_1_1diagram__manager.html#a00111b3f863d6ccf6503b15e372acbb1">More...</a><br /></td></tr>
+<tr class="separator:a00111b3f863d6ccf6503b15e372acbb1 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110856ce25c5aa8af6c36ffc3c753c97 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a110856ce25c5aa8af6c36ffc3c753c97">set_gc_ratio</a> (double ratio) -&gt; void</td></tr>
+<tr class="memdesc:a110856ce25c5aa8af6c36ffc3c753c97 inherit pub_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets ratio used to determine new node pool allocation.  <a href="classteddy_1_1diagram__manager.html#a110856ce25c5aa8af6c36ffc3c753c97">More...</a><br /></td></tr>
+<tr class="separator:a110856ce25c5aa8af6c36ffc3c753c97 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12278af62ce8151192671d2524d314e8 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top"><a id="a12278af62ce8151192671d2524d314e8" name="a12278af62ce8151192671d2524d314e8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>diagram_manager</b> (<a class="el" href="classteddy_1_1diagram__manager.html">diagram_manager</a> const &amp;)=delete</td></tr>
 <tr class="separator:a12278af62ce8151192671d2524d314e8 inherit pub_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -298,92 +365,147 @@ Protected Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>reliability_manager</b> (std::size_t vars, std::size_t nodes, <a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a>, std::vector&lt; index_t &gt; order)</td></tr>
 <tr class="separator:a50d4f42f02373c0be329f5d6a5055cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classteddy_1_1diagram__manager"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classteddy_1_1diagram__manager')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager&lt; double, Degree, Domain &gt;</a></td></tr>
-<tr class="memitem:a25f26c7692d20cd0ab7bbdecc4ecf0be inherit pro_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top"><a id="a25f26c7692d20cd0ab7bbdecc4ecf0be" name="a25f26c7692d20cd0ab7bbdecc4ecf0be"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>diagram_manager</b> (std::size_t vars, std::size_t nodes, std::vector&lt; index_t &gt; order)</td></tr>
-<tr class="separator:a25f26c7692d20cd0ab7bbdecc4ecf0be inherit pro_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a142dcaed3f5e4db7d18b2c85e0215005 inherit pro_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top"><a id="a142dcaed3f5e4db7d18b2c85e0215005" name="a142dcaed3f5e4db7d18b2c85e0215005"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>diagram_manager</b> (std::size_t vars, std::size_t nodes, <a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a>, std::vector&lt; index_t &gt; order)</td></tr>
-<tr class="separator:a142dcaed3f5e4db7d18b2c85e0215005 inherit pro_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a758eea9c06be3976755406bd7f0864d8 inherit pro_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a758eea9c06be3976755406bd7f0864d8">diagram_manager</a> (std::size_t varCount, std::size_t initNodeCount, std::vector&lt; index_t &gt; order)</td></tr>
+<tr class="memdesc:a758eea9c06be3976755406bd7f0864d8 inherit pro_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes diagram manager.  <a href="classteddy_1_1diagram__manager.html#a758eea9c06be3976755406bd7f0864d8">More...</a><br /></td></tr>
+<tr class="separator:a758eea9c06be3976755406bd7f0864d8 inherit pro_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b066703eeabf11003f4c850e9bb18cb inherit pro_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a9b066703eeabf11003f4c850e9bb18cb">diagram_manager</a> (std::size_t varCount, std::size_t initNodeCount, <a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a> ds, std::vector&lt; index_t &gt; order)</td></tr>
+<tr class="memdesc:a9b066703eeabf11003f4c850e9bb18cb inherit pro_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes diagram manager.  <a href="classteddy_1_1diagram__manager.html#a9b066703eeabf11003f4c850e9bb18cb">More...</a><br /></td></tr>
+<tr class="separator:a9b066703eeabf11003f4c850e9bb18cb inherit pro_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_types_classteddy_1_1diagram__manager"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classteddy_1_1diagram__manager')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager&lt; double, Degree, Domain &gt;</a></td></tr>
+<tr class="memitem:a6e5142fac56713fea1a5f9a1cb3d9235 inherit pro_types_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top"><a id="a6e5142fac56713fea1a5f9a1cb3d9235" name="a6e5142fac56713fea1a5f9a1cb3d9235"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>node_t</b> = typename <a class="el" href="classteddy_1_1diagram.html">diagram</a>&lt; double, Degree &gt;::node_t</td></tr>
+<tr class="separator:a6e5142fac56713fea1a5f9a1cb3d9235 inherit pro_types_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classteddy_1_1diagram__manager"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classteddy_1_1diagram__manager')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager&lt; double, Degree, Domain &gt;</a></td></tr>
 <tr class="memitem:ab98034c8b05644fa852e15b2d08b18fb inherit pro_attribs_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top"><a id="ab98034c8b05644fa852e15b2d08b18fb" name="ab98034c8b05644fa852e15b2d08b18fb"></a>
 <a class="el" href="classteddy_1_1node__manager.html">node_manager</a>&lt; double, Degree, Domain &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nodes_</b></td></tr>
 <tr class="separator:ab98034c8b05644fa852e15b2d08b18fb inherit pro_attribs_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad2df9bef6cb2b085bcf3ff98b0085a04" name="ad2df9bef6cb2b085bcf3ff98b0085a04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2df9bef6cb2b085bcf3ff98b0085a04">&#9670;&nbsp;</a></span>availability() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;degree Degree, domain Domain&gt; <br />
-requires (is_bss&lt;Domain&gt;)</div>
-<div class="memtemplate">
-template&lt;component_probabilities Ps, class Foo &gt; <br />
-requires (is_bss&lt;Domain&gt;)</div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::availability </td>
-          <td>(</td>
-          <td class="paramtype">Ps const &amp;&#160;</td>
-          <td class="paramname"><em>ps</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">diagram_t &amp;&#160;</td>
-          <td class="paramname"><em>f</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; second_t&lt;Foo, double&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Calculates and returns probability that system represented by <code>f</code> is in state 1 given probabilities <code>ps</code> . Available only for BSS. </p>
-
-</div>
-</div>
-<a id="a6ea7430c6896a002c1e7636ea49e15e4" name="a6ea7430c6896a002c1e7636ea49e15e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ea7430c6896a002c1e7636ea49e15e4">&#9670;&nbsp;</a></span>availability() <span class="overload">[2/2]</span></h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;degree Degree, domain Domain&gt;<br />
+class teddy::reliability_manager&lt; Degree, Domain &gt;</div><p >Base class for reliability managers. </p>
+<p >Base class for reliability managers. Defines all functions for reliability analysis. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aea4a42aab828abb8f029874c6229b413" name="aea4a42aab828abb8f029874c6229b413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea4a42aab828abb8f029874c6229b413">&#9670;&nbsp;</a></span>probabilities() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;degree Degree, domain Domain&gt; </div>
 <div class="memtemplate">
-template&lt;component_probabilities Ps&gt; </div>
+template&lt;uint_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::availability </td>
+          <td class="memname">static auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::probabilities </td>
           <td>(</td>
-          <td class="paramtype">uint_t&#160;</td>
-          <td class="paramname"><em>j</em>, </td>
+          <td class="paramtype"><a class="el" href="structteddy_1_1degrees_1_1fixed.html">degrees::fixed</a>&lt; N &gt;&#160;</td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Ps const &amp;&#160;</td>
-          <td class="paramname"><em>ps</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">diagram_t &amp;&#160;</td>
-          <td class="paramname"><em>f</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structteddy_1_1domains_1_1fixed.html">domains::fixed</a>&lt; N &gt;&#160;</td>
+          <td class="paramname">&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> -&gt; double</td>
+          <td></td><td> -&gt;  std::vector&lt; std::array&lt; double, N &gt; &gt;</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p >Calculates and returns probability that system represetned by <code>f</code> is in state greater or equal to <code>j</code> given probabilities <code>ps</code> . </p>
+<p >Homogenous system. Probabilities are stored in vector of arrays. </p>
+
+</div>
+</div>
+<a id="a6c459fd9c1c3458d5f0a2d1632664a63" name="a6c459fd9c1c3458d5f0a2d1632664a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c459fd9c1c3458d5f0a2d1632664a63">&#9670;&nbsp;</a></span>probabilities() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::probabilities </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structteddy_1_1degrees_1_1mixed.html">degrees::mixed</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt;  std::vector&lt; std::vector&lt; double &gt; &gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Nonhomogenous system optimized for memory usage. Probabilities are stored in vector of vectors. </p>
+
+</div>
+</div>
+<a id="afb49b0a03bb1f55d599e255b9f735dca" name="afb49b0a03bb1f55d599e255b9f735dca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb49b0a03bb1f55d599e255b9f735dca">&#9670;&nbsp;</a></span>probabilities() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;uint_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::probabilities </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structteddy_1_1degrees_1_1fixed.html">degrees::fixed</a>&lt; N &gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt;  std::vector&lt; std::array&lt; double, N &gt; &gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Nonhomogenous system optimized for speed. Probabilities are stored in vector of arrays. </p>
 
 </div>
 </div>
@@ -435,6 +557,418 @@ template&lt;component_probabilities Ps&gt; </div>
 
 </div>
 </div>
+<a id="a994934430505f25a44553657388e6d82" name="a994934430505f25a44553657388e6d82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a994934430505f25a44553657388e6d82">&#9670;&nbsp;</a></span>probability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;component_probabilities Ps&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::probability </td>
+          <td>(</td>
+          <td class="paramtype">uint_t&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ps const &amp;&#160;</td>
+          <td class="paramname"><em>ps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">diagram_t &amp;&#160;</td>
+          <td class="paramname"><em>sf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; double</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates and returns probability of a system state <code>j</code> . </p>
+<p >When used as <code>ps</code>[i][k] parameter <code>ps</code> must return probability that i-th component is in state k.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Type</td><td>that holds component state probabilities. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">j</td><td>System state. </td></tr>
+    <tr><td class="paramname">ps</td><td>Component state probabilities. </td></tr>
+    <tr><td class="paramname">sf</td><td>Structure function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Probability that system described by <code>sf</code> is in state <code>j</code> given probabilities <code>ps</code> . </dd></dl>
+
+</div>
+</div>
+<a id="ac18d1e9ff3ceb9426e51661894993ced" name="ac18d1e9ff3ceb9426e51661894993ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac18d1e9ff3ceb9426e51661894993ced">&#9670;&nbsp;</a></span>get_probability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::get_probability </td>
+          <td>(</td>
+          <td class="paramtype">uint_t&#160;</td>
+          <td class="paramname"><em>j</em></td><td>)</td>
+          <td> const -&gt; double</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns probability of given system state. </p>
+<p >Call to <code>calculate_probabilities</code> must proceed call to this funtion otherwise the result is undefined. This is a bit unfortunate but the idea is that probabilities are calculated once using <code>calculate_probabilities</code> and later accessed using <code>get_probability</code> .</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">j</td><td>System state. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Probability of a system state <code>j</code> . </dd></dl>
+
+</div>
+</div>
+<a id="a292741961f0abe5bead4928ec64d4316" name="a292741961f0abe5bead4928ec64d4316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a292741961f0abe5bead4928ec64d4316">&#9670;&nbsp;</a></span>availability() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; <br />
+requires (is_bss&lt;Domain&gt;)</div>
+<div class="memtemplate">
+template&lt;component_probabilities Ps, class Foo &gt; <br />
+requires (is_bss&lt;Domain&gt;)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::availability </td>
+          <td>(</td>
+          <td class="paramtype">Ps const &amp;&#160;</td>
+          <td class="paramname"><em>ps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">diagram_t &amp;&#160;</td>
+          <td class="paramname"><em>sf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; second_t&lt;Foo, double&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates and returns availability of a BSS. </p>
+<p >When used as <code>ps</code>[i][k] parameter <code>ps</code> must return probability that i-th component is in state k.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Component</td><td>state probabilities. </td></tr>
+    <tr><td class="paramname">Foo</td><td>Dummy parameter to enable SFINE. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ps</td><td>Component state probabilities. </td></tr>
+    <tr><td class="paramname">sf</td><td>Structure function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>System availability. </dd></dl>
+
+</div>
+</div>
+<a id="a6ea7430c6896a002c1e7636ea49e15e4" name="a6ea7430c6896a002c1e7636ea49e15e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ea7430c6896a002c1e7636ea49e15e4">&#9670;&nbsp;</a></span>availability() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;component_probabilities Ps&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::availability </td>
+          <td>(</td>
+          <td class="paramtype">uint_t&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ps const &amp;&#160;</td>
+          <td class="paramname"><em>ps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">diagram_t &amp;&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; double</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates and returns system availability with respect to the system state <code>j</code> . </p>
+<p >When used as <code>ps</code>[i][k] parameter <code>ps</code> must return probability that i-th component is in state k.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Component</td><td>state probabilities. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">j</td><td>System state. </td></tr>
+    <tr><td class="paramname">ps</td><td>Component state probabilities. </td></tr>
+    <tr><td class="paramname">sf</td><td>Structure function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>System availability with respect to the system state <code>j</code> . </dd></dl>
+
+</div>
+</div>
+<a id="a157bb776b384e6628af550d96d7fdaa1" name="a157bb776b384e6628af550d96d7fdaa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a157bb776b384e6628af550d96d7fdaa1">&#9670;&nbsp;</a></span>get_availability() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;class Foo &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::get_availability</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns availability of a BSS. </p>
+<p >Call to <code>calculate_probabilities</code> must proceed call to this funtion otherwise the result is undefined. This is a bit unfortunate but the idea is that probabilities are calculated once using <code>calculate_probabilities</code> and availability and unavailability are later accessed using <code>get_availability</code> and <code>get_unavailability</code> .</p>
+<dl class="section return"><dt>Returns</dt><dd>System availability. </dd></dl>
+
+</div>
+</div>
+<a id="a6e6aac3a64d2b77a997d2a1fa44a8f80" name="a6e6aac3a64d2b77a997d2a1fa44a8f80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e6aac3a64d2b77a997d2a1fa44a8f80">&#9670;&nbsp;</a></span>get_availability() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::get_availability </td>
+          <td>(</td>
+          <td class="paramtype">uint_t&#160;</td>
+          <td class="paramname"><em>j</em></td><td>)</td>
+          <td> const -&gt; double</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns system availability with respect to the system state <code>j</code> . </p>
+<p >Call to <code>calculate_probabilities</code> must proceed call to this funtion otherwise the result is undefined. This is a bit unfortunate but the idea is that probabilities are calculated once using <code>calculate_probabilities</code> and availability and unavailability are later accessed using <code>get_availability</code> and <code>get_unavailability</code> .</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">j</td><td>System state. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>System availability with respect to the system state <code>j</code> . </dd></dl>
+
+</div>
+</div>
+<a id="a23eaddd3c54cd75a3972364d9081b334" name="a23eaddd3c54cd75a3972364d9081b334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23eaddd3c54cd75a3972364d9081b334">&#9670;&nbsp;</a></span>unavailability() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; <br />
+requires (is_bss&lt;Degree&gt;)</div>
+<div class="memtemplate">
+template&lt;component_probabilities Ps, class Foo &gt; <br />
+requires (is_bss&lt;Degree&gt;)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::unavailability </td>
+          <td>(</td>
+          <td class="paramtype">Ps const &amp;&#160;</td>
+          <td class="paramname"><em>ps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">diagram_t &amp;&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; second_t&lt;Foo, double&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates and returns unavailability of a BSS. </p>
+<p >When used as <code>ps</code>[i][k] parameter <code>ps</code> must return probability that i-th component is in state k.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Component</td><td>state probabilities. </td></tr>
+    <tr><td class="paramname">Foo</td><td>Dummy parameter to enable SFINE. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ps</td><td>Component state probabilities. </td></tr>
+    <tr><td class="paramname">sf</td><td>Structure function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>System unavailtability. </dd></dl>
+
+</div>
+</div>
+<a id="a2f41b172814f01d970722910b4e590ed" name="a2f41b172814f01d970722910b4e590ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f41b172814f01d970722910b4e590ed">&#9670;&nbsp;</a></span>unavailability() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;component_probabilities Ps&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::unavailability </td>
+          <td>(</td>
+          <td class="paramtype">uint_t&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ps const &amp;&#160;</td>
+          <td class="paramname"><em>ps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">diagram_t &amp;&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; double</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates and returns system availability with respect to the system state <code>j</code> . </p>
+<p >When used as <code>ps</code>[i][k] parameter <code>ps</code> must return probability that i-th component is in state k.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Component</td><td>state probabilities. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">j</td><td>System state. </td></tr>
+    <tr><td class="paramname">ps</td><td>Component state probabilities. </td></tr>
+    <tr><td class="paramname">sf</td><td>Structure function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>System availability with respect to the system state <code>j</code> . </dd></dl>
+
+</div>
+</div>
+<a id="a24823c1f8394a6753cad4660028cb2f9" name="a24823c1f8394a6753cad4660028cb2f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24823c1f8394a6753cad4660028cb2f9">&#9670;&nbsp;</a></span>get_unavailability() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; </div>
+<div class="memtemplate">
+template&lt;class Foo &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::get_unavailability</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns system unavailability of a BSS. </p>
+<p >Call to <code>calculate_probabilities</code> must proceed call to this funtion otherwise the result is undefined. This is a bit unfortunate but the idea is that probabilities are calculated once using <code>calculate_probabilities</code> and availability and unavailability are later accessed using <code>get_availability</code> and <code>get_unavailability</code> .</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">j</td><td>System state. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>System availability with respect to the system state <code>j</code> . </dd></dl>
+
+</div>
+</div>
+<a id="a6667593d5d6cdb962408a5a027585d89" name="a6667593d5d6cdb962408a5a027585d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6667593d5d6cdb962408a5a027585d89">&#9670;&nbsp;</a></span>get_unavailability() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::get_unavailability </td>
+          <td>(</td>
+          <td class="paramtype">uint_t&#160;</td>
+          <td class="paramname"><em>j</em></td><td>)</td>
+          <td> -&gt; double</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns system unavailability with respect to the system state <code>j</code> . </p>
+<p >Call to <code>calculate_probabilities</code> must proceed call to this funtion otherwise the result is undefined. This is a bit unfortunate but the idea is that probabilities are calculated once using <code>calculate_probabilities</code> and availability and unavailability are later accessed using <code>get_availability</code> and <code>get_unavailability</code> .</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">j</td><td>System state. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>System unavailability with respect to the system state <code>j</code> . </dd></dl>
+
+</div>
+</div>
 <a id="a4c1b56f754c0a42ce859f4654b721066" name="a4c1b56f754c0a42ce859f4654b721066"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c1b56f754c0a42ce859f4654b721066">&#9670;&nbsp;</a></span>dpbd()</h2>
 
@@ -474,12 +1008,23 @@ template&lt;degree Degree, domain Domain&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Calculates Direct Partial Boolean Derivative for <code>i</code> - th variable where <code>var</code> describes change in value of <code>i</code> - th variable and <code>f</code> describes change in value of the function represented by <code>sf</code> . </p>
+
+<p>Calculates Direct Partial Boolean Derivative. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">var</td><td>Change of the value of <code>i</code> th component. </td></tr>
+    <tr><td class="paramname">f</td><td>Change of the value of the system. </td></tr>
+    <tr><td class="paramname">sf</td><td>Structure function. </td></tr>
+    <tr><td class="paramname">i</td><td>Index of the component. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram representing Direct Partial Boolean Derivative. </dd></dl>
 
 </div>
 </div>
-<a id="a40f760bd5a3596587e7aef1551c12464" name="a40f760bd5a3596587e7aef1551c12464"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40f760bd5a3596587e7aef1551c12464">&#9670;&nbsp;</a></span>dpbd_i_3()</h2>
+<a id="ac7d792b36536f7ae5c7b841f55342577" name="ac7d792b36536f7ae5c7b841f55342577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7d792b36536f7ae5c7b841f55342577">&#9670;&nbsp;</a></span>idpbd_type_1_decrease()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -487,7 +1032,268 @@ template&lt;degree Degree, domain Domain&gt; </div>
 template&lt;degree Degree, domain Domain&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::dpbd_i_3 </td>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::idpbd_type_1_decrease </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structteddy_1_1value__change.html">value_change</a>&#160;</td>
+          <td class="paramname"><em>var</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint_t&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">diagram_t const &amp;&#160;</td>
+          <td class="paramname"><em>sf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">index_t&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; diagram_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates Direct Partial Boolean Derivative of type 1. </p>
+<p >Identifies situations in which change of the state of <code>i</code> th component causes change of the system state from the state <code>j</code> to a worse state.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">var</td><td>Change of the value of <code>i</code> th component. </td></tr>
+    <tr><td class="paramname">j</td><td>System state. </td></tr>
+    <tr><td class="paramname">sf</td><td>Structure function. </td></tr>
+    <tr><td class="paramname">i</td><td>Index of the component. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram representing Direct Partial Boolean Derivative of type 1. </dd></dl>
+
+</div>
+</div>
+<a id="a1f2c66e71cff3ce89b95bb6a418144f2" name="a1f2c66e71cff3ce89b95bb6a418144f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f2c66e71cff3ce89b95bb6a418144f2">&#9670;&nbsp;</a></span>idpbd_type_1_increase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::idpbd_type_1_increase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structteddy_1_1value__change.html">value_change</a>&#160;</td>
+          <td class="paramname"><em>var</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint_t&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">diagram_t const &amp;&#160;</td>
+          <td class="paramname"><em>sf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">index_t&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; diagram_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates Direct Partial Boolean Derivative of type 1. </p>
+<p >Identifies situations in which change of the state of <code>i</code> th component causes change of the system state from the state <code>j</code> to a better state.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">var</td><td>Change of the value of <code>i</code> th component. </td></tr>
+    <tr><td class="paramname">j</td><td>System state. </td></tr>
+    <tr><td class="paramname">sf</td><td>Structure function. </td></tr>
+    <tr><td class="paramname">i</td><td>Index of the component. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram representing Direct Partial Boolean Derivative of type 1. </dd></dl>
+
+</div>
+</div>
+<a id="ad14e7525a4e21f021ac54da5c0710c8d" name="ad14e7525a4e21f021ac54da5c0710c8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad14e7525a4e21f021ac54da5c0710c8d">&#9670;&nbsp;</a></span>idpbd_type_2_decrease()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::idpbd_type_2_decrease </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structteddy_1_1value__change.html">value_change</a>&#160;</td>
+          <td class="paramname"><em>var</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">diagram_t const &amp;&#160;</td>
+          <td class="paramname"><em>sf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">index_t&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; diagram_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates Direct Partial Boolean Derivative of type 2. </p>
+<p >Identifies situations in which change of the state of <code>i</code> th component causes degradation of the system state.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">var</td><td>Change of the value of <code>i</code> th component. </td></tr>
+    <tr><td class="paramname">sf</td><td>Structure function. </td></tr>
+    <tr><td class="paramname">i</td><td>Index of the component. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram representing Direct Partial Boolean Derivative of type 2. </dd></dl>
+
+</div>
+</div>
+<a id="abd37e96ec47dcc0647a81b374298b995" name="abd37e96ec47dcc0647a81b374298b995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd37e96ec47dcc0647a81b374298b995">&#9670;&nbsp;</a></span>idpbd_type_2_increase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::idpbd_type_2_increase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structteddy_1_1value__change.html">value_change</a>&#160;</td>
+          <td class="paramname"><em>var</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">diagram_t const &amp;&#160;</td>
+          <td class="paramname"><em>sf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">index_t&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; diagram_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates Direct Partial Boolean Derivative of type 2. </p>
+<p >Identifies situations in which change of the state of <code>i</code> th component causes improvement of the system state.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">var</td><td>Change of the value of <code>i</code> th component. </td></tr>
+    <tr><td class="paramname">sf</td><td>Structure function. </td></tr>
+    <tr><td class="paramname">i</td><td>Index of the component. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram representing Direct Partial Boolean Derivative of type 2. </dd></dl>
+
+</div>
+</div>
+<a id="a8b4b48dff3da9f16144a7258201b49fd" name="a8b4b48dff3da9f16144a7258201b49fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b4b48dff3da9f16144a7258201b49fd">&#9670;&nbsp;</a></span>idpbd_type_3_decrease()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::idpbd_type_3_decrease </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structteddy_1_1value__change.html">value_change</a>&#160;</td>
+          <td class="paramname"><em>var</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint_t&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">diagram_t const &amp;&#160;</td>
+          <td class="paramname"><em>sf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">index_t&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; diagram_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates Direct Partial Boolean Derivative of type 2. </p>
+<p >Identifies situations in which change ot the state of <code>i</code> th component causes system state degradation from a state at least <code>j</code> to a state worse than <code>j</code> .</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">var</td><td>Change of the value of <code>i</code> th component. </td></tr>
+    <tr><td class="paramname">j</td><td>System state. </td></tr>
+    <tr><td class="paramname">sf</td><td>Structure function. </td></tr>
+    <tr><td class="paramname">i</td><td>Index of the component. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram representing Direct Partial Boolean Derivative of type 3. </dd></dl>
+
+</div>
+</div>
+<a id="a20d7e11b73edb2c23ce349281693ea4c" name="a20d7e11b73edb2c23ce349281693ea4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20d7e11b73edb2c23ce349281693ea4c">&#9670;&nbsp;</a></span>idpbd_type_3_increase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;degree Degree, domain Domain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::idpbd_type_3_increase </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structteddy_1_1value__change.html">value_change</a>&#160;</td>
           <td class="paramname"><em>var</em>, </td>
@@ -517,175 +1323,24 @@ template&lt;degree Degree, domain Domain&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Calculate Direct Partial Boolean Derivative of type 3 for <code>i</code> - th variable where <code>var</code> describes change in value of <code>i</code> - th variable and <code>f</code> describes value of the function represented by <code>sf</code> . </p>
 
-</div>
-</div>
-<a id="a1a3d9eab481735711b7f075a3ba4efd1" name="a1a3d9eab481735711b7f075a3ba4efd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a3d9eab481735711b7f075a3ba4efd1">&#9670;&nbsp;</a></span>dpbds()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;degree Degree, domain Domain&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::dpbds </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structteddy_1_1value__change.html">value_change</a>&#160;</td>
-          <td class="paramname"><em>var</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structteddy_1_1value__change.html">value_change</a>&#160;</td>
-          <td class="paramname"><em>f</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">diagram_t const &amp;&#160;</td>
-          <td class="paramname"><em>sf</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; std::vector&lt;diagram_t&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Calculates Direc Partial Boolean Derivatives ( <code>dpbd</code> ) for each variable. </p>
-
-</div>
-</div>
-<a id="a8597a9617e85dcb714456acfd0b75a59" name="a8597a9617e85dcb714456acfd0b75a59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8597a9617e85dcb714456acfd0b75a59">&#9670;&nbsp;</a></span>dpbds_i_3()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;degree Degree, domain Domain&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::dpbds_i_3 </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structteddy_1_1value__change.html">value_change</a>&#160;</td>
-          <td class="paramname"><em>var</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint_t&#160;</td>
-          <td class="paramname"><em>f</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">diagram_t const &amp;&#160;</td>
-          <td class="paramname"><em>sf</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; std::vector&lt;diagram_t&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Calculate Direct Partial Boolean Derivative of type 3 ( <code>dpbd_i_3</code> ) for each variable. </p>
-
-</div>
-</div>
-<a id="a157bb776b384e6628af550d96d7fdaa1" name="a157bb776b384e6628af550d96d7fdaa1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a157bb776b384e6628af550d96d7fdaa1">&#9670;&nbsp;</a></span>get_availability() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;class Foo &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::get_availability</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Returns probability that system is in state 1. after call to <code>calculate_probabilities</code> . If there was no call to <code>calculate_probabilities</code> then the result is undefined. </p>
-
-</div>
-</div>
-<a id="a6e6aac3a64d2b77a997d2a1fa44a8f80" name="a6e6aac3a64d2b77a997d2a1fa44a8f80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e6aac3a64d2b77a997d2a1fa44a8f80">&#9670;&nbsp;</a></span>get_availability() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;degree Degree, domain Domain&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::get_availability </td>
-          <td>(</td>
-          <td class="paramtype">uint_t&#160;</td>
-          <td class="paramname"><em>j</em></td><td>)</td>
-          <td> const -&gt; double</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Returns probability that system is in state greater or equal to <code>j</code> after call to <code>calculate_probabilities</code> . If there was no call to <code>calculate_probabilities</code> then the result is undefined. </p>
-
-</div>
-</div>
-<a id="ac18d1e9ff3ceb9426e51661894993ced" name="ac18d1e9ff3ceb9426e51661894993ced"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac18d1e9ff3ceb9426e51661894993ced">&#9670;&nbsp;</a></span>get_probability()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;degree Degree, domain Domain&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::get_probability </td>
-          <td>(</td>
-          <td class="paramtype">uint_t&#160;</td>
-          <td class="paramname"><em>j</em></td><td>)</td>
-          <td> const -&gt; double</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns probability of given system state. </p>
-<p >Call to <code>calculate_probabilities</code> must proceed call to this funtion otherwise the result is undefined. This is a bit unfortunate but the idea is that probabilities are calculated once using <code>calculate_probabilities</code> and later accessed using <code>get_probability</code> .</p>
+<p>Calculates Direct Partial Boolean Derivative of type 2. </p>
+<p >Identifies situations in which change ot the state of <code>i</code> th component causes system state improvement from a state state worse than <code>j</code> to a state at least <code>j</code> .</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">var</td><td>Change of the value of <code>i</code> th component. </td></tr>
     <tr><td class="paramname">j</td><td>System state. </td></tr>
+    <tr><td class="paramname">sf</td><td>Structure function. </td></tr>
+    <tr><td class="paramname">i</td><td>Index of the component. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Probability of a system state <code>j</code> . </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Diagram representing Direct Partial Boolean Derivative of type 3. </dd></dl>
 
 </div>
 </div>
-<a id="a24823c1f8394a6753cad4660028cb2f9" name="a24823c1f8394a6753cad4660028cb2f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24823c1f8394a6753cad4660028cb2f9">&#9670;&nbsp;</a></span>get_unavailability() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;class Foo &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::get_unavailability</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Returns probability that system is in state 0 after call to <code>calculate_probabilities</code> . If there was no call to <code>calculate_probabilities</code> then the result is undefined. </p>
-
-</div>
-</div>
-<a id="a6667593d5d6cdb962408a5a027585d89" name="a6667593d5d6cdb962408a5a027585d89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6667593d5d6cdb962408a5a027585d89">&#9670;&nbsp;</a></span>get_unavailability() <span class="overload">[2/2]</span></h2>
+<a id="a25569ce230e2e9b253e4f1dd5f161052" name="a25569ce230e2e9b253e4f1dd5f161052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25569ce230e2e9b253e4f1dd5f161052">&#9670;&nbsp;</a></span>structural_importance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -693,15 +1348,24 @@ template&lt;class Foo &gt; </div>
 template&lt;degree Degree, domain Domain&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::get_unavailability </td>
+          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::structural_importance </td>
           <td>(</td>
-          <td class="paramtype">uint_t&#160;</td>
-          <td class="paramname"><em>j</em></td><td>)</td>
+          <td class="paramtype">diagram_t &amp;&#160;</td>
+          <td class="paramname"><em>dpbd</em></td><td>)</td>
           <td> -&gt; double</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Returns probability that system is in state worse than <code>j</code> after call to <code>calculate_probabilities</code> . If there was no call to <code>calculate_probabilities</code> then the result is undefined. </p>
+
+<p>Calculates Structural Importace (SI) of a component. </p>
+<p >Structural Importance specifies relative number of system states in which degradation of a component states causes degradation of a system state. Different types of DPBDs can be used for SI calculation. It is up to the user to pick the one that suits his needs.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dpbd</td><td>Direct Partial Boolean Derivative of any type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Structural importance of given componentn. </dd></dl>
 
 </div>
 </div>
@@ -734,7 +1398,23 @@ template&lt;out_var_values Vars&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Finds all Minimal Cut Vectors of the system described by <code>sf</code> with respect to state <code>j</code> . MCVs are stored and returned in a vector. </p>
+
+<p>Finds all Minimal Cut Vector (MCVs) of the system with respect to the system state <code>j</code> . </p>
+<p >This function uses <code>satisfy_all</code> function. Please keep in mind that for bigger systems, there can be a huge number of MCVs.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Vars</td><td>Container type that defines <code>operator</code>[] and allows assigning unsigned integers. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sf</td><td>Structure function. </td></tr>
+    <tr><td class="paramname">j</td><td>System state. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of Minimal Cut Vectors. </dd></dl>
 
 </div>
 </div>
@@ -773,311 +1453,34 @@ template&lt;out_var_values Vars, std::output_iterator&lt; Vars &gt; Out&gt; </di
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Finds all Minimal Cut Vectors of the system described by <code>sf</code> with respect to state <code>j</code> . MCVs are outputed via output iterator <code>out</code> . </p>
 
-</div>
-</div>
-<a id="aea4a42aab828abb8f029874c6229b413" name="aea4a42aab828abb8f029874c6229b413"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea4a42aab828abb8f029874c6229b413">&#9670;&nbsp;</a></span>probabilities() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;uint_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::probabilities </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structteddy_1_1degrees_1_1fixed.html">degrees::fixed</a>&lt; N &gt;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structteddy_1_1domains_1_1fixed.html">domains::fixed</a>&lt; N &gt;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt;  std::vector&lt; std::array&lt; double, N &gt; &gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Homogenous system. Probabilities are stored in vector of arrays. </p>
-
-</div>
-</div>
-<a id="afb49b0a03bb1f55d599e255b9f735dca" name="afb49b0a03bb1f55d599e255b9f735dca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb49b0a03bb1f55d599e255b9f735dca">&#9670;&nbsp;</a></span>probabilities() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;uint_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::probabilities </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structteddy_1_1degrees_1_1fixed.html">degrees::fixed</a>&lt; N &gt;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt;  std::vector&lt; std::array&lt; double, N &gt; &gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Nonhomogenous system optimized for speed. Probabilities are stored in vector of arrays. </p>
-
-</div>
-</div>
-<a id="a6c459fd9c1c3458d5f0a2d1632664a63" name="a6c459fd9c1c3458d5f0a2d1632664a63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c459fd9c1c3458d5f0a2d1632664a63">&#9670;&nbsp;</a></span>probabilities() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;degree Degree, domain Domain&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::probabilities </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structteddy_1_1degrees_1_1mixed.html">degrees::mixed</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt;  std::vector&lt; std::vector&lt; double &gt; &gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Nonhomogenous system optimized for memory usage. Probabilities are stored in vector of vectors. </p>
-
-</div>
-</div>
-<a id="a994934430505f25a44553657388e6d82" name="a994934430505f25a44553657388e6d82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a994934430505f25a44553657388e6d82">&#9670;&nbsp;</a></span>probability()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;component_probabilities Ps&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::probability </td>
-          <td>(</td>
-          <td class="paramtype">uint_t&#160;</td>
-          <td class="paramname"><em>j</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Ps const &amp;&#160;</td>
-          <td class="paramname"><em>ps</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">diagram_t &amp;&#160;</td>
-          <td class="paramname"><em>sf</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; double</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calculates probability of a system state <code>j</code> . </p>
-<p >When used as <code>ps</code>[i][k] parameter <code>ps</code> must return probability that i-th component is in state k.</p>
+<p>Finds all Minimal Cut Vector of the system with respect to the system state <code>j</code> . </p>
+<p >This function uses <code>satisfy_all_g</code> function. Please keep in mind that for bigger systems, there can be a huge number of MCVs.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">Type</td><td>that holds component state probabilities. </td></tr>
+    <tr><td class="paramname">Vars</td><td>Container type that defines <code>operator</code>[] and allows assigning unsigned integers. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">sf</td><td>Structure function. </td></tr>
     <tr><td class="paramname">j</td><td>System state. </td></tr>
-    <tr><td class="paramname">ps</td><td>Component state probabilities. </td></tr>
-    <tr><td class="paramname">sf</td><td>Structure sunction. </td></tr>
+    <tr><td class="paramname">out</td><td>Output iterator that is used to output instances of <code>Vars</code> . </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Probability that system described by <code>sf</code> is in state <code>j</code> given probabilities <code>ps</code> . </dd></dl>
-
-</div>
-</div>
-<a id="a25569ce230e2e9b253e4f1dd5f161052" name="a25569ce230e2e9b253e4f1dd5f161052"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25569ce230e2e9b253e4f1dd5f161052">&#9670;&nbsp;</a></span>structural_importance()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;degree Degree, domain Domain&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::structural_importance </td>
-          <td>(</td>
-          <td class="paramtype">diagram_t &amp;&#160;</td>
-          <td class="paramname"><em>dpbd</em></td><td>)</td>
-          <td> -&gt; double</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Calculates structural importace of <code>i</code> - th component using <code>dpbd</code> derivative. </p>
-
-</div>
-</div>
-<a id="a4ef251bbac5f69f9b097cd270ffce790" name="a4ef251bbac5f69f9b097cd270ffce790"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ef251bbac5f69f9b097cd270ffce790">&#9670;&nbsp;</a></span>structural_importances()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;degree Degree, domain Domain&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::structural_importances </td>
-          <td>(</td>
-          <td class="paramtype">std::vector&lt; diagram_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>dpbds</em></td><td>)</td>
-          <td> -&gt; std::vector&lt;double&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Calculates structural importaces for all components using their derivatives <code>dpbds</code> . </p>
-
-</div>
-</div>
-<a id="a23eaddd3c54cd75a3972364d9081b334" name="a23eaddd3c54cd75a3972364d9081b334"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23eaddd3c54cd75a3972364d9081b334">&#9670;&nbsp;</a></span>unavailability() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;degree Degree, domain Domain&gt; <br />
-requires (is_bss&lt;Degree&gt;)</div>
-<div class="memtemplate">
-template&lt;component_probabilities Ps, class Foo &gt; <br />
-requires (is_bss&lt;Degree&gt;)</div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::unavailability </td>
-          <td>(</td>
-          <td class="paramtype">Ps const &amp;&#160;</td>
-          <td class="paramname"><em>ps</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">diagram_t &amp;&#160;</td>
-          <td class="paramname"><em>f</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; second_t&lt;Foo, double&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Calculates and returns probability that system represented by <code>f</code> is in state worse than <code>j</code> given probabilities <code>ps</code> . </p>
-
-</div>
-</div>
-<a id="a2f41b172814f01d970722910b4e590ed" name="a2f41b172814f01d970722910b4e590ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f41b172814f01d970722910b4e590ed">&#9670;&nbsp;</a></span>unavailability() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;degree Degree, domain Domain&gt; </div>
-<div class="memtemplate">
-template&lt;component_probabilities Ps&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager</a>&lt; Degree, Domain &gt;::unavailability </td>
-          <td>(</td>
-          <td class="paramtype">uint_t&#160;</td>
-          <td class="paramname"><em>j</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Ps const &amp;&#160;</td>
-          <td class="paramname"><em>ps</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">diagram_t &amp;&#160;</td>
-          <td class="paramname"><em>f</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; double</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Calculates and returns probability that system represented by <code>f</code> is in state worse than <code>j</code> given probabilities <code>ps</code> . </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/mrena/Projects/DecisionDiagrams/include/teddy/impl/<a class="el" href="diagram_8hpp_source.html">diagram.hpp</a></li>
-<li>/home/mrena/Projects/DecisionDiagrams/include/teddy/impl/<a class="el" href="reliability__manager_8hpp_source.html">reliability_manager.hpp</a></li>
+<li><a class="el" href="diagram_8hpp_source.html">diagram.hpp</a></li>
+<li><a class="el" href="reliability__manager_8hpp_source.html">reliability_manager.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Tue Apr 12 2022 19:32:04 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

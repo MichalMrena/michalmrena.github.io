@@ -12,6 +12,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -36,17 +41,37 @@
 var searchBox = new SearchBox("searchBox", "search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,9 +108,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structteddy_1_1pla__file_1_1pla__line.html">pla_line</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents one line of a PLA file.  <a href="structteddy_1_1pla__file_1_1pla__line.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structteddy_1_1pla__file_1_1pla__line"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1pla__file.html#structteddy_1_1pla__file_1_1pla__line">pla_line</a></td></tr>
+<tr class="memdesc:structteddy_1_1pla__file_1_1pla__line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents one line of a PLA file.  <a href="classteddy_1_1pla__file.html#structteddy_1_1pla__file_1_1pla__line">More...</a><br /></td></tr>
+<tr class="separator:structteddy_1_1pla__file_1_1pla__line"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -98,10 +123,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4b8b0d78c96cb6ff010c84df5c0b021f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1pla__file.html#a4b8b0d78c96cb6ff010c84df5c0b021f">line_count</a> () const -&gt; std::size_t</td></tr>
 <tr class="memdesc:a4b8b0d78c96cb6ff010c84df5c0b021f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns number of lines in the file.  <a href="classteddy_1_1pla__file.html#a4b8b0d78c96cb6ff010c84df5c0b021f">More...</a><br /></td></tr>
 <tr class="separator:a4b8b0d78c96cb6ff010c84df5c0b021f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5feae6a4a088e695239d797a3cfe3cde"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1pla__file.html#a5feae6a4a088e695239d797a3cfe3cde">get_lines</a> () const &amp;-&gt; std::vector&lt; <a class="el" href="structteddy_1_1pla__file_1_1pla__line.html">pla_line</a> &gt; const &amp;</td></tr>
+<tr class="memitem:a5feae6a4a088e695239d797a3cfe3cde"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1pla__file.html#a5feae6a4a088e695239d797a3cfe3cde">get_lines</a> () const &amp;-&gt; std::vector&lt; <a class="el" href="classteddy_1_1pla__file.html#structteddy_1_1pla__file_1_1pla__line">pla_line</a> &gt; const &amp;</td></tr>
 <tr class="memdesc:a5feae6a4a088e695239d797a3cfe3cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns reference to a vector holding lines.  <a href="classteddy_1_1pla__file.html#a5feae6a4a088e695239d797a3cfe3cde">More...</a><br /></td></tr>
 <tr class="separator:a5feae6a4a088e695239d797a3cfe3cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e4f511606be967ea46f34aadc5b1c3e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1pla__file.html#a0e4f511606be967ea46f34aadc5b1c3e">get_lines</a> () &amp;&amp;-&gt; std::vector&lt; <a class="el" href="structteddy_1_1pla__file_1_1pla__line.html">pla_line</a> &gt;</td></tr>
+<tr class="memitem:a0e4f511606be967ea46f34aadc5b1c3e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1pla__file.html#a0e4f511606be967ea46f34aadc5b1c3e">get_lines</a> () &amp;&amp;-&gt; std::vector&lt; <a class="el" href="classteddy_1_1pla__file.html#structteddy_1_1pla__file_1_1pla__line">pla_line</a> &gt;</td></tr>
 <tr class="memdesc:a0e4f511606be967ea46f34aadc5b1c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns copy of a vector holding lines.  <a href="classteddy_1_1pla__file.html#a0e4f511606be967ea46f34aadc5b1c3e">More...</a><br /></td></tr>
 <tr class="separator:a0e4f511606be967ea46f34aadc5b1c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a958fd92e95bcf9a2dde66d8ba239bb9d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1pla__file.html#a958fd92e95bcf9a2dde66d8ba239bb9d">get_input_labels</a> () const &amp;-&gt; std::vector&lt; std::string &gt; const &amp;</td></tr>
@@ -125,232 +150,38 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Representation of a PLA file. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a99b06ae25a3f05904f6e3c36116ccca7" name="a99b06ae25a3f05904f6e3c36116ccca7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99b06ae25a3f05904f6e3c36116ccca7">&#9670;&nbsp;</a></span>function_count()</h2>
+</div><hr/><h2 class="groupheader">Class Documentation</h2>
+<a name="structteddy_1_1pla__file_1_1pla__line" id="structteddy_1_1pla__file_1_1pla__line"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structteddy_1_1pla__file_1_1pla__line">&#9670;&nbsp;</a></span>teddy::pla_file::pla_line</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto teddy::pla_file::function_count </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::size_t</td>
+          <td class="memname">struct teddy::pla_file::pla_line</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Returns number of functions in the file. </p>
-<dl class="section return"><dt>Returns</dt><dd>Number of functions. </dd></dl>
-
-</div>
-</div>
-<a id="aaf9bc63904f076a63408e560a08ee1e8" name="aaf9bc63904f076a63408e560a08ee1e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf9bc63904f076a63408e560a08ee1e8">&#9670;&nbsp;</a></span>get_input_labels() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto teddy::pla_file::get_input_labels </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> &amp;&amp; -&gt; std::vector&lt;std::string&gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
+<div class="textblock"><p >Represents one line of a PLA file. </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="ae827b7b7e7b88aaff67aebf396a95d5b" name="ae827b7b7e7b88aaff67aebf396a95d5b"></a><a class="el" href="classteddy_1_1cube__t.html">cube_t</a></td>
+<td class="fieldname">
+cube</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a16b275350d2d2545b31034508c5c13a2" name="a16b275350d2d2545b31034508c5c13a2"></a><a class="el" href="classteddy_1_1cube__t.html">cube_t</a></td>
+<td class="fieldname">
+fVals</td>
+<td class="fielddoc">
+</td></tr>
 </table>
-</div><div class="memdoc">
-
-<p>Returns copy of a vector holding labels of input variables. </p>
-<dl class="section return"><dt>Returns</dt><dd>Copy of a vector. </dd></dl>
 
 </div>
 </div>
-<a id="a958fd92e95bcf9a2dde66d8ba239bb9d" name="a958fd92e95bcf9a2dde66d8ba239bb9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a958fd92e95bcf9a2dde66d8ba239bb9d">&#9670;&nbsp;</a></span>get_input_labels() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto teddy::pla_file::get_input_labels </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const &amp; -&gt; std::vector&lt;std::string&gt; const&amp;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns reference to a vector holding labels of input variables. </p>
-<dl class="section return"><dt>Returns</dt><dd>Reference to a vector. </dd></dl>
-
-</div>
-</div>
-<a id="a0e4f511606be967ea46f34aadc5b1c3e" name="a0e4f511606be967ea46f34aadc5b1c3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e4f511606be967ea46f34aadc5b1c3e">&#9670;&nbsp;</a></span>get_lines() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto teddy::pla_file::get_lines </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> &amp;&amp; -&gt; std::vector&lt;<a class="el" href="structteddy_1_1pla__file_1_1pla__line.html">pla_line</a>&gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns copy of a vector holding lines. </p>
-<dl class="section return"><dt>Returns</dt><dd>Copy of a vector. </dd></dl>
-
-</div>
-</div>
-<a id="a5feae6a4a088e695239d797a3cfe3cde" name="a5feae6a4a088e695239d797a3cfe3cde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5feae6a4a088e695239d797a3cfe3cde">&#9670;&nbsp;</a></span>get_lines() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto teddy::pla_file::get_lines </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const &amp; -&gt; std::vector&lt;<a class="el" href="structteddy_1_1pla__file_1_1pla__line.html">pla_line</a>&gt; const&amp;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns reference to a vector holding lines. </p>
-<dl class="section return"><dt>Returns</dt><dd>Reference to a vector. </dd></dl>
-
-</div>
-</div>
-<a id="a93be17a0942a369830a7f3fd83cfdaf5" name="a93be17a0942a369830a7f3fd83cfdaf5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93be17a0942a369830a7f3fd83cfdaf5">&#9670;&nbsp;</a></span>get_output_labels() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto teddy::pla_file::get_output_labels </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> &amp;&amp; -&gt; std::vector&lt;std::string&gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return copy of a vector holding labels of functions. </p>
-<dl class="section return"><dt>Returns</dt><dd>Copy a vector. </dd></dl>
-
-</div>
-</div>
-<a id="a545db10313dd5ae1343ea6d3f5bef371" name="a545db10313dd5ae1343ea6d3f5bef371"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a545db10313dd5ae1343ea6d3f5bef371">&#9670;&nbsp;</a></span>get_output_labels() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto teddy::pla_file::get_output_labels </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const &amp; -&gt; std::vector&lt;std::string&gt; const&amp;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return reference to a vector holding labels of functions. </p>
-<dl class="section return"><dt>Returns</dt><dd>Reference to a vector. </dd></dl>
-
-</div>
-</div>
-<a id="a4b8b0d78c96cb6ff010c84df5c0b021f" name="a4b8b0d78c96cb6ff010c84df5c0b021f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b8b0d78c96cb6ff010c84df5c0b021f">&#9670;&nbsp;</a></span>line_count()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto teddy::pla_file::line_count </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::size_t</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns number of lines in the file. </p>
-<p >Does not count headers and comments, only lines containing cubes.</p>
-<dl class="section return"><dt>Returns</dt><dd>Number of lines. </dd></dl>
-
-</div>
-</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7374ec9176521383f5b24d6a8d5bf2ad" name="a7374ec9176521383f5b24d6a8d5bf2ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7374ec9176521383f5b24d6a8d5bf2ad">&#9670;&nbsp;</a></span>load_file()</h2>
 
@@ -414,13 +245,238 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a99b06ae25a3f05904f6e3c36116ccca7" name="a99b06ae25a3f05904f6e3c36116ccca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b06ae25a3f05904f6e3c36116ccca7">&#9670;&nbsp;</a></span>function_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto teddy::pla_file::function_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; std::size_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns number of functions in the file. </p>
+<dl class="section return"><dt>Returns</dt><dd>Number of functions. </dd></dl>
+
+</div>
+</div>
+<a id="a4b8b0d78c96cb6ff010c84df5c0b021f" name="a4b8b0d78c96cb6ff010c84df5c0b021f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b8b0d78c96cb6ff010c84df5c0b021f">&#9670;&nbsp;</a></span>line_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto teddy::pla_file::line_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; std::size_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns number of lines in the file. </p>
+<p >Does not count headers and comments, only lines containing cubes.</p>
+<dl class="section return"><dt>Returns</dt><dd>Number of lines. </dd></dl>
+
+</div>
+</div>
+<a id="a5feae6a4a088e695239d797a3cfe3cde" name="a5feae6a4a088e695239d797a3cfe3cde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5feae6a4a088e695239d797a3cfe3cde">&#9670;&nbsp;</a></span>get_lines() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto teddy::pla_file::get_lines </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const &amp; -&gt; std::vector&lt;<a class="el" href="classteddy_1_1pla__file.html#structteddy_1_1pla__file_1_1pla__line">pla_line</a>&gt; const&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns reference to a vector holding lines. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to a vector. </dd></dl>
+
+</div>
+</div>
+<a id="a0e4f511606be967ea46f34aadc5b1c3e" name="a0e4f511606be967ea46f34aadc5b1c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e4f511606be967ea46f34aadc5b1c3e">&#9670;&nbsp;</a></span>get_lines() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto teddy::pla_file::get_lines </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> &amp;&amp; -&gt; std::vector&lt;<a class="el" href="classteddy_1_1pla__file.html#structteddy_1_1pla__file_1_1pla__line">pla_line</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns copy of a vector holding lines. </p>
+<dl class="section return"><dt>Returns</dt><dd>Copy of a vector. </dd></dl>
+
+</div>
+</div>
+<a id="a958fd92e95bcf9a2dde66d8ba239bb9d" name="a958fd92e95bcf9a2dde66d8ba239bb9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a958fd92e95bcf9a2dde66d8ba239bb9d">&#9670;&nbsp;</a></span>get_input_labels() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto teddy::pla_file::get_input_labels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const &amp; -&gt; std::vector&lt;std::string&gt; const&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns reference to a vector holding labels of input variables. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to a vector. </dd></dl>
+
+</div>
+</div>
+<a id="aaf9bc63904f076a63408e560a08ee1e8" name="aaf9bc63904f076a63408e560a08ee1e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf9bc63904f076a63408e560a08ee1e8">&#9670;&nbsp;</a></span>get_input_labels() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto teddy::pla_file::get_input_labels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> &amp;&amp; -&gt; std::vector&lt;std::string&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns copy of a vector holding labels of input variables. </p>
+<dl class="section return"><dt>Returns</dt><dd>Copy of a vector. </dd></dl>
+
+</div>
+</div>
+<a id="a545db10313dd5ae1343ea6d3f5bef371" name="a545db10313dd5ae1343ea6d3f5bef371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a545db10313dd5ae1343ea6d3f5bef371">&#9670;&nbsp;</a></span>get_output_labels() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto teddy::pla_file::get_output_labels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const &amp; -&gt; std::vector&lt;std::string&gt; const&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return reference to a vector holding labels of functions. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to a vector. </dd></dl>
+
+</div>
+</div>
+<a id="a93be17a0942a369830a7f3fd83cfdaf5" name="a93be17a0942a369830a7f3fd83cfdaf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93be17a0942a369830a7f3fd83cfdaf5">&#9670;&nbsp;</a></span>get_output_labels() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto teddy::pla_file::get_output_labels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> &amp;&amp; -&gt; std::vector&lt;std::string&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return copy of a vector holding labels of functions. </p>
+<dl class="section return"><dt>Returns</dt><dd>Copy a vector. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/mrena/Projects/DecisionDiagrams/include/teddy/impl/<a class="el" href="pla__file_8hpp_source.html">pla_file.hpp</a></li>
+<li><a class="el" href="pla__file_8hpp_source.html">pla_file.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Tue Apr 12 2022 19:32:04 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>
