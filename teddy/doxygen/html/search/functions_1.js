@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['bdd_5fmanager_0',['bdd_manager',['../structteddy_1_1bdd__manager.html#acf13de228c633628fba2512e1c6ec2b5',1,'teddy::bdd_manager']]],
-  ['bss_5fmanager_1',['bss_manager',['../structteddy_1_1bss__manager.html#ada4a78bede2f22e7d08faf8360882271',1,'teddy::bss_manager']]]
+  ['bdd_5fmanager_0',['bdd_manager',['../structteddy_1_1bdd__manager.html#ace0a4ea349431d56b64916cc89a4880c',1,'teddy::bdd_manager::bdd_manager(std::size_t varCount, std::size_t nodePoolSize, std::vector&lt; index_t &gt; order=default_oder())'],['../structteddy_1_1bdd__manager.html#a7ff73720430509a7d052d68b84cbf181',1,'teddy::bdd_manager::bdd_manager(std::size_t varCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, std::vector&lt; index_t &gt; order=default_oder())']]],
+  ['bss_5fmanager_1',['bss_manager',['../structteddy_1_1bss__manager.html#a881f4b3fdb93c82b7dae0139f61127c1',1,'teddy::bss_manager::bss_manager(std::size_t componentCount, std::size_t nodePoolSize, std::vector&lt; index_t &gt; order=default_oder())'],['../structteddy_1_1bss__manager.html#aea23257deee11e451d958556b2207582',1,'teddy::bss_manager::bss_manager(std::size_t componentCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, std::vector&lt; index_t &gt; order=default_oder())']]]
 ];

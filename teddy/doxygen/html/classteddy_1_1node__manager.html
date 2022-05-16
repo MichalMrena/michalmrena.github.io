@@ -121,12 +121,12 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>op_cache_t</b> = <a 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abd4ca5ad35195ce995c5c41e60fde8ea"><td class="memItemLeft" align="right" valign="top"><a id="abd4ca5ad35195ce995c5c41e60fde8ea" name="abd4ca5ad35195ce995c5c41e60fde8ea"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>node_manager</b> (std::size_t vars, std::size_t nodes, std::vector&lt; index_t &gt; order)</td></tr>
-<tr class="separator:abd4ca5ad35195ce995c5c41e60fde8ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab4d55ecd3df7a224072ebd9a09a899d"><td class="memItemLeft" align="right" valign="top"><a id="aab4d55ecd3df7a224072ebd9a09a899d" name="aab4d55ecd3df7a224072ebd9a09a899d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>node_manager</b> (std::size_t vars, std::size_t nodes, std::vector&lt; index_t &gt; order, <a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a>)</td></tr>
-<tr class="separator:aab4d55ecd3df7a224072ebd9a09a899d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62d5350881743237c71282fc46431f46"><td class="memItemLeft" align="right" valign="top"><a id="a62d5350881743237c71282fc46431f46" name="a62d5350881743237c71282fc46431f46"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>node_manager</b> (std::size_t varCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, std::vector&lt; index_t &gt; order)</td></tr>
+<tr class="separator:a62d5350881743237c71282fc46431f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a583ff65348eb6f809deb8290107e95d3"><td class="memItemLeft" align="right" valign="top"><a id="a583ff65348eb6f809deb8290107e95d3" name="a583ff65348eb6f809deb8290107e95d3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>node_manager</b> (std::size_t varCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, std::vector&lt; index_t &gt; order, <a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a>)</td></tr>
+<tr class="separator:a583ff65348eb6f809deb8290107e95d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfc06118f1520fc83b8412323583d1e4"><td class="memItemLeft" align="right" valign="top"><a id="abfc06118f1520fc83b8412323583d1e4" name="abfc06118f1520fc83b8412323583d1e4"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>node_manager</b> (<a class="el" href="classteddy_1_1node__manager.html">node_manager</a> &amp;&amp;) noexcept=default</td></tr>
 <tr class="separator:abfc06118f1520fc83b8412323583d1e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,9 +136,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2339623c29ef739fce558cb3bb783060"><td class="memItemLeft" align="right" valign="top"><a id="a2339623c29ef739fce558cb3bb783060" name="a2339623c29ef739fce558cb3bb783060"></a>
 auto&#160;</td><td class="memItemRight" valign="bottom"><b>set_cache_ratio</b> (double) -&gt; void</td></tr>
 <tr class="separator:a2339623c29ef739fce558cb3bb783060"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8afcff1df7f6400e6f6105d91b1b944"><td class="memItemLeft" align="right" valign="top"><a id="ab8afcff1df7f6400e6f6105d91b1b944" name="ab8afcff1df7f6400e6f6105d91b1b944"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>set_pool_ratio</b> (double) -&gt; void</td></tr>
-<tr class="separator:ab8afcff1df7f6400e6f6105d91b1b944"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acefb353efe1d3ad6e27a2a0d37a276f5"><td class="memItemLeft" align="right" valign="top"><a id="acefb353efe1d3ad6e27a2a0d37a276f5" name="acefb353efe1d3ad6e27a2a0d37a276f5"></a>
 auto&#160;</td><td class="memItemRight" valign="bottom"><b>set_gc_ratio</b> (double) -&gt; void</td></tr>
 <tr class="separator:acefb353efe1d3ad6e27a2a0d37a276f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -281,7 +278,7 @@ struct teddy::node_manager&lt; Data, Degree, Domain &gt;::common_init</div></div
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 12 2022 19:32:04 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Mon May 16 2022 08:41:07 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

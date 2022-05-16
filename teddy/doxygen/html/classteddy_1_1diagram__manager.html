@@ -283,12 +283,12 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>node_t</b> = typenam
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a758eea9c06be3976755406bd7f0864d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a758eea9c06be3976755406bd7f0864d8">diagram_manager</a> (std::size_t varCount, std::size_t initNodeCount, std::vector&lt; index_t &gt; order)</td></tr>
-<tr class="memdesc:a758eea9c06be3976755406bd7f0864d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes diagram manager.  <a href="classteddy_1_1diagram__manager.html#a758eea9c06be3976755406bd7f0864d8">More...</a><br /></td></tr>
-<tr class="separator:a758eea9c06be3976755406bd7f0864d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b066703eeabf11003f4c850e9bb18cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a9b066703eeabf11003f4c850e9bb18cb">diagram_manager</a> (std::size_t varCount, std::size_t initNodeCount, <a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a> ds, std::vector&lt; index_t &gt; order)</td></tr>
-<tr class="memdesc:a9b066703eeabf11003f4c850e9bb18cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes diagram manager.  <a href="classteddy_1_1diagram__manager.html#a9b066703eeabf11003f4c850e9bb18cb">More...</a><br /></td></tr>
-<tr class="separator:a9b066703eeabf11003f4c850e9bb18cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3601b1dfda1d0bae23f6d17478c98afb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a3601b1dfda1d0bae23f6d17478c98afb">diagram_manager</a> (std::size_t varCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, std::vector&lt; index_t &gt; order)</td></tr>
+<tr class="memdesc:a3601b1dfda1d0bae23f6d17478c98afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes diagram manager.  <a href="classteddy_1_1diagram__manager.html#a3601b1dfda1d0bae23f6d17478c98afb">More...</a><br /></td></tr>
+<tr class="separator:a3601b1dfda1d0bae23f6d17478c98afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad285b75b3a4ab8a27d06cd3924493c08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#ad285b75b3a4ab8a27d06cd3924493c08">diagram_manager</a> (std::size_t varCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, <a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a> ds, std::vector&lt; index_t &gt; order)</td></tr>
+<tr class="memdesc:ad285b75b3a4ab8a27d06cd3924493c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes diagram manager.  <a href="classteddy_1_1diagram__manager.html#ad285b75b3a4ab8a27d06cd3924493c08">More...</a><br /></td></tr>
+<tr class="separator:ad285b75b3a4ab8a27d06cd3924493c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -300,8 +300,8 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class Data, degree Degree, domain Domain&gt;<br />
 class teddy::diagram_manager&lt; Data, Degree, Domain &gt;</div><p >Base class for all diagram managers that generically implements all of the algorithms. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a758eea9c06be3976755406bd7f0864d8" name="a758eea9c06be3976755406bd7f0864d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a758eea9c06be3976755406bd7f0864d8">&#9670;&nbsp;</a></span>diagram_manager() <span class="overload">[1/2]</span></h2>
+<a id="a3601b1dfda1d0bae23f6d17478c98afb" name="a3601b1dfda1d0bae23f6d17478c98afb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3601b1dfda1d0bae23f6d17478c98afb">&#9670;&nbsp;</a></span>diagram_manager() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -322,7 +322,13 @@ requires (<a class="el" href="structteddy_1_1domains_1_1is__fixed.html">domains:
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>initNodeCount</em>, </td>
+          <td class="paramname"><em>nodePoolSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>overflowNodePoolSize</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -348,7 +354,8 @@ requires (<a class="el" href="structteddy_1_1domains_1_1is__fixed.html">domains:
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">varCount</td><td>Number of variables. </td></tr>
-    <tr><td class="paramname">initNodeCount</td><td>Number of nodes that is pre-allocated. </td></tr>
+    <tr><td class="paramname">nodePoolSize</td><td>Number of nodes that is pre-allocated. </td></tr>
+    <tr><td class="paramname">overflowNodePoolSize</td><td>Size of the additional node pools. </td></tr>
     <tr><td class="paramname">order</td><td>Order of variables. </td></tr>
   </table>
   </dd>
@@ -356,8 +363,8 @@ requires (<a class="el" href="structteddy_1_1domains_1_1is__fixed.html">domains:
 
 </div>
 </div>
-<a id="a9b066703eeabf11003f4c850e9bb18cb" name="a9b066703eeabf11003f4c850e9bb18cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b066703eeabf11003f4c850e9bb18cb">&#9670;&nbsp;</a></span>diagram_manager() <span class="overload">[2/2]</span></h2>
+<a id="ad285b75b3a4ab8a27d06cd3924493c08" name="ad285b75b3a4ab8a27d06cd3924493c08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad285b75b3a4ab8a27d06cd3924493c08">&#9670;&nbsp;</a></span>diagram_manager() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -378,7 +385,13 @@ requires (domains::is_mixed&lt;Domain&gt;()())</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>initNodeCount</em>, </td>
+          <td class="paramname"><em>nodePoolSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>overflowNodePoolSize</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -410,7 +423,8 @@ requires (domains::is_mixed&lt;Domain&gt;()())</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">varCount</td><td>Number of variables. </td></tr>
-    <tr><td class="paramname">initNodeCount</td><td>Number of nodes that is pre-allocated. </td></tr>
+    <tr><td class="paramname">nodePoolSize</td><td>Number of nodes that is pre-allocated. </td></tr>
+    <tr><td class="paramname">overflowNodePoolSize</td><td>Size of the additional node pools. </td></tr>
     <tr><td class="paramname">ds</td><td>Domains of varibales. </td></tr>
     <tr><td class="paramname">order</td><td>Order of variables. </td></tr>
   </table>
@@ -711,8 +725,8 @@ template&lt;std::input_iterator I, std::sentinel_for&lt; I &gt; S&gt; </div>
 <div class="line"><a class="code hl_class" href="structteddy_1_1ifmdd__manager.html">teddy::ifmdd_manager&lt;3&gt;</a> manager(3, 100, {2, 2, 3});</div>
 <div class="line">std::vector&lt;unsigned int&gt; vec {0, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 2};</div>
 <div class="line"><a class="code hl_typedef" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> f = manager.from_vector(vec);</div>
-<div class="ttc" id="aclassteddy_1_1diagram__manager_html_afd258af2e42689cd3887b7c7acd7c64a"><div class="ttname"><a href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">teddy::diagram_manager::diagram_t</a></div><div class="ttdeci">diagram&lt; Data, Degree &gt; diagram_t</div><div class="ttdoc">Alias for the diagram type used in the functions of this manager.</div><div class="ttdef"><b>Definition:</b> diagram_manager.hpp:51</div></div>
-<div class="ttc" id="astructteddy_1_1ifmdd__manager_html"><div class="ttname"><a href="structteddy_1_1ifmdd__manager.html">teddy::ifmdd_manager</a></div><div class="ttdoc">Diagram manager for creation and manipulation of (integer) Multi-valued Decision Diagrams (iMDDs).</div><div class="ttdef"><b>Definition:</b> teddy.hpp:105</div></div>
+<div class="ttc" id="aclassteddy_1_1diagram__manager_html_afd258af2e42689cd3887b7c7acd7c64a"><div class="ttname"><a href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">teddy::diagram_manager::diagram_t</a></div><div class="ttdeci">diagram&lt; Data, Degree &gt; diagram_t</div><div class="ttdoc">Alias for the diagram type used in the functions of this manager.</div><div class="ttdef"><b>Definition:</b> diagram_manager.hpp:56</div></div>
+<div class="ttc" id="astructteddy_1_1ifmdd__manager_html"><div class="ttname"><a href="structteddy_1_1ifmdd__manager.html">teddy::ifmdd_manager</a></div><div class="ttdoc">Diagram manager for creation and manipulation of (integer) Multi-valued Decision Diagrams (iMDDs).</div><div class="ttdef"><b>Definition:</b> teddy.hpp:150</div></div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">I</td><td>Iterator type for the input range. </td></tr>
@@ -1371,7 +1385,7 @@ template&lt;out_var_values Vars&gt; </div>
 <p >Complexity is <code>O</code>(n*|Sf|) where <code>|Sf|</code> is the size of the satisfying set and <code>n</code> is the number of variables. Please note that this is quite high for bigger functions and the computation will probably not finish in reasonable time.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">Vars</td><td>Container type that defines <code>operator</code>[] and allows assigning unsigned integers. </td></tr>
+    <tr><td class="paramname">Vars</td><td>Container type that defines <code>operator</code>[] and allows assigning unsigned integers. std::vector is also allowed. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1427,7 +1441,7 @@ template&lt;out_var_values Vars, std::output_iterator&lt; Vars &gt; O&gt; </div>
 <p >Complexity is <code>O</code>(n*|Sf|) where <code>|Sf|</code> is the size of the satisfying set and <code>n</code> is the number of variables. Please note that this is quite high for bigger functions and the computation will probably not finish in reasonable time.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">Vars</td><td>Container type that defines <code>operator</code>[] and allows assigning unsigned integers. </td></tr>
+    <tr><td class="paramname">Vars</td><td>Container type that defines <code>operator</code>[] and allows assigning unsigned integers. std::vector is also allowed. </td></tr>
     <tr><td class="paramname">O</td><td>Output iterator type. </td></tr>
   </table>
   </dd>
@@ -1941,7 +1955,7 @@ template&lt;class Data , degree Degree, domain Domain&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 12 2022 19:32:04 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Mon May 16 2022 08:41:07 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

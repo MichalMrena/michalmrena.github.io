@@ -102,227 +102,235 @@ var searchBox = new SearchBox("searchBox", "search",'Search','.html');
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;array&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;iterator&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span>teddy</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classteddy_1_1mem__wrap.html">   15</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classteddy_1_1mem__wrap.html">mem_wrap</a></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        std::array&lt;std::byte, <span class="keyword">sizeof</span>(T)&gt; bytes_;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">auto</span> get ()</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>T*<span class="keyword">&gt;</span>(bytes_.data());</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    };</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classteddy_1_1node__pool.html">   27</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">using</span> <a class="code hl_class" href="classteddy_1_1node.html">node_t</a> = <a class="code hl_class" href="classteddy_1_1node.html">node&lt;Data, D&gt;</a>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">using</span> sons_t = <span class="keyword">typename</span> node_t::sons_t;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a>  (std::size_t);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a>  (<a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a> <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a>  (<a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a>&amp;&amp;);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_class" href="classteddy_1_1node__pool.html">~node_pool</a> ();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">auto</span> operator= (<a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a> <span class="keyword">const</span>&amp;) -&gt; <a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a>&amp; = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">auto</span> operator= (<a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a>&amp;&amp;)      -&gt; <a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a>&amp; = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>teddy</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classteddy_1_1node__pool.html">   16</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">using</span> <a class="code hl_class" href="classteddy_1_1node.html">node_t</a> = <a class="code hl_class" href="classteddy_1_1node.html">node&lt;Data, D&gt;</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">using</span> sons_t = <span class="keyword">typename</span> node_t::sons_t;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a>  (std::size_t mainPoolSize, std::size_t overflowPoolSize);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a>  (<a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a> <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a>  (<a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a>&amp;&amp;);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_class" href="classteddy_1_1node__pool.html">~node_pool</a> ();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">auto</span> operator= (<a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a>) -&gt; <a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a>&amp;;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">auto</span> available_node_count () <span class="keyword">const</span> -&gt; std::size_t;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">auto</span> main_pool_size () <span class="keyword">const</span> -&gt; std::size_t;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span>... Args&gt;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        [[nodiscard]]</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">auto</span> create (Args&amp;&amp;...) -&gt; <a class="code hl_class" href="classteddy_1_1node.html">node_t</a>*;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">auto</span> destroy (<a class="code hl_class" href="classteddy_1_1node.html">node_t</a>*) -&gt; void;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">auto</span> grow () -&gt; void;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">auto</span> set_overflow_ratio (<span class="keywordtype">double</span>) -&gt; void;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">auto</span> available_nodes () <span class="keyword">const</span> -&gt; std::size_t;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">auto</span> main_pool_size () <span class="keyword">const</span> -&gt; std::size_t;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span>... Args&gt;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        [[nodiscard]] <span class="keyword">auto</span> create (Args&amp;&amp;...) -&gt; <a class="code hl_class" href="classteddy_1_1node.html">node_t</a>*;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">auto</span> grow () -&gt; void;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">auto</span> destroy (<a class="code hl_class" href="classteddy_1_1node.html">node_t</a>*) -&gt; void;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keyword">using</span> pool_it = <span class="keyword">typename</span> std::vector&lt;mem_wrap&lt;node_t&gt;&gt;::iterator;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        std::vector&lt;mem_wrap&lt;node_t&gt;&gt;              mainPool_;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        std::vector&lt;std::vector&lt;mem_wrap&lt;node_t&gt;&gt;&gt; overflowPools_;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        std::vector&lt;mem_wrap&lt;node_t&gt;&gt;*             currentPoolPtr_;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_class" href="classteddy_1_1node.html">node_t</a>*                                    freeNode_;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        pool_it                                    nextPoolNodeIt_;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordtype">double</span>                                     overflowRatio_;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        std::size_t                                availableNodes_;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    };</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool&lt;Data, D&gt;::node_pool</a></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        (std::size_t <span class="keyword">const</span> initSize) :</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        mainPool_       (initSize),</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        overflowPools_  (),</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        currentPoolPtr_ (&amp;mainPool_),</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        freeNode_       (nullptr),</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        nextPoolNodeIt_ (std::begin(mainPool_)),</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        overflowRatio_  (0.5),</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        availableNodes_ (mainPool_.size())</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        debug::out( <span class="stringliteral">&quot;node_pool: Allocating initial pool with size &quot;</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                  , mainPool_.size(), <span class="stringliteral">&quot;.\n&quot;</span> );</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="comment">// TODO nope</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        overflowPools_.reserve(100);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    node_pool&lt;Data, D&gt;::node_pool</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        (node_pool&amp;&amp; other) :</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        availableNodes_ (std::exchange(other.availableNodes_, 0))</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="comment">// Calculate others pointer and iterator positions.</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keyword">auto</span> <span class="keyword">constexpr</span> MainPoolOffset = <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(-1);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keyword">auto</span> <span class="keyword">const</span> poolOffset = other.currentPoolPtr_ == &amp;other.mainPool_</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            ? MainPoolOffset</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            : <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>( other.currentPoolPtr_</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                                      - &amp;other.overflowPools_.front() );</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keyword">auto</span> <span class="keyword">const</span> nodeItOffset</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            = std::distance( std::begin(*other.currentPoolPtr_)</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                           , other.nextPoolNodeIt_ );</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="comment">// Steal from other.</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        mainPool_       = std::move(other.mainPool_);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        overflowPools_  = std::move(other.overflowPools_);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        currentPoolPtr_ = poolOffset == MainPoolOffset</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            ? &amp;mainPool_</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            : &amp;overflowPools_[poolOffset];</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        freeNode_       = other.freeNode_;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        nextPoolNodeIt_ = std::next( std::begin(*currentPoolPtr_)</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                                   , nodeItOffset );</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        overflowRatio_  = other.overflowRatio_;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="comment">// Set other into correct state.</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        other.currentPoolPtr_ = &amp;other.mainPool_;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        other.freeNode_       = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        other.nextPoolNodeIt_ = std::begin(other.mainPool_);</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    node_pool&lt;Data, D&gt;::~node_pool</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        ()</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordflow">if</span> (currentPoolPtr_ != &amp;mainPool_)</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="comment">// Destroy main pool.</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; mem : mainPool_)</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            {</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                std::destroy_at(mem.get());</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            }</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <span class="comment">// Destroy other fully used pools.</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <span class="keyword">auto</span> poolPtr = &amp;overflowPools_.front();</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="keywordflow">while</span> (poolPtr != currentPoolPtr_)</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            {</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; mem : *poolPtr)</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                    std::destroy_at(mem.get());</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                }</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                ++poolPtr;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            }</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        }</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="comment">// Destroy current partially used pool (main or overflow).</span></div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keyword">auto</span> it = std::begin(*currentPoolPtr_);</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">while</span> (it != nextPoolNodeIt_)</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        {</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            std::destroy_at(it-&gt;get());</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            ++it;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        }</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    }</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::set_overflow_ratio</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        (<span class="keywordtype">double</span> <span class="keyword">const</span> d) -&gt; <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    {</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        overflowRatio_ = d;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::available_nodes</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        () const -&gt; std::<span class="keywordtype">size_t</span></div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    {</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="keywordflow">return</span> availableNodes_;</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    }</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::main_pool_size</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        () const -&gt; std::<span class="keywordtype">size_t</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    {</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">return</span> mainPool_.size();</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    }</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span>... Args&gt;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::create</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        (Args&amp;&amp;... as) -&gt; node_t*</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    {</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        assert(availableNodes_ &gt; 0);</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        --availableNodes_;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">auto</span> current_pool () <span class="keyword">const</span> -&gt; <a class="code hl_class" href="classteddy_1_1node.html">node_t</a>*;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">auto</span> swap (<a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool</a>&amp;) -&gt; void;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">static</span> <span class="keyword">auto</span> allocate_pool (std::size_t) -&gt; <a class="code hl_class" href="classteddy_1_1node.html">node_t</a>*;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">static</span> <span class="keyword">auto</span> deallocate_pool (<a class="code hl_class" href="classteddy_1_1node.html">node_t</a>*) -&gt; void;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_class" href="classteddy_1_1node.html">node_t</a>*              mainPool_;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        std::vector&lt;node_t*&gt; overflowPools_;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_class" href="classteddy_1_1node.html">node_t</a>*              freeNodeList_;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        std::size_t          currentPoolIndex_;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        std::size_t          nextPoolNodeIndex_;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        std::size_t          mainPoolSize_;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        std::size_t          overflowPoolSize_;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        std::size_t          availableNodes_;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    };</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_class" href="classteddy_1_1node__pool.html">node_pool&lt;Data, D&gt;::node_pool</a></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        (std::size_t <span class="keyword">const</span> mainPoolSize, std::size_t <span class="keyword">const</span> overflowPoolSize) :</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        mainPool_          (allocate_pool(mainPoolSize)),</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        overflowPools_     ({}),</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        freeNodeList_      (<span class="keyword">nullptr</span>),</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        currentPoolIndex_  (std::numeric_limits&lt;std::size_t&gt;::max()),</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        nextPoolNodeIndex_ (0),</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        mainPoolSize_      (mainPoolSize),</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        overflowPoolSize_  (overflowPoolSize),</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        availableNodes_    (mainPoolSize)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        debug::out( <span class="stringliteral">&quot;node_pool: Allocating initial pool with size &quot;</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                  , mainPoolSize_, <span class="stringliteral">&quot;.\n&quot;</span> );</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    node_pool&lt;Data, D&gt;::node_pool</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        (node_pool&amp;&amp; other) :</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        mainPool_          (std::exchange(other.mainPool_, nullptr)),</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        overflowPools_     (std::move(other.overflowPools_)),</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        freeNodeList_      (std::exchange(other.freeNodeList_, nullptr)),</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        currentPoolIndex_  (other.currentPoolIndex_),</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        nextPoolNodeIndex_ (other.nextPoolNodeIndex_),</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        mainPoolSize_      (other.mainPoolSize_),</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        overflowPoolSize_  (other.overflowPoolSize_),</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        availableNodes_    (other.availableNodes_)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    node_pool&lt;Data, D&gt;::~node_pool</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        ()</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">if</span> (this-&gt;current_pool() != mainPool_)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="comment">// Destroy main pool.</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0ull; i &lt; mainPoolSize_; ++i)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                std::destroy_at(mainPool_ + i);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            deallocate_pool(mainPool_);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="comment">// Destroy other fully used pools.</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0ull; i &lt; currentPoolIndex_; ++i)</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                <span class="keyword">auto</span> <span class="keyword">const</span> pool = overflowPools_[i];</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> k = 0ull; k &lt; overflowPoolSize_; ++k)</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                    std::destroy_at(pool + k);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                deallocate_pool(pool);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="comment">// Destroy current partially used pool (main or overflow).</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keyword">auto</span> <span class="keyword">const</span> pool = this-&gt;current_pool();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> k = 0ull; k &lt; nextPoolNodeIndex_; ++k)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            std::destroy_at(pool + k);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        deallocate_pool(pool);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::operator=</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        (node_pool other) -&gt; node_pool&amp;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        this-&gt;swap(other);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::available_node_count</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        () const -&gt; std::<span class="keywordtype">size_t</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordflow">return</span> availableNodes_;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::main_pool_size</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        () const -&gt; std::<span class="keywordtype">size_t</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">return</span> mainPoolSize_;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span>... Args&gt;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::create</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        (Args&amp;&amp;... as) -&gt; node_t*</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        assert(availableNodes_ &gt; 0);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        --availableNodes_;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keyword">auto</span> p = <span class="keyword">static_cast&lt;</span>node_t*<span class="keyword">&gt;</span>(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordflow">if</span> (freeNodeList_)</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            p = freeNodeList_;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            freeNodeList_ = freeNodeList_-&gt;get_next();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            std::destroy_at(p);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        }</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            p = this-&gt;current_pool() + nextPoolNodeIndex_;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            ++nextPoolNodeIndex_;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keywordflow">return</span> std::construct_at(p, std::forward&lt;Args&gt;(as)...);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::destroy</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        (node_t* <span class="keyword">const</span> p) -&gt; <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        ++availableNodes_;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        p-&gt;set_next(freeNodeList_);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        freeNodeList_ = p;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    }</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keyword">auto</span> p = <span class="keyword">static_cast&lt;</span>node_t*<span class="keyword">&gt;</span>(<span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">if</span> (freeNode_)</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        {</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            p = freeNode_;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            freeNode_ = freeNode_-&gt;get_next();</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            std::destroy_at(p);</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        }</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        {</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            p = nextPoolNodeIt_-&gt;get();</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            ++nextPoolNodeIt_;</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::grow</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        () -&gt; <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        debug::out( <span class="stringliteral">&quot;node_pool: Allocating overflow pool with size &quot;</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                  , overflowPoolSize_, <span class="stringliteral">&quot;.\n&quot;</span> );</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        overflowPools_.emplace_back(allocate_pool(overflowPoolSize_));</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        currentPoolIndex_  = overflowPools_.size() - 1ull;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        nextPoolNodeIndex_ = 0ull;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        availableNodes_   += overflowPoolSize_;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    }</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <span class="keywordflow">return</span> std::construct_at(p, std::forward&lt;Args&gt;(as)...);</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    }</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::destroy</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        (node_t* <span class="keyword">const</span> p) -&gt; <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    {</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        ++availableNodes_;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        p-&gt;set_next(freeNode_);</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        freeNode_ = p;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    }</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::grow</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        () -&gt; <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    {</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="keyword">auto</span> <span class="keyword">const</span> baseSize = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(mainPool_.size());</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <span class="keyword">auto</span> <span class="keyword">const</span> newPoolSize</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            = <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(baseSize * overflowRatio_);</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        debug::out( <span class="stringliteral">&quot;node_pool: Allocating overflow pool with size &quot;</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                  , newPoolSize, <span class="stringliteral">&quot;.\n&quot;</span> );</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        overflowPools_.emplace_back(newPoolSize);</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        currentPoolPtr_ = &amp;overflowPools_.back();</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        nextPoolNodeIt_ = std::begin(*currentPoolPtr_);</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        availableNodes_ += currentPoolPtr_-&gt;size();</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    }</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>}</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassteddy_1_1mem__wrap_html"><div class="ttname"><a href="classteddy_1_1mem__wrap.html">teddy::mem_wrap</a></div><div class="ttdef"><b>Definition:</b> node_pool.hpp:16</div></div>
-<div class="ttc" id="aclassteddy_1_1node__pool_html"><div class="ttname"><a href="classteddy_1_1node__pool.html">teddy::node_pool</a></div><div class="ttdef"><b>Definition:</b> node_pool.hpp:28</div></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::current_pool</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        () const -&gt; node_t*</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="keywordflow">return</span> overflowPools_.empty()</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            ? mainPool_</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            : overflowPools_[currentPoolIndex_];</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    }</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::swap</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        (node_pool&amp; other) -&gt; <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    {</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="keyword">using</span> std::swap;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        swap(mainPool_, other.mainPool_);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        swap(overflowPools_, other.overflowPools_);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        swap(currentPoolIndex_, other.currentPoolIndex_);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        swap(freeNodeList_, other.freeNodeList_);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        swap(nextPoolNodeIndex_, other.nextPoolNodeIndex_);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        swap(availableNodes_, other.availableNodes_);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        swap(mainPoolSize_, other.mainPoolSize_);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        swap(overflowPoolSize_, other.overflowPoolSize_);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::allocate_pool</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        (std::size_t <span class="keyword">const</span> size) -&gt; node_t*</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>node_t*<span class="keyword">&gt;</span>(::operator <span class="keyword">new</span>(size * <span class="keyword">sizeof</span>(node_t)));</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    }</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Data, degree D&gt;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keyword">auto</span> node_pool&lt;Data, D&gt;::deallocate_pool</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        (node_t* <span class="keyword">const</span> ptr) -&gt; <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        ::operator <span class="keyword">delete</span>(ptr);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    }</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>}</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassteddy_1_1node__pool_html"><div class="ttname"><a href="classteddy_1_1node__pool.html">teddy::node_pool</a></div><div class="ttdef"><b>Definition:</b> node_pool.hpp:17</div></div>
 <div class="ttc" id="aclassteddy_1_1node_html"><div class="ttname"><a href="classteddy_1_1node.html">teddy::node</a></div><div class="ttdef"><b>Definition:</b> node.hpp:63</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 12 2022 19:32:04 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Mon May 16 2022 08:41:06 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

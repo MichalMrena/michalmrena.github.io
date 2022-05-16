@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['bdd_5fmanager_0',['bdd_manager',['../structteddy_1_1bdd__manager.html#acf13de228c633628fba2512e1c6ec2b5',1,'teddy::bdd_manager::bdd_manager()'],['../structteddy_1_1bdd__manager.html',1,'teddy::bdd_manager']]],
+  ['bdd_5fmanager_0',['bdd_manager',['../structteddy_1_1bdd__manager.html#a7ff73720430509a7d052d68b84cbf181',1,'teddy::bdd_manager::bdd_manager(std::size_t varCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, std::vector&lt; index_t &gt; order=default_oder())'],['../structteddy_1_1bdd__manager.html#ace0a4ea349431d56b64916cc89a4880c',1,'teddy::bdd_manager::bdd_manager(std::size_t varCount, std::size_t nodePoolSize, std::vector&lt; index_t &gt; order=default_oder())'],['../structteddy_1_1bdd__manager.html',1,'teddy::bdd_manager']]],
   ['bin_5fop_5fbase_1',['bin_op_base',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
   ['bin_5fop_5fbase_3c_20equal_5fto_5ft_20_3e_2',['bin_op_base&lt; equal_to_t &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
   ['bin_5fop_5fbase_3c_20greater_5fequal_5ft_20_3e_3',['bin_op_base&lt; greater_equal_t &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
@@ -18,5 +18,5 @@ var searchData=
   ['bin_5fop_5fbase_3c_20not_5fequal_5fto_5ft_20_3e_15',['bin_op_base&lt; not_equal_to_t &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
   ['bin_5fop_5fbase_3c_20pi_5fconj_5ft_2c_200_20_3e_16',['bin_op_base&lt; pi_conj_t, 0 &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
   ['bin_5fop_5fbase_3c_20plus_5fmod_5ft_3c_20p_20_3e_20_3e_17',['bin_op_base&lt; plus_mod_t&lt; P &gt; &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bss_5fmanager_18',['bss_manager',['../structteddy_1_1bss__manager.html#ada4a78bede2f22e7d08faf8360882271',1,'teddy::bss_manager::bss_manager()'],['../structteddy_1_1bss__manager.html',1,'teddy::bss_manager']]]
+  ['bss_5fmanager_18',['bss_manager',['../structteddy_1_1bss__manager.html#a881f4b3fdb93c82b7dae0139f61127c1',1,'teddy::bss_manager::bss_manager(std::size_t componentCount, std::size_t nodePoolSize, std::vector&lt; index_t &gt; order=default_oder())'],['../structteddy_1_1bss__manager.html#aea23257deee11e451d958556b2207582',1,'teddy::bss_manager::bss_manager(std::size_t componentCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, std::vector&lt; index_t &gt; order=default_oder())'],['../structteddy_1_1bss__manager.html',1,'teddy::bss_manager']]]
 ];

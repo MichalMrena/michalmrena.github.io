@@ -116,9 +116,12 @@ Inheritance diagram for teddy::ifmss_manager&lt; PMax &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af2a7eda20370de4983ef249c9a929a37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structteddy_1_1ifmss__manager.html#af2a7eda20370de4983ef249c9a929a37">ifmss_manager</a> (std::size_t componentCount, std::size_t initNodeCount, std::vector&lt; uint_t &gt; domains, std::vector&lt; index_t &gt; order=default_oder())</td></tr>
-<tr class="memdesc:af2a7eda20370de4983ef249c9a929a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes ifMSS manager.  <a href="structteddy_1_1ifmss__manager.html#af2a7eda20370de4983ef249c9a929a37">More...</a><br /></td></tr>
-<tr class="separator:af2a7eda20370de4983ef249c9a929a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94303b2131ae680c9f21b25c84506bf7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structteddy_1_1ifmss__manager.html#a94303b2131ae680c9f21b25c84506bf7">ifmss_manager</a> (std::size_t componentCount, std::size_t nodePoolSize, std::vector&lt; uint_t &gt; domains, std::vector&lt; index_t &gt; order=default_oder())</td></tr>
+<tr class="memdesc:a94303b2131ae680c9f21b25c84506bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes ifMSS manager.  <a href="structteddy_1_1ifmss__manager.html#a94303b2131ae680c9f21b25c84506bf7">More...</a><br /></td></tr>
+<tr class="separator:a94303b2131ae680c9f21b25c84506bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec702e323bdc8f68c5d47d72c0d27b06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structteddy_1_1ifmss__manager.html#aec702e323bdc8f68c5d47d72c0d27b06">ifmss_manager</a> (std::size_t componentCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, std::vector&lt; uint_t &gt; domains, std::vector&lt; index_t &gt; order=default_oder())</td></tr>
+<tr class="memdesc:aec702e323bdc8f68c5d47d72c0d27b06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes ifMSS manager.  <a href="structteddy_1_1ifmss__manager.html#aec702e323bdc8f68c5d47d72c0d27b06">More...</a><br /></td></tr>
+<tr class="separator:aec702e323bdc8f68c5d47d72c0d27b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classteddy_1_1reliability__manager"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classteddy_1_1reliability__manager')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager&lt; degrees::fixed&lt; PMax &gt;, domains::mixed &gt;</a></td></tr>
 <tr class="memitem:a0dd9b4118601870e234be9680bc52e8a inherit pub_methods_classteddy_1_1reliability__manager"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1reliability__manager.html#a0dd9b4118601870e234be9680bc52e8a">calculate_probabilities</a> (Ps const &amp;ps, <a class="el" href="classteddy_1_1diagram__manager.html#afd258af2e42689cd3887b7c7acd7c64a">diagram_t</a> &amp;sf) -&gt; void</td></tr>
 <tr class="memdesc:a0dd9b4118601870e234be9680bc52e8a inherit pub_methods_classteddy_1_1reliability__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates probabilities of all system states.  <a href="classteddy_1_1reliability__manager.html#a0dd9b4118601870e234be9680bc52e8a">More...</a><br /></td></tr>
@@ -347,19 +350,19 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>diagram_t</b> = <a c
 using&#160;</td><td class="memItemRight" valign="bottom"><b>node_t</b> = typename <a class="el" href="classteddy_1_1diagram.html">diagram</a>&lt; double, Degree &gt;::node_t</td></tr>
 <tr class="separator:a6e5142fac56713fea1a5f9a1cb3d9235 inherit pro_types_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classteddy_1_1reliability__manager"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classteddy_1_1reliability__manager')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classteddy_1_1reliability__manager.html">teddy::reliability_manager&lt; degrees::fixed&lt; PMax &gt;, domains::mixed &gt;</a></td></tr>
-<tr class="memitem:a68125121baf7c0590d7b96d37949f79a inherit pro_methods_classteddy_1_1reliability__manager"><td class="memItemLeft" align="right" valign="top"><a id="a68125121baf7c0590d7b96d37949f79a" name="a68125121baf7c0590d7b96d37949f79a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>reliability_manager</b> (std::size_t vars, std::size_t nodes, std::vector&lt; index_t &gt; order)</td></tr>
-<tr class="separator:a68125121baf7c0590d7b96d37949f79a inherit pro_methods_classteddy_1_1reliability__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50d4f42f02373c0be329f5d6a5055cea inherit pro_methods_classteddy_1_1reliability__manager"><td class="memItemLeft" align="right" valign="top"><a id="a50d4f42f02373c0be329f5d6a5055cea" name="a50d4f42f02373c0be329f5d6a5055cea"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>reliability_manager</b> (std::size_t vars, std::size_t nodes, <a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a>, std::vector&lt; index_t &gt; order)</td></tr>
-<tr class="separator:a50d4f42f02373c0be329f5d6a5055cea inherit pro_methods_classteddy_1_1reliability__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abccf2ee9e6759941d8717282730a0144 inherit pro_methods_classteddy_1_1reliability__manager"><td class="memItemLeft" align="right" valign="top"><a id="abccf2ee9e6759941d8717282730a0144" name="abccf2ee9e6759941d8717282730a0144"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>reliability_manager</b> (std::size_t varCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, std::vector&lt; index_t &gt; order)</td></tr>
+<tr class="separator:abccf2ee9e6759941d8717282730a0144 inherit pro_methods_classteddy_1_1reliability__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07476dde4dab8a95f8b882a7bc4f6cf inherit pro_methods_classteddy_1_1reliability__manager"><td class="memItemLeft" align="right" valign="top"><a id="ac07476dde4dab8a95f8b882a7bc4f6cf" name="ac07476dde4dab8a95f8b882a7bc4f6cf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>reliability_manager</b> (std::size_t varCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, <a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a>, std::vector&lt; index_t &gt; order)</td></tr>
+<tr class="separator:ac07476dde4dab8a95f8b882a7bc4f6cf inherit pro_methods_classteddy_1_1reliability__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classteddy_1_1diagram__manager"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classteddy_1_1diagram__manager')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager&lt; double, Degree, Domain &gt;</a></td></tr>
-<tr class="memitem:a758eea9c06be3976755406bd7f0864d8 inherit pro_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a758eea9c06be3976755406bd7f0864d8">diagram_manager</a> (std::size_t varCount, std::size_t initNodeCount, std::vector&lt; index_t &gt; order)</td></tr>
-<tr class="memdesc:a758eea9c06be3976755406bd7f0864d8 inherit pro_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes diagram manager.  <a href="classteddy_1_1diagram__manager.html#a758eea9c06be3976755406bd7f0864d8">More...</a><br /></td></tr>
-<tr class="separator:a758eea9c06be3976755406bd7f0864d8 inherit pro_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b066703eeabf11003f4c850e9bb18cb inherit pro_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a9b066703eeabf11003f4c850e9bb18cb">diagram_manager</a> (std::size_t varCount, std::size_t initNodeCount, <a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a> ds, std::vector&lt; index_t &gt; order)</td></tr>
-<tr class="memdesc:a9b066703eeabf11003f4c850e9bb18cb inherit pro_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes diagram manager.  <a href="classteddy_1_1diagram__manager.html#a9b066703eeabf11003f4c850e9bb18cb">More...</a><br /></td></tr>
-<tr class="separator:a9b066703eeabf11003f4c850e9bb18cb inherit pro_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3601b1dfda1d0bae23f6d17478c98afb inherit pro_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#a3601b1dfda1d0bae23f6d17478c98afb">diagram_manager</a> (std::size_t varCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, std::vector&lt; index_t &gt; order)</td></tr>
+<tr class="memdesc:a3601b1dfda1d0bae23f6d17478c98afb inherit pro_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes diagram manager.  <a href="classteddy_1_1diagram__manager.html#a3601b1dfda1d0bae23f6d17478c98afb">More...</a><br /></td></tr>
+<tr class="separator:a3601b1dfda1d0bae23f6d17478c98afb inherit pro_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad285b75b3a4ab8a27d06cd3924493c08 inherit pro_methods_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteddy_1_1diagram__manager.html#ad285b75b3a4ab8a27d06cd3924493c08">diagram_manager</a> (std::size_t varCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, <a class="el" href="structteddy_1_1domains_1_1mixed.html">domains::mixed</a> ds, std::vector&lt; index_t &gt; order)</td></tr>
+<tr class="memdesc:ad285b75b3a4ab8a27d06cd3924493c08 inherit pro_methods_classteddy_1_1diagram__manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes diagram manager.  <a href="classteddy_1_1diagram__manager.html#ad285b75b3a4ab8a27d06cd3924493c08">More...</a><br /></td></tr>
+<tr class="separator:ad285b75b3a4ab8a27d06cd3924493c08 inherit pro_methods_classteddy_1_1diagram__manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classteddy_1_1diagram__manager"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classteddy_1_1diagram__manager')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classteddy_1_1diagram__manager.html">teddy::diagram_manager&lt; double, Degree, Domain &gt;</a></td></tr>
 <tr class="memitem:ab98034c8b05644fa852e15b2d08b18fb inherit pro_attribs_classteddy_1_1diagram__manager"><td class="memItemLeft" align="right" valign="top"><a id="ab98034c8b05644fa852e15b2d08b18fb" name="ab98034c8b05644fa852e15b2d08b18fb"></a>
 <a class="el" href="classteddy_1_1node__manager.html">node_manager</a>&lt; double, Degree, Domain &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nodes_</b></td></tr>
@@ -375,8 +378,8 @@ class teddy::ifmss_manager&lt; PMax &gt;</div><p >Manager for creation of (integ
   </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af2a7eda20370de4983ef249c9a929a37" name="af2a7eda20370de4983ef249c9a929a37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2a7eda20370de4983ef249c9a929a37">&#9670;&nbsp;</a></span>ifmss_manager()</h2>
+<a id="a94303b2131ae680c9f21b25c84506bf7" name="a94303b2131ae680c9f21b25c84506bf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94303b2131ae680c9f21b25c84506bf7">&#9670;&nbsp;</a></span>ifmss_manager() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -393,7 +396,7 @@ template&lt;uint_t PMax&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>initNodeCount</em>, </td>
+          <td class="paramname"><em>nodePoolSize</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -419,7 +422,67 @@ template&lt;uint_t PMax&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">componentCount</td><td>Number of components. </td></tr>
-    <tr><td class="paramname">initNodeCount</td><td>Number of nodes that is pre-allocated. </td></tr>
+    <tr><td class="paramname">nodePoolSize</td><td>Size of the main node pool. </td></tr>
+    <tr><td class="paramname">domains</td><td>Domains of variables. Number at index i is the domain of i-th variable. </td></tr>
+    <tr><td class="paramname">order</td><td>Order of variables. Variables are ordered by their indices by default. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aec702e323bdc8f68c5d47d72c0d27b06" name="aec702e323bdc8f68c5d47d72c0d27b06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec702e323bdc8f68c5d47d72c0d27b06">&#9670;&nbsp;</a></span>ifmss_manager() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;uint_t PMax&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structteddy_1_1ifmss__manager.html">teddy::ifmss_manager</a>&lt; PMax &gt;::ifmss_manager </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>componentCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>nodePoolSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>overflowNodePoolSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; uint_t &gt;&#160;</td>
+          <td class="paramname"><em>domains</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; index_t &gt;&#160;</td>
+          <td class="paramname"><em>order</em> = <code>default_oder()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes ifMSS manager. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">componentCount</td><td>Number of components. </td></tr>
+    <tr><td class="paramname">nodePoolSize</td><td>Size of the main node pool. </td></tr>
+    <tr><td class="paramname">overflowNodePoolSize</td><td>Size of the additional node pools. </td></tr>
     <tr><td class="paramname">domains</td><td>Domains of variables. Number at index i is the domain of i-th variable. </td></tr>
     <tr><td class="paramname">order</td><td>Order of variables. Variables are ordered by their indices by default. </td></tr>
   </table>
@@ -434,7 +497,7 @@ template&lt;uint_t PMax&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 12 2022 19:32:04 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Mon May 16 2022 08:41:07 for TeDDy by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>
