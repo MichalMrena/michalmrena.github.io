@@ -2,7 +2,7 @@ var searchData=
 [
   ['nand_0',['NAND',['../structteddy_1_1ops_1_1NAND.html',1,'teddy::ops']]],
   ['node_1',['node',['../classteddy_1_1node.html',1,'teddy']]],
-  ['node_5fcount_2',['node_count',['../classteddy_1_1diagram__manager.html#a0df9c68f93bd16f27f48503a8c2f2652',1,'teddy::diagram_manager::node_count() const -&gt; std::size_t'],['../classteddy_1_1diagram__manager.html#a0860d5b2f122192aa2fd9df902eef0a8',1,'teddy::diagram_manager::node_count(diagram_t const &amp;d) const -&gt; std::size_t']]],
+  ['node_5fcount_2',['node_count',['../classteddy_1_1diagram__manager.html#a0df9c68f93bd16f27f48503a8c2f2652',1,'teddy::diagram_manager::node_count() const -&gt; std::size_t'],['../classteddy_1_1diagram__manager.html#a65d0b80624848f04953e24fc2b39c34d',1,'teddy::diagram_manager::node_count(diagram_t d) const -&gt; std::size_t']]],
   ['node_5fmanager_3',['node_manager',['../classteddy_1_1node__manager.html',1,'teddy']]],
   ['node_5fmanager_3c_20double_2c_20degree_2c_20domain_20_3e_4',['node_manager&lt; double, Degree, Domain &gt;',['../classteddy_1_1node__manager.html',1,'teddy']]],
   ['node_5fmanager_3c_20void_2c_20degree_2c_20domain_20_3e_5',['node_manager&lt; void, Degree, Domain &gt;',['../classteddy_1_1node__manager.html',1,'teddy']]],
