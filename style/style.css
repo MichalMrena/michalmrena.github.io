@@ -15,7 +15,7 @@ html {
 body nav a {
     color: var(--link-color-menu);
     font-size: var(--font-size-menu);
-    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -49,6 +49,7 @@ article.article-short {
 }
 
 article.article-short h2 {
+    font-family: Arial, Helvetica, sans-serif;
     margin-top: 5px;
     margin-bottom: 2px;
     font-size: 22px;
@@ -59,6 +60,7 @@ article p {
 }
 
 article.article-long h1 {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
     margin-bottom: 5px;
 }
