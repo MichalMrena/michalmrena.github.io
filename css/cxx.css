@@ -1,0 +1,26 @@
+.short-article {
+    border-top: 1px solid var(--border-color);
+}
+
+.short-article h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    font-size: 22px;
+}
+
+.short-article-title {
+    text-align: left;
+    width: 70%;
+}
+
+.short-article-date {
+    text-align: right;
+    font-style: italic;
+    color: var(--date-color);
+    width: 30%;
+}
+
+.short-article-title, .short-article-date {
+    display: inline-block;
+}
