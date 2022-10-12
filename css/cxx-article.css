@@ -30,3 +30,7 @@ article p {
     display: inline-block;
     width: 50%;
 }
+
+ul li a {
+    word-break: break-all;
+}
