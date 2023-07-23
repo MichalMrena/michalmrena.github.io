@@ -1,15 +1,12 @@
 var searchData=
 [
-  ['left_5ffold_0',['left_fold',['../classteddy_1_1diagram__manager.html#a97fe617cf5cc1872e36fd0dca87a7e85',1,'teddy::diagram_manager::left_fold(R const &amp;range) -&gt; diagram_t'],['../classteddy_1_1diagram__manager.html#a9954a79a74936ba6494ec15c1cc517e3',1,'teddy::diagram_manager::left_fold(I first, S last) -&gt; diagram_t']]],
-  ['less_1',['LESS',['../structteddy_1_1ops_1_1LESS.html',1,'teddy::ops']]],
-  ['less_5fequal_2',['LESS_EQUAL',['../structteddy_1_1ops_1_1LESS__EQUAL.html',1,'teddy::ops']]],
-  ['less_5fequal_5ft_3',['less_equal_t',['../structteddy_1_1less__equal__t.html',1,'teddy']]],
-  ['less_5ft_4',['less_t',['../structteddy_1_1less__t.html',1,'teddy']]],
-  ['line_5fcount_5',['line_count',['../classteddy_1_1pla__file.html#a4b8b0d78c96cb6ff010c84df5c0b021f',1,'teddy::pla_file']]],
-  ['load_5ffile_6',['load_file',['../classteddy_1_1pla__file.html#a7374ec9176521383f5b24d6a8d5bf2ad',1,'teddy::pla_file']]],
-  ['logical_5fand_5ft_7',['logical_and_t',['../structteddy_1_1logical__and__t.html',1,'teddy']]],
-  ['logical_5fnand_5ft_8',['logical_nand_t',['../structteddy_1_1logical__nand__t.html',1,'teddy']]],
-  ['logical_5fnor_5ft_9',['logical_nor_t',['../structteddy_1_1logical__nor__t.html',1,'teddy']]],
-  ['logical_5for_5ft_10',['logical_or_t',['../structteddy_1_1logical__or__t.html',1,'teddy']]],
-  ['logical_5fxor_5ft_11',['logical_xor_t',['../structteddy_1_1logical__xor__t.html',1,'teddy']]]
+  ['ifmdd_5fmanager_0',['ifmdd_manager',['../structteddy_1_1ifmdd__manager.html#a492270931cee0d07632f4eb5ac34e42f',1,'teddy::ifmdd_manager::ifmdd_manager(int32 varCount, int64 nodePoolSize, std::vector&lt; int32 &gt; domains, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1ifmdd__manager.html#a69badc76acb0f03c2560ac79bc68eac5',1,'teddy::ifmdd_manager::ifmdd_manager(int32 varCount, int64 nodePoolSize, int64 overflowNodePoolSize, std::vector&lt; int32 &gt; domains, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1ifmdd__manager.html',1,'teddy::ifmdd_manager&lt; M &gt;']]],
+  ['ifmss_5fmanager_1',['ifmss_manager',['../structteddy_1_1ifmss__manager.html#a438020dfa4d9ba6cf855fc5eb0f03998',1,'teddy::ifmss_manager::ifmss_manager(int32 componentCount, int64 nodePoolSize, std::vector&lt; int32 &gt; domains, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1ifmss__manager.html#a97ca50c4b122e79683b3b522b755ba4d',1,'teddy::ifmss_manager::ifmss_manager(int32 componentCount, int64 nodePoolSize, int64 overflowNodePoolSize, std::vector&lt; int32 &gt; domains, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1ifmss__manager.html',1,'teddy::ifmss_manager&lt; M &gt;']]],
+  ['imdd_5fmanager_2',['imdd_manager',['../structteddy_1_1imdd__manager.html#a8fcfdf5f181c40ba893d7ce042e7785b',1,'teddy::imdd_manager::imdd_manager(int32 varCount, int64 nodePoolSize, int64 overflowNodePoolSize, std::vector&lt; int32 &gt; domains, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1imdd__manager.html#a9f6c7f362ec6c92cb247dae031af620c',1,'teddy::imdd_manager::imdd_manager(int32 varCount, int64 nodePoolSize, std::vector&lt; int32 &gt; domains, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1imdd__manager.html',1,'teddy::imdd_manager']]],
+  ['implies_3',['IMPLIES',['../structteddy_1_1ops_1_1IMPLIES.html',1,'teddy::ops']]],
+  ['implies_5ft_4',['implies_t',['../structteddy_1_1details_1_1implies__t.html',1,'teddy::details']]],
+  ['imss_5fmanager_5',['imss_manager',['../structteddy_1_1imss__manager.html#adcb524088f6d54bb7b83d0043cb98530',1,'teddy::imss_manager::imss_manager(int32 componentCount, int64 nodePoolSize, int64 overflowNodePoolSize, std::vector&lt; int32 &gt; domains, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1imss__manager.html#ae68d5c5660a08e100b92001504d96ab6',1,'teddy::imss_manager::imss_manager(int32 componentCount, int64 nodePoolSize, std::vector&lt; int32 &gt; domains, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1imss__manager.html',1,'teddy::imss_manager']]],
+  ['insert_6',['insert',['../classteddy_1_1unique__table.html#a6fb3bd19db499a985e3d99e722e8256a',1,'teddy::unique_table']]],
+  ['is_5ffixed_7',['is_fixed',['../structteddy_1_1degrees_1_1is__fixed.html',1,'teddy::degrees::is_fixed&lt; T &gt;'],['../structteddy_1_1domains_1_1is__fixed.html',1,'teddy::domains::is_fixed&lt; T &gt;']]],
+  ['is_5ffixed_3c_20fixed_3c_20n_20_3e_20_3e_8',['is_fixed&lt; fixed&lt; N &gt; &gt;',['../structteddy_1_1degrees_1_1is__fixed_3_01fixed_3_01N_01_4_01_4.html',1,'teddy::degrees::is_fixed&lt; fixed&lt; N &gt; &gt;'],['../structteddy_1_1domains_1_1is__fixed_3_01fixed_3_01N_01_4_01_4.html',1,'teddy::domains::is_fixed&lt; fixed&lt; N &gt; &gt;']]]
 ];

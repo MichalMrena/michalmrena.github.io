@@ -1,22 +1,8 @@
 var searchData=
 [
-  ['bdd_5fmanager_0',['bdd_manager',['../structteddy_1_1bdd__manager.html#a7ff73720430509a7d052d68b84cbf181',1,'teddy::bdd_manager::bdd_manager(std::size_t varCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, std::vector&lt; index_t &gt; order=default_oder())'],['../structteddy_1_1bdd__manager.html#ace0a4ea349431d56b64916cc89a4880c',1,'teddy::bdd_manager::bdd_manager(std::size_t varCount, std::size_t nodePoolSize, std::vector&lt; index_t &gt; order=default_oder())'],['../structteddy_1_1bdd__manager.html',1,'teddy::bdd_manager']]],
-  ['bin_5fop_5fbase_1',['bin_op_base',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20equal_5fto_5ft_20_3e_2',['bin_op_base&lt; equal_to_t &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20greater_5fequal_5ft_20_3e_3',['bin_op_base&lt; greater_equal_t &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20greater_5ft_20_3e_4',['bin_op_base&lt; greater_t &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20less_5fequal_5ft_20_3e_5',['bin_op_base&lt; less_equal_t &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20less_5ft_20_3e_6',['bin_op_base&lt; less_t &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20logical_5fand_5ft_2c_200_20_3e_7',['bin_op_base&lt; logical_and_t, 0 &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20logical_5fnand_5ft_20_3e_8',['bin_op_base&lt; logical_nand_t &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20logical_5fnor_5ft_20_3e_9',['bin_op_base&lt; logical_nor_t &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20logical_5for_5ft_2c_201_20_3e_10',['bin_op_base&lt; logical_or_t, 1 &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20logical_5fxor_5ft_20_3e_11',['bin_op_base&lt; logical_xor_t &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20max_5ft_20_3e_12',['bin_op_base&lt; max_t &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20min_5ft_2c_200_20_3e_13',['bin_op_base&lt; min_t, 0 &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20multiplies_5fmod_5ft_3c_20p_20_3e_2c_200_20_3e_14',['bin_op_base&lt; multiplies_mod_t&lt; P &gt;, 0 &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20not_5fequal_5fto_5ft_20_3e_15',['bin_op_base&lt; not_equal_to_t &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20pi_5fconj_5ft_2c_200_20_3e_16',['bin_op_base&lt; pi_conj_t, 0 &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bin_5fop_5fbase_3c_20plus_5fmod_5ft_3c_20p_20_3e_20_3e_17',['bin_op_base&lt; plus_mod_t&lt; P &gt; &gt;',['../structteddy_1_1bin__op__base.html',1,'teddy']]],
-  ['bss_5fmanager_18',['bss_manager',['../structteddy_1_1bss__manager.html#a881f4b3fdb93c82b7dae0139f61127c1',1,'teddy::bss_manager::bss_manager(std::size_t componentCount, std::size_t nodePoolSize, std::vector&lt; index_t &gt; order=default_oder())'],['../structteddy_1_1bss__manager.html#aea23257deee11e451d958556b2207582',1,'teddy::bss_manager::bss_manager(std::size_t componentCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, std::vector&lt; index_t &gt; order=default_oder())'],['../structteddy_1_1bss__manager.html',1,'teddy::bss_manager']]]
+  ['bdd_5fmanager_0',['bdd_manager',['../structteddy_1_1bdd__manager.html#a23333d11a693adff7507d894f5e2d73d',1,'teddy::bdd_manager::bdd_manager(int32 varCount, int64 nodePoolSize, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1bdd__manager.html#a6fde816cc6795a77bee75064b3d53d2f',1,'teddy::bdd_manager::bdd_manager(int32 varCount, int64 nodePoolSize, int64 overflowNodePoolSize, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1bdd__manager.html',1,'teddy::bdd_manager']]],
+  ['begin_1',['begin',['../classteddy_1_1unique__table.html#a4919fcf6bbf22a9646d462f77ee5046b',1,'teddy::unique_table::begin() -&gt; iterator'],['../classteddy_1_1unique__table.html#aec4699076936e70266345e5c08797653',1,'teddy::unique_table::begin() const -&gt; const_iterator']]],
+  ['birnbaum_5fimportance_2',['birnbaum_importance',['../classteddy_1_1reliability__manager.html#a4a8faf52db604c50d6c4e3e0d82e6cf0',1,'teddy::reliability_manager']]],
+  ['bool_5fcube_3',['bool_cube',['../classteddy_1_1bool__cube.html',1,'teddy']]],
+  ['bss_5fmanager_4',['bss_manager',['../structteddy_1_1bss__manager.html#a99fd6e1d66ae58d748d7e2f5cfdefce0',1,'teddy::bss_manager::bss_manager(int32 componentCount, int64 nodePoolSize, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1bss__manager.html#a949b56bc08609c5944cec977b7c52173',1,'teddy::bss_manager::bss_manager(int32 componentCount, int64 nodePoolSize, int64 overflowNodePoolSize, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1bss__manager.html',1,'teddy::bss_manager']]]
 ];

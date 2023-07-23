@@ -1,6 +1,25 @@
 var searchData=
 [
-  ['unavailability_0',['unavailability',['../classteddy_1_1reliability__manager.html#a2eb670d92455d21f4545af1d03237b65',1,'teddy::reliability_manager::unavailability(Ps const &amp;ps, diagram_t &amp;sf) -&gt; second_t&lt; Foo, double &gt;'],['../classteddy_1_1reliability__manager.html#a33b4db1620d61b975464cf15b26d2737',1,'teddy::reliability_manager::unavailability(uint_t j, Ps const &amp;ps, diagram_t &amp;sf) -&gt; double']]],
-  ['unique_5ftable_1',['unique_table',['../classteddy_1_1unique__table.html',1,'teddy']]],
-  ['unique_5ftable_5fit_2',['unique_table_it',['../classteddy_1_1unique__table__it.html',1,'teddy']]]
+  ['cache_5fhandle_0',['cache_handle',['../conceptteddy_1_1cache__handle.html',1,'teddy']]],
+  ['component_5fprobabilities_1',['component_probabilities',['../conceptteddy_1_1component__probabilities.html',1,'teddy']]],
+  ['degree_2',['degree',['../conceptteddy_1_1degree.html',1,'teddy']]],
+  ['domain_3',['domain',['../conceptteddy_1_1domain.html',1,'teddy']]],
+  ['expression_5fnode_4',['expression_node',['../conceptteddy_1_1expression__node.html',1,'teddy']]],
+  ['i_5fgen_5',['i_gen',['../conceptteddy_1_1utils_1_1i__gen.html',1,'teddy::utils']]],
+  ['in_5fvar_5fvalues_6',['in_var_values',['../conceptteddy_1_1in__var__values.html',1,'teddy']]],
+  ['int_5fto_5fint_7',['int_to_int',['../conceptteddy_1_1int__to__int.html',1,'teddy']]],
+  ['is_5fbdd_8',['is_bdd',['../conceptteddy_1_1is__bdd.html',1,'teddy']]],
+  ['is_5fbss_9',['is_bss',['../conceptteddy_1_1is__bss.html',1,'teddy']]],
+  ['is_5fstd_5fvector_10',['is_std_vector',['../conceptteddy_1_1utils_1_1is__std__vector.html',1,'teddy::utils']]],
+  ['node_5fop_11',['node_op',['../conceptteddy_1_1node__op.html',1,'teddy']]],
+  ['out_5fvar_5fvalues_12',['out_var_values',['../conceptteddy_1_1out__var__values.html',1,'teddy']]],
+  ['table_5fbase_13',['table_base',['../classteddy_1_1table__base.html',1,'teddy']]],
+  ['teddy_5fbin_5fop_14',['teddy_bin_op',['../conceptteddy_1_1teddy__bin__op.html',1,'teddy']]],
+  ['to_5fdot_5fgraph_15',['to_dot_graph',['../classteddy_1_1diagram__manager.html#a9a02749d3a2902adb581b7b064a78064',1,'teddy::diagram_manager::to_dot_graph(std::ostream &amp;out) const -&gt; void'],['../classteddy_1_1diagram__manager.html#a9e13bcf94b79b2f2b09aa0b5cc6bba03',1,'teddy::diagram_manager::to_dot_graph(std::ostream &amp;out, diagram_t const &amp;diagram) const -&gt; void']]],
+  ['to_5fdpld_5fe_16',['to_dpld_e',['../classteddy_1_1reliability__manager.html#a8da5002450c8cbf56e4b7ff52778d315',1,'teddy::reliability_manager']]],
+  ['to_5fvector_17',['to_vector',['../classteddy_1_1diagram__manager.html#a42b38d2cfc763ec18460e285ae5fba79',1,'teddy::diagram_manager']]],
+  ['to_5fvector_5fg_18',['to_vector_g',['../classteddy_1_1diagram__manager.html#aa6ac10a68e553087882a6ae18383bd8d',1,'teddy::diagram_manager']]],
+  ['transform_19',['transform',['../classteddy_1_1diagram__manager.html#ad1dfa020ac1cdd8d1ead5cae60629b5e',1,'teddy::diagram_manager']]],
+  ['tree_5ffold_20',['tree_fold',['../classteddy_1_1diagram__manager.html#af84d0aa56905007fa98c48cd2b9f9ae0',1,'teddy::diagram_manager::tree_fold(I first, S last) -&gt; diagram_t'],['../classteddy_1_1diagram__manager.html#a7a7cc644478b9cc47858ba69fb38dc81',1,'teddy::diagram_manager::tree_fold(R &amp;diagrams) -&gt; diagram_t']]],
+  ['tuple_5fhash_21',['tuple_hash',['../structteddy_1_1utils_1_1tuple__hash.html',1,'teddy::utils']]]
 ];

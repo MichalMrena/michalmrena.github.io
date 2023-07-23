@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['max_0',['MAX',['../structteddy_1_1ops_1_1MAX.html',1,'teddy::ops']]],
-  ['max_5ft_1',['max_t',['../structteddy_1_1max__t.html',1,'teddy']]],
-  ['mdd_5fmanager_2',['mdd_manager',['../structteddy_1_1mdd__manager.html',1,'teddy']]],
-  ['min_3',['MIN',['../structteddy_1_1ops_1_1MIN.html',1,'teddy::ops']]],
-  ['min_5ft_4',['min_t',['../structteddy_1_1min__t.html',1,'teddy']]],
-  ['mixed_5',['mixed',['../structteddy_1_1degrees_1_1mixed.html',1,'teddy::degrees::mixed'],['../structteddy_1_1domains_1_1mixed.html',1,'teddy::domains::mixed']]],
-  ['mss_5fmanager_6',['mss_manager',['../structteddy_1_1mss__manager.html',1,'teddy']]],
-  ['multiplies_7',['MULTIPLIES',['../structteddy_1_1ops_1_1MULTIPLIES.html',1,'teddy::ops']]],
-  ['multiplies_5fmod_5ft_8',['multiplies_mod_t',['../structteddy_1_1multiplies__mod__t.html',1,'teddy']]]
+  ['less_0',['LESS',['../structteddy_1_1ops_1_1LESS.html',1,'teddy::ops']]],
+  ['less_5fequal_1',['LESS_EQUAL',['../structteddy_1_1ops_1_1LESS__EQUAL.html',1,'teddy::ops']]],
+  ['less_5fequal_5ft_2',['less_equal_t',['../structteddy_1_1details_1_1less__equal__t.html',1,'teddy::details']]],
+  ['less_5ft_3',['less_t',['../structteddy_1_1details_1_1less__t.html',1,'teddy::details']]],
+  ['logical_5fand_5ft_4',['logical_and_t',['../structteddy_1_1details_1_1logical__and__t.html',1,'teddy::details']]],
+  ['logical_5fnand_5ft_5',['logical_nand_t',['../structteddy_1_1details_1_1logical__nand__t.html',1,'teddy::details']]],
+  ['logical_5fnor_5ft_6',['logical_nor_t',['../structteddy_1_1details_1_1logical__nor__t.html',1,'teddy::details']]],
+  ['logical_5for_5ft_7',['logical_or_t',['../structteddy_1_1details_1_1logical__or__t.html',1,'teddy::details']]],
+  ['logical_5fxor_5ft_8',['logical_xor_t',['../structteddy_1_1details_1_1logical__xor__t.html',1,'teddy::details']]]
 ];

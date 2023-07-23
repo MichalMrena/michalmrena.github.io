@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['max_0',['MAX',['../structteddy_1_1ops_1_1MAX.html',1,'teddy::ops']]],
-  ['max_5ft_1',['max_t',['../structteddy_1_1max__t.html',1,'teddy']]],
-  ['mcvs_2',['mcvs',['../classteddy_1_1reliability__manager.html#a6edd0a4f36a2dcf6c8c828c3af19fbcd',1,'teddy::reliability_manager']]],
-  ['mcvs_5fg_3',['mcvs_g',['../classteddy_1_1reliability__manager.html#a3b844856a83bdf46c294c7535183a42c',1,'teddy::reliability_manager']]],
-  ['mdd_5fmanager_4',['mdd_manager',['../structteddy_1_1mdd__manager.html#a44e4ba78a9c3cc9c5e79aec2f441bb7e',1,'teddy::mdd_manager::mdd_manager(std::size_t varCount, std::size_t nodePoolSize, std::vector&lt; index_t &gt; order=default_oder())'],['../structteddy_1_1mdd__manager.html#a43fd6a65dbb594ae85217ed3dff215de',1,'teddy::mdd_manager::mdd_manager(std::size_t varCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, std::vector&lt; index_t &gt; order=default_oder())'],['../structteddy_1_1mdd__manager.html',1,'teddy::mdd_manager&lt; P &gt;']]],
-  ['min_5',['MIN',['../structteddy_1_1ops_1_1MIN.html',1,'teddy::ops']]],
-  ['min_5ft_6',['min_t',['../structteddy_1_1min__t.html',1,'teddy']]],
-  ['mixed_7',['mixed',['../structteddy_1_1degrees_1_1mixed.html',1,'teddy::degrees::mixed'],['../structteddy_1_1domains_1_1mixed.html',1,'teddy::domains::mixed']]],
-  ['mss_5fmanager_8',['mss_manager',['../structteddy_1_1mss__manager.html#aee13af7dc36895da58d7ae981d96094a',1,'teddy::mss_manager::mss_manager(std::size_t componentCount, std::size_t nodePoolSize, std::vector&lt; index_t &gt; order=default_oder())'],['../structteddy_1_1mss__manager.html#ae73f8081479cbafdbd78797841c0d33f',1,'teddy::mss_manager::mss_manager(std::size_t componentCount, std::size_t nodePoolSize, std::size_t overflowNodePoolSize, std::vector&lt; index_t &gt; order=default_oder())'],['../structteddy_1_1mss__manager.html',1,'teddy::mss_manager&lt; P &gt;']]],
-  ['multiplies_9',['MULTIPLIES',['../structteddy_1_1ops_1_1MULTIPLIES.html',1,'teddy::ops']]],
-  ['multiplies_5fmod_5ft_10',['multiplies_mod_t',['../structteddy_1_1multiplies__mod__t.html',1,'teddy']]]
+  ['left_5ffold_0',['left_fold',['../classteddy_1_1diagram__manager.html#af9bcef18a79702ade105fc8de1ac69cb',1,'teddy::diagram_manager::left_fold(R const &amp;diagrams) -&gt; diagram_t'],['../classteddy_1_1diagram__manager.html#a9954a79a74936ba6494ec15c1cc517e3',1,'teddy::diagram_manager::left_fold(I first, S last) -&gt; diagram_t']]],
+  ['less_1',['LESS',['../structteddy_1_1ops_1_1LESS.html',1,'teddy::ops']]],
+  ['less_5fequal_2',['LESS_EQUAL',['../structteddy_1_1ops_1_1LESS__EQUAL.html',1,'teddy::ops']]],
+  ['less_5fequal_5ft_3',['less_equal_t',['../structteddy_1_1details_1_1less__equal__t.html',1,'teddy::details']]],
+  ['less_5ft_4',['less_t',['../structteddy_1_1details_1_1less__t.html',1,'teddy::details']]],
+  ['load_5ffile_5',['load_file',['../classteddy_1_1pla__file.html#a7374ec9176521383f5b24d6a8d5bf2ad',1,'teddy::pla_file']]],
+  ['logical_5fand_5ft_6',['logical_and_t',['../structteddy_1_1details_1_1logical__and__t.html',1,'teddy::details']]],
+  ['logical_5fnand_5ft_7',['logical_nand_t',['../structteddy_1_1details_1_1logical__nand__t.html',1,'teddy::details']]],
+  ['logical_5fnor_5ft_8',['logical_nor_t',['../structteddy_1_1details_1_1logical__nor__t.html',1,'teddy::details']]],
+  ['logical_5for_5ft_9',['logical_or_t',['../structteddy_1_1details_1_1logical__or__t.html',1,'teddy::details']]],
+  ['logical_5fxor_5ft_10',['logical_xor_t',['../structteddy_1_1details_1_1logical__xor__t.html',1,'teddy::details']]]
 ];

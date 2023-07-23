@@ -1,16 +1,14 @@
 var searchData=
 [
-  ['nand_0',['NAND',['../structteddy_1_1ops_1_1NAND.html',1,'teddy::ops']]],
-  ['node_1',['node',['../classteddy_1_1node.html',1,'teddy']]],
-  ['node_5fmanager_2',['node_manager',['../classteddy_1_1node__manager.html',1,'teddy']]],
-  ['node_5fmanager_3c_20double_2c_20degree_2c_20domain_20_3e_3',['node_manager&lt; double, Degree, Domain &gt;',['../classteddy_1_1node__manager.html',1,'teddy']]],
-  ['node_5fmanager_3c_20void_2c_20degree_2c_20domain_20_3e_4',['node_manager&lt; void, Degree, Domain &gt;',['../classteddy_1_1node__manager.html',1,'teddy']]],
-  ['node_5fpool_5',['node_pool',['../classteddy_1_1node__pool.html',1,'teddy']]],
-  ['node_5fpool_3c_20data_2c_20degree_20_3e_6',['node_pool&lt; Data, Degree &gt;',['../classteddy_1_1node__pool.html',1,'teddy']]],
-  ['node_5fpool_3c_20double_2c_20degree_20_3e_7',['node_pool&lt; double, Degree &gt;',['../classteddy_1_1node__pool.html',1,'teddy']]],
-  ['node_5fpool_3c_20void_2c_20degree_20_3e_8',['node_pool&lt; void, Degree &gt;',['../classteddy_1_1node__pool.html',1,'teddy']]],
-  ['nor_9',['NOR',['../structteddy_1_1ops_1_1NOR.html',1,'teddy::ops']]],
-  ['not_10',['NOT',['../structteddy_1_1ops_1_1NOT.html',1,'teddy::ops']]],
-  ['not_5fequal_5fto_11',['NOT_EQUAL_TO',['../structteddy_1_1ops_1_1NOT__EQUAL__TO.html',1,'teddy::ops']]],
-  ['not_5fequal_5fto_5ft_12',['not_equal_to_t',['../structteddy_1_1not__equal__to__t.html',1,'teddy']]]
+  ['max_0',['MAX',['../structteddy_1_1ops_1_1MAX.html',1,'teddy::ops']]],
+  ['max_5ft_1',['max_t',['../structteddy_1_1details_1_1max__t.html',1,'teddy::details']]],
+  ['maximum_5ft_2',['maximum_t',['../structteddy_1_1details_1_1maximum__t.html',1,'teddy::details']]],
+  ['mdd_5fmanager_3',['mdd_manager',['../structteddy_1_1mdd__manager.html',1,'teddy']]],
+  ['min_4',['MIN',['../structteddy_1_1ops_1_1MIN.html',1,'teddy::ops']]],
+  ['min_5ft_5',['min_t',['../structteddy_1_1details_1_1min__t.html',1,'teddy::details']]],
+  ['minimum_5ft_6',['minimum_t',['../structteddy_1_1details_1_1minimum__t.html',1,'teddy::details']]],
+  ['mixed_7',['mixed',['../structteddy_1_1degrees_1_1mixed.html',1,'teddy::degrees::mixed'],['../structteddy_1_1domains_1_1mixed.html',1,'teddy::domains::mixed']]],
+  ['mss_5fmanager_8',['mss_manager',['../structteddy_1_1mss__manager.html',1,'teddy']]],
+  ['multiplies_9',['MULTIPLIES',['../structteddy_1_1ops_1_1MULTIPLIES.html',1,'teddy::ops']]],
+  ['multiplies_5fmod_5ft_10',['multiplies_mod_t',['../structteddy_1_1details_1_1multiplies__mod__t.html',1,'teddy::details']]]
 ];

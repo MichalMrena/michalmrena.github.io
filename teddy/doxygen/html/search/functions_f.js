@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['to_5fdot_5fgraph_0',['to_dot_graph',['../classteddy_1_1diagram__manager.html#a9a02749d3a2902adb581b7b064a78064',1,'teddy::diagram_manager::to_dot_graph(std::ostream &amp;out) const -&gt; void'],['../classteddy_1_1diagram__manager.html#a8b8ddc5bdd085e17a7fd7bb1cc9e7f4f',1,'teddy::diagram_manager::to_dot_graph(std::ostream &amp;out, diagram_t d) const -&gt; void']]],
-  ['to_5fvector_1',['to_vector',['../classteddy_1_1diagram__manager.html#a6eebd0c962003f434168e5ef3a3fc621',1,'teddy::diagram_manager']]],
-  ['to_5fvector_5fg_2',['to_vector_g',['../classteddy_1_1diagram__manager.html#a1c97c0ed2c5560d5b568b5b02d95055a',1,'teddy::diagram_manager']]],
-  ['transform_3',['transform',['../classteddy_1_1diagram__manager.html#a759640699bb5baad483f4cb0bd595e39',1,'teddy::diagram_manager']]],
-  ['tree_5ffold_4',['tree_fold',['../classteddy_1_1diagram__manager.html#a366cfc607825c26e5bacc8eba2a3eebe',1,'teddy::diagram_manager::tree_fold(R &amp;range) -&gt; diagram_t'],['../classteddy_1_1diagram__manager.html#af84d0aa56905007fa98c48cd2b9f9ae0',1,'teddy::diagram_manager::tree_fold(I first, S last) -&gt; diagram_t']]]
+  ['variable_0',['variable',['../classteddy_1_1diagram__manager.html#a7a825b2e44e0f2480b6cb272f8877661',1,'teddy::diagram_manager']]],
+  ['variable_5fcount_1',['variable_count',['../classteddy_1_1pla__file.html#aa501d6cb19afe69542a7dc74e3b56912',1,'teddy::pla_file']]],
+  ['variable_5fnot_2',['variable_not',['../classteddy_1_1diagram__manager.html#a8b859304ddfb64464f58d5716eea5444',1,'teddy::diagram_manager']]],
+  ['variables_3',['variables',['../classteddy_1_1diagram__manager.html#a96a278e6eeebcc1d87a0c1ee539e512e',1,'teddy::diagram_manager::variables(std::initializer_list&lt; T &gt; indices) -&gt; std::vector&lt; diagram_t &gt;'],['../classteddy_1_1diagram__manager.html#a80f56f39c209510b6602ab6863e30899',1,'teddy::diagram_manager::variables(I first, S last) -&gt; std::vector&lt; diagram_t &gt;'],['../classteddy_1_1diagram__manager.html#a88fa2f23c486004004e7655ee219121f',1,'teddy::diagram_manager::variables(Is const &amp;indices) -&gt; std::vector&lt; diagram_t &gt;']]]
 ];

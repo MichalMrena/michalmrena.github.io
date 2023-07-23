@@ -1,9 +1,25 @@
 var searchData=
 [
-  ['pi_5fconj_0',['PI_CONJ',['../structteddy_1_1ops_1_1PI__CONJ.html',1,'teddy::ops']]],
-  ['pi_5fconj_5ft_1',['pi_conj_t',['../structteddy_1_1pi__conj__t.html',1,'teddy']]],
-  ['pla_5ffile_2',['pla_file',['../classteddy_1_1pla__file.html',1,'teddy']]],
-  ['pla_5fline_3',['pla_line',['../classteddy_1_1pla__file.html#structteddy_1_1pla__file_1_1pla__line',1,'teddy::pla_file']]],
-  ['plus_4',['PLUS',['../structteddy_1_1ops_1_1PLUS.html',1,'teddy::ops']]],
-  ['plus_5fmod_5ft_5',['plus_mod_t',['../structteddy_1_1plus__mod__t.html',1,'teddy']]]
+  ['operation_5fbase_0',['operation_base',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3aequal_5fto_5ft_20_3e_1',['operation_base&lt; details::equal_to_t &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3agreater_5fequal_5ft_20_3e_2',['operation_base&lt; details::greater_equal_t &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3agreater_5ft_20_3e_3',['operation_base&lt; details::greater_t &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3aimplies_5ft_20_3e_4',['operation_base&lt; details::implies_t &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3aless_5fequal_5ft_20_3e_5',['operation_base&lt; details::less_equal_t &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3aless_5ft_20_3e_6',['operation_base&lt; details::less_t &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3alogical_5fand_5ft_2c_200_20_3e_7',['operation_base&lt; details::logical_and_t, 0 &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3alogical_5fnand_5ft_20_3e_8',['operation_base&lt; details::logical_nand_t &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3alogical_5fnor_5ft_20_3e_9',['operation_base&lt; details::logical_nor_t &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3alogical_5for_5ft_2c_201_20_3e_10',['operation_base&lt; details::logical_or_t, 1 &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3alogical_5fxor_5ft_20_3e_11',['operation_base&lt; details::logical_xor_t &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3amaximum_5ft_20_3e_12',['operation_base&lt; details::maximum_t &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3aminimum_5ft_2c_200_20_3e_13',['operation_base&lt; details::minimum_t, 0 &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3amultiplies_5fmod_5ft_3c_20p_20_3e_2c_200_20_3e_14',['operation_base&lt; details::multiplies_mod_t&lt; P &gt;, 0 &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3anot_5fequal_5fto_5ft_20_3e_15',['operation_base&lt; details::not_equal_to_t &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3api_5fconj_5ft_2c_200_20_3e_16',['operation_base&lt; details::pi_conj_t, 0 &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['operation_5fbase_3c_20details_3a_3aplus_5fmod_5ft_3c_20p_20_3e_20_3e_17',['operation_base&lt; details::plus_mod_t&lt; P &gt; &gt;',['../structteddy_1_1details_1_1operation__base.html',1,'teddy::details']]],
+  ['optional_5fmember_18',['optional_member',['../structoptional__member.html',1,'']]],
+  ['optional_5fmember_3c_20data_20_3e_19',['optional_member&lt; Data &gt;',['../structoptional__member.html',1,'']]],
+  ['optional_5fmember_3c_20void_20_3e_20',['optional_member&lt; void &gt;',['../structoptional__member_3_01void_01_4.html',1,'']]],
+  ['or_21',['OR',['../structteddy_1_1ops_1_1OR.html',1,'teddy::ops']]]
 ];

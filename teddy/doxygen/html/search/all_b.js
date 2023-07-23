@@ -1,10 +1,15 @@
 var searchData=
 [
-  ['operator_28_29_0',['operator()',['../classteddy_1_1diagram__manager.html#accd754f605dfcab429b6f1d857076219',1,'teddy::diagram_manager']]],
-  ['operator_3d_1',['operator=',['../classteddy_1_1diagram.html#a0c2e796065448d771ee305d737a46e14',1,'teddy::diagram']]],
-  ['ops_2',['ops',['../namespaceops.html',1,'']]],
-  ['opt_5fmember_3',['opt_member',['../structteddy_1_1opt__member.html',1,'teddy']]],
-  ['opt_5fmember_3c_20data_20_3e_4',['opt_member&lt; Data &gt;',['../structteddy_1_1opt__member.html',1,'teddy']]],
-  ['opt_5fmember_3c_20void_20_3e_5',['opt_member&lt; void &gt;',['../structteddy_1_1opt__member_3_01void_01_4.html',1,'teddy']]],
-  ['or_6',['OR',['../structteddy_1_1ops_1_1OR.html',1,'teddy::ops']]]
+  ['nand_0',['NAND',['../structteddy_1_1ops_1_1NAND.html',1,'teddy::ops']]],
+  ['node_1',['node',['../classteddy_1_1node.html',1,'teddy']]],
+  ['node_5fmanager_2',['node_manager',['../classteddy_1_1node__manager.html',1,'teddy']]],
+  ['node_5fmanager_3c_20double_2c_20degree_2c_20domain_20_3e_3',['node_manager&lt; double, Degree, Domain &gt;',['../classteddy_1_1node__manager.html',1,'teddy']]],
+  ['node_5fmanager_3c_20void_2c_20degree_2c_20domain_20_3e_4',['node_manager&lt; void, Degree, Domain &gt;',['../classteddy_1_1node__manager.html',1,'teddy']]],
+  ['node_5fpool_5',['node_pool',['../classteddy_1_1node__pool.html',1,'teddy']]],
+  ['node_5fpool_3c_20double_2c_20degree_20_3e_6',['node_pool&lt; double, Degree &gt;',['../classteddy_1_1node__pool.html',1,'teddy']]],
+  ['node_5fpool_3c_20void_2c_20degree_20_3e_7',['node_pool&lt; void, Degree &gt;',['../classteddy_1_1node__pool.html',1,'teddy']]],
+  ['nor_8',['NOR',['../structteddy_1_1ops_1_1NOR.html',1,'teddy::ops']]],
+  ['not_9',['NOT',['../structteddy_1_1ops_1_1NOT.html',1,'teddy::ops']]],
+  ['not_5fequal_5fto_10',['NOT_EQUAL_TO',['../structteddy_1_1ops_1_1NOT__EQUAL__TO.html',1,'teddy::ops']]],
+  ['not_5fequal_5fto_5ft_11',['not_equal_to_t',['../structteddy_1_1details_1_1not__equal__to__t.html',1,'teddy::details']]]
 ];

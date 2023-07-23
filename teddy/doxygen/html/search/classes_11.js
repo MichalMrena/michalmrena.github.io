@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_5fchange_0',['value_change',['../structteddy_1_1value__change.html',1,'teddy']]]
+  ['var_5fchange_0',['var_change',['../structteddy_1_1var__change.html',1,'teddy']]]
 ];

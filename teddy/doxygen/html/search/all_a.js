@@ -1,17 +1,19 @@
 var searchData=
 [
-  ['nand_0',['NAND',['../structteddy_1_1ops_1_1NAND.html',1,'teddy::ops']]],
-  ['node_1',['node',['../classteddy_1_1node.html',1,'teddy']]],
-  ['node_5fcount_2',['node_count',['../classteddy_1_1diagram__manager.html#a0df9c68f93bd16f27f48503a8c2f2652',1,'teddy::diagram_manager::node_count() const -&gt; std::size_t'],['../classteddy_1_1diagram__manager.html#a65d0b80624848f04953e24fc2b39c34d',1,'teddy::diagram_manager::node_count(diagram_t d) const -&gt; std::size_t']]],
-  ['node_5fmanager_3',['node_manager',['../classteddy_1_1node__manager.html',1,'teddy']]],
-  ['node_5fmanager_3c_20double_2c_20degree_2c_20domain_20_3e_4',['node_manager&lt; double, Degree, Domain &gt;',['../classteddy_1_1node__manager.html',1,'teddy']]],
-  ['node_5fmanager_3c_20void_2c_20degree_2c_20domain_20_3e_5',['node_manager&lt; void, Degree, Domain &gt;',['../classteddy_1_1node__manager.html',1,'teddy']]],
-  ['node_5fpool_6',['node_pool',['../classteddy_1_1node__pool.html',1,'teddy']]],
-  ['node_5fpool_3c_20data_2c_20degree_20_3e_7',['node_pool&lt; Data, Degree &gt;',['../classteddy_1_1node__pool.html',1,'teddy']]],
-  ['node_5fpool_3c_20double_2c_20degree_20_3e_8',['node_pool&lt; double, Degree &gt;',['../classteddy_1_1node__pool.html',1,'teddy']]],
-  ['node_5fpool_3c_20void_2c_20degree_20_3e_9',['node_pool&lt; void, Degree &gt;',['../classteddy_1_1node__pool.html',1,'teddy']]],
-  ['nor_10',['NOR',['../structteddy_1_1ops_1_1NOR.html',1,'teddy::ops']]],
-  ['not_11',['NOT',['../structteddy_1_1ops_1_1NOT.html',1,'teddy::ops']]],
-  ['not_5fequal_5fto_12',['NOT_EQUAL_TO',['../structteddy_1_1ops_1_1NOT__EQUAL__TO.html',1,'teddy::ops']]],
-  ['not_5fequal_5fto_5ft_13',['not_equal_to_t',['../structteddy_1_1not__equal__to__t.html',1,'teddy']]]
+  ['max_0',['MAX',['../structteddy_1_1ops_1_1MAX.html',1,'teddy::ops']]],
+  ['max_5ft_1',['max_t',['../structteddy_1_1details_1_1max__t.html',1,'teddy::details']]],
+  ['maximum_5ft_2',['maximum_t',['../structteddy_1_1details_1_1maximum__t.html',1,'teddy::details']]],
+  ['mcvs_3',['mcvs',['../classteddy_1_1reliability__manager.html#a22313c179a0ccc11efaa56544787a929',1,'teddy::reliability_manager']]],
+  ['mcvs_5fg_4',['mcvs_g',['../classteddy_1_1reliability__manager.html#a1826b9d99c3f09aea77c1d0a2fd54078',1,'teddy::reliability_manager']]],
+  ['mdd_5fmanager_5',['mdd_manager',['../structteddy_1_1mdd__manager.html#abac350194f00c4f4f91a1c59ec08eecd',1,'teddy::mdd_manager::mdd_manager(int32 varCount, int64 nodePoolSize, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1mdd__manager.html#a6f1d9d68df4d0c5f6cde6fe45d591ead',1,'teddy::mdd_manager::mdd_manager(int32 varCount, int64 nodePoolSize, int64 overflowNodePoolSize, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1mdd__manager.html',1,'teddy::mdd_manager&lt; M &gt;']]],
+  ['merge_6',['merge',['../classteddy_1_1unique__table.html#a179f2d97fa60ce847631055c3561adb1',1,'teddy::unique_table']]],
+  ['min_7',['MIN',['../structteddy_1_1ops_1_1MIN.html',1,'teddy::ops']]],
+  ['min_5ft_8',['min_t',['../structteddy_1_1details_1_1min__t.html',1,'teddy::details']]],
+  ['minimum_5ft_9',['minimum_t',['../structteddy_1_1details_1_1minimum__t.html',1,'teddy::details']]],
+  ['mixed_10',['mixed',['../structteddy_1_1degrees_1_1mixed.html',1,'teddy::degrees::mixed'],['../structteddy_1_1domains_1_1mixed.html',1,'teddy::domains::mixed']]],
+  ['mpvs_11',['mpvs',['../classteddy_1_1reliability__manager.html#a6af33c7a65939fef25e3801c84ba6d90',1,'teddy::reliability_manager']]],
+  ['mpvs_5fg_12',['mpvs_g',['../classteddy_1_1reliability__manager.html#a0c7840137e7fbc86fccdef2461820aab',1,'teddy::reliability_manager']]],
+  ['mss_5fmanager_13',['mss_manager',['../structteddy_1_1mss__manager.html#a6810c380cf20cb1065cf1ac472856ede',1,'teddy::mss_manager::mss_manager(int32 componentCount, int64 nodePoolSize, int64 overflowNodePoolSize, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1mss__manager.html#a465f45928c7bf8999d8b76dece72b683',1,'teddy::mss_manager::mss_manager(int32 componentCount, int64 nodePoolSize, std::vector&lt; int32 &gt; order=default_oder())'],['../structteddy_1_1mss__manager.html',1,'teddy::mss_manager&lt; M &gt;']]],
+  ['multiplies_14',['MULTIPLIES',['../structteddy_1_1ops_1_1MULTIPLIES.html',1,'teddy::ops']]],
+  ['multiplies_5fmod_5ft_15',['multiplies_mod_t',['../structteddy_1_1details_1_1multiplies__mod__t.html',1,'teddy::details']]]
 ];
