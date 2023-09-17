@@ -1,13 +1,9 @@
 :root {
-  --link-color: #0077aa;
-  --link-color-menu: #454545;
-  --link-hover-color: #c0392b;
   --font-size-menu: 22px;
-  --font-color: #454545;
   --font-size: 18px;
   --font-size-footer: 14px;
-  --border-color: gray;
-  --date-color: gray;
+  --serif-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  --sans-serif-font: 'Trebuchet MS', Calibri, sans-serif;
 }
 
 html {
@@ -17,13 +13,40 @@ html {
 header nav a {
   color: var(--link-color-menu);
   font-size: var(--font-size-menu);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
+  font-family: var(--sans-serif-font);
+}
+
+header nav img {
+  height: 0.8em;
 }
 
 body {
-  font-family: 'Times New Roman', Times, serif;
+  --background-color: #f0f0f0;
+  --link-color: #0077aa;
+  --link-color-menu: #454545;
+  --link-hover-color: #c0392b;
+  --font-color: #454545;
+  --border-color: gray;
+  --date-color: gray;
+}
+
+body.dark-mode {
+  --background-color: #454545;
+  --link-color: #64aac8;
+  --link-color-menu: #d9d9d9;
+  --link-hover-color: #c36f66;
+  --font-color: #d9d9d9;
+  --border-color: gray;
+  --date-color: gray;
+}
+
+body {
+  font-family: serif;
+  font-family: var(--serif-font);
   font-size: var(--font-size);
   color: var(--font-color);
+  background: var(--background-color);
 }
 
 body a {
@@ -37,7 +60,7 @@ body a:hover {
 }
 
 body p {
-  text-align: justify;
+  text-align: left;
   line-height: 135%;
 }
 
@@ -52,6 +75,35 @@ footer p {
   text-align: center;
 }
 
+@media screen and (max-width: 620px) {
+  #dark-mode-toggle {
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 620px) {
+  #dark-mode-toggle {
+    position: fixed;
+  }
+}
+
+@media print {
+  #dark-mode-toggle {
+    display: none;
+  }
+
+  header {
+    display: none;
+  }
+}
+
+#dark-mode-toggle {
+  top: 10px;
+  right: 15px;
+  width: 100px;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 620px) {
   body {
       width: 600px;
@@ -60,7 +112,7 @@ footer p {
 
   header {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 40px;
       margin-bottom: 10px;
   }
 
@@ -79,7 +131,7 @@ footer p {
 
   header {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-bottom: 10px;
 }
 
@@ -109,7 +161,7 @@ footer p {
   nav a {
       text-align: center;
       display: block;
-      margin-top: 4px;
+      margin-top: 10px;
       margin-bottom: 4px;
   }
 

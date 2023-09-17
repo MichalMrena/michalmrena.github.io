@@ -1,0 +1,19 @@
+h1 {
+    font-family: sans-serif;
+    font-family: var(--sans-serif-font);
+}
+
+article {
+    border-top: 1px solid var(--border-color);
+}
+
+article table {
+    width: 100% !important;
+    margin-bottom: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+article table td {
+    width: 33% !important;
+}

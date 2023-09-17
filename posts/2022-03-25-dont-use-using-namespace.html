@@ -6,20 +6,22 @@
         <title>MM | Don't use using namespace</title>
         <link rel="stylesheet" href="../css/global.css">
         
-        <link rel="stylesheet" href="../css/code-pandoc.css">
+        <link rel="stylesheet" href="../css/code-pandoc-light.css" id="pandoc-css">
         <link rel="stylesheet" href="../css/code-custom.css">
         
         
         <link rel="stylesheet" href="../css/cxx-article.css">
         
         <link rel="shortcut icon" type="image/jpg" href="../images/favicon.jpg">
+        <script src="../script/dark-mode.js"></script>
     </head>
-    <body>
+    <body class>
         <header>
             <nav>
                 <a href="../index.html">Home</a>
                 <a href="../cxx.html">C++</a>
                 <a href="../teddy.html">TeDDy</a>
+                <a href="../theses.html"><img src="../images/slovak-flag.png" alt="slovak flag"> Theses</a>
             </nav>
         </header>
 
@@ -45,17 +47,17 @@
 <div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;filesystem&gt;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;string&gt;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="bu">std::</span>filesystem<span class="bu">::</span>path<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="bu">std::</span>filesystem::path<span class="op">;</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">std::</span>string<span class="op"> </span>read_file<span class="op">(</span>path filePath<span class="op">);</span></span></code></pre></div>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">std::</span>string read_file<span class="op">(</span>path filePath<span class="op">);</span></span></code></pre></div>
 <p>The second option (better, in my opinion) is to use a namespace alias. It allows us to make a shortcut of a long name and use that shortcut instead of the long name. The following example shows how to use the alias. Notice that we can use it locally in a function scope. This is preferable (because we don’t pollute the global scope) if we don’t need it anywhere else:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> print_numbers<span class="op">(</span><span class="dt">int</span> from<span class="op">,</span> <span class="dt">int</span> to<span class="op">)</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">namespace</span> rs <span class="op">=</span> <span class="bu">std::</span>ranges<span class="bu">::</span>views<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">namespace</span> rs <span class="op">=</span> <span class="bu">std::</span>ranges::views<span class="op">;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> n <span class="op">:</span> rs<span class="op">::</span>iota<span class="op">(</span>from<span class="op">,</span> to<span class="op">))</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">std::</span>cout<span class="op"> &lt;&lt;</span> n <span class="op">&lt;&lt;</span> <span class="ch">'</span><span class="sc">\n</span><span class="ch">'</span><span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">std::</span>cout <span class="op">&lt;&lt;</span> n <span class="op">&lt;&lt;</span> <span class="ch">'</span><span class="sc">\n</span><span class="ch">'</span><span class="op">;</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p><strong>Further reading:</strong></p>
@@ -75,6 +77,10 @@
             <p>
                 Also, it is proudly generated by <a href="http://jaspervdj.be/hakyll">Hakyll</a>.
             </p>
+            <p>
+                Finally, the Slovak flag icon in the menu is provided by <a href="https://www.freeflagicons.com/">freeflagicons</a>.
+            </p>
         </footer>
+        <button id="dark-mode-toggle">Lights off</button>
     </body>
 </html>
