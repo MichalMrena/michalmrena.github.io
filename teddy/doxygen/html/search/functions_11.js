@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['variable_0',['variable',['../classteddy_1_1diagram__manager.html#a53b279ab997be99c116f6a38d20200e9',1,'teddy::diagram_manager']]],
-  ['variable_5fcount_1',['variable_count',['../classteddy_1_1pla__file.html#af29866b606dcfc9b46cfa9f74ed46499',1,'teddy::pla_file']]],
-  ['variable_5fnot_2',['variable_not',['../classteddy_1_1diagram__manager.html#a4505f796689fd32385ddae310e8d9843',1,'teddy::diagram_manager']]],
-  ['variables_3',['variables',['../classteddy_1_1diagram__manager.html#a1f9f8421cd7f33c11f6487e81683c7a1',1,'teddy::diagram_manager::variables(std::initializer_list&lt; T &gt; is) -&gt; std::vector&lt; diagram_t &gt;'],['../classteddy_1_1diagram__manager.html#a80f56f39c209510b6602ab6863e30899',1,'teddy::diagram_manager::variables(I first, S last) -&gt; std::vector&lt; diagram_t &gt;'],['../classteddy_1_1diagram__manager.html#ae647e6868fb5c739e5646635d5523562',1,'teddy::diagram_manager::variables(Is const &amp;is) -&gt; std::vector&lt; diagram_t &gt;']]]
+  ['variable_0',['variable',['../classteddy_1_1diagram__manager.html#a7a825b2e44e0f2480b6cb272f8877661',1,'teddy::diagram_manager']]],
+  ['variable_5fnot_1',['variable_not',['../classteddy_1_1diagram__manager.html#ad453049e900b8c4bc304737f40c7c098',1,'teddy::diagram_manager']]],
+  ['variables_2',['variables',['../classteddy_1_1diagram__manager.html#a96a278e6eeebcc1d87a0c1ee539e512e',1,'teddy::diagram_manager::variables(std::initializer_list&lt; T &gt; indices) -&gt; std::vector&lt; diagram_t &gt;'],['../classteddy_1_1diagram__manager.html#a80f56f39c209510b6602ab6863e30899',1,'teddy::diagram_manager::variables(I first, S last) -&gt; std::vector&lt; diagram_t &gt;'],['../classteddy_1_1diagram__manager.html#a88fa2f23c486004004e7655ee219121f',1,'teddy::diagram_manager::variables(Is const &amp;indices) -&gt; std::vector&lt; diagram_t &gt;']]]
 ];

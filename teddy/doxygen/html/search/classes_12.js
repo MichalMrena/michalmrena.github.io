@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xor_0',['XOR',['../structteddy_1_1ops_1_1XOR.html',1,'teddy::ops']]]
+  ['weibull_0',['weibull',['../classteddy_1_1probs_1_1weibull.html',1,'teddy::probs']]]
 ];
