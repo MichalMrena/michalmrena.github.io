@@ -64,6 +64,10 @@ body p {
   line-height: 135%;
 }
 
+main {
+  padding-bottom: 10px;
+}
+
 footer {
   font-size: var(--font-size-footer);
   text-align: center;
