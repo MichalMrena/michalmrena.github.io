@@ -1,6 +1,26 @@
 h1 {
     font-family: sans-serif;
     font-family: var(--sans-serif-font);
+    overflow-wrap: break-word;
+}
+
+h1 a {
+    opacity: 0.5;
+    margin-left: 5px;
+}
+
+h1 a img {
+    position: relative;
+    bottom: -5px;
+    width: initial;
+}
+
+h1 a:hover {
+    opacity: 0.9;
+}
+
+body.dark-mode h1 a  {
+    filter: invert(100%);
 }
 
 article {
@@ -16,4 +36,8 @@ article table {
 
 article table td {
     width: 33% !important;
+}
+
+code {
+    font-size: calc(var(--font-size) - 2px);
 }

@@ -30,43 +30,43 @@
 
 
 <article>
-    <h1 class="collapsible-heading" id="dd-visualization">Nástroj na vizualizáciu rozhodovacích diagramov</h1>
-    <p>Rozhodovací diagram je orientovaný acyklický graf, ktorý slúži na reprezentáciu diskrétnych funkcií (Boolovská funkcia a jej zovšeobecnenia). Pri práci s rozhodovacími diagramami potrebujeme často diagramy vizualizovať. Vizualizácie (obrázky) používame na ladenie algoritmov alebo ako ilustrácie do prezentácií a publikácií. Cieľom práce je vytvoriť webovú aplikáciu, ktorá umožní:</p>
+    <h1 class="collapsible-heading" id="cxx-containers">
+        Porovnanie alternatívných implementácií kontajnerov zo štandardnej knižnice jazyka C++
+        <a href="#cxx-containers">
+            <img src="images/link.png" alt="Link icon">
+        </a>
+    </h1>
+    <p>Štandardná knižnica jazyka C++ obsahuje implementácie základných abstraktných údajových typov (AUT):</p>
 <ul>
-<li>vytvoriť rozhodovací diagram reprezentujúci diskrétnu funkciu zadanú pravdivostnou tabuľkou (tento bod je možné rozšíriť o zadanie funkcie napr. výrazom),</li>
-<li>vytvoriť vizualizáciu diagramu (s použitím existujúcich knižníc ako napr. Graphviz),</li>
-<li>umožniť prispôsobenie vizualizácie (napr. voľba farieb, popiskov, vykresľovania hrán, …),</li>
-<li>export vizualizácie do rôznych formátov (napr. png, pdf, …).</li>
+<li><strong>zoznam</strong>: <a href="https://en.cppreference.com/w/cpp/container/vector"><code>std::vector</code></a>, <a href="https://en.cppreference.com/w/cpp/container/list"><code>std::list</code></a>, <a href="https://en.cppreference.com/w/cpp/container/forward_list"><code>std::forward_list</code></a>;<br />
+</li>
+<li><strong>tabuľka</strong>: <a href="https://en.cppreference.com/w/cpp/container/map"><code>std::map</code></a>, <a href="https://en.cppreference.com/w/cpp/container/unordered_map"><code>std::unordered_map</code></a>;<br />
+</li>
+<li><strong>množina</strong>: <a href="https://en.cppreference.com/w/cpp/container/set"><code>std::set</code></a>, <a href="https://en.cppreference.com/w/cpp/container/unordered_set"><code>std::unordered_set</code></a>;<br />
+</li>
+<li><strong>zásobník, front, prioritný front</strong>: <a href="https://en.cppreference.com/w/cpp/container/stack"><code>std::stack</code></a>, <a href="https://en.cppreference.com/w/cpp/container/queue"><code>std::queue</code></a>, <a href="https://en.cppreference.com/w/cpp/container/deque"><code>std::deque</code></a>, <a href="https://en.cppreference.com/w/cpp/container/priority_queue"><code>std::priority_queue</code></a>;<br />
+</li>
+<li><strong>reťazec</strong>*: <a href="https://en.cppreference.com/w/cpp/string/basic_string"><code>std::string</code></a>, <a href="https://en.cppreference.com/w/cpp/string/basic_string_view"><code>std::string_view</code></a>;</li>
 </ul>
-<table style="width:77%;">
+<p>ktoré pokrývajú väčšinu bežných prípadov použitia. Okrem vyššie uvedených existuje množstvo otvorených knižních, ktoré poskytujú alternatívne a rozšírené implementácie. Príkladom je súbor knižníc <a href="https://www.boost.org/">Boost</a> alebo knižnice väčších spoločností ako napr. <a href="https://github.com/facebook/folly">Facebook</a> a <a href="https://github.com/abseil/abseil-cpp">Google</a>. Cieľom práce je porovnať vybrané** implementácie AUT zo štandardnej knižnice s alternatívnymi implementáciami z uvedených (a iných) knižníc. Pri porovnaní je potrebné zamerať sa na:</p>
+<ul>
+<li><strong>rozhranie</strong> – určiť ako jednoduché je <em>vymeniť</em> štandardnú implementáciu za alternatívnu;<br />
+</li>
+<li><strong>výkonnosť</strong> – porovnať implementácie z pohľadu rýchlosti ich operácií;</li>
+<li><strong>spôsob inštalácie</strong> – inštalácia novej knižnice môže byť pomerne komplikovaný proces, čo môže výrazne ovplyvniť <em>vymeniteľnosť</em> štandardnej knižnice.</li>
+</ul>
+<p>* <em>Nejde o AUT, ale z pohľadu jazyka C++ spĺňa definíciu kontajnera. Zároveň ide o jeden z najpoužívanejších kontajnerov, preto je v zozname zahrnutý.</em><br />
+** <em>Porovnanie všetkých implementácií je nad rámec jednej práce. Preto je potrebné najprv vhodne vybrať porovnávané implementácie AUT. Výberu môže predchádzať napr. analýza početnosti použitia vo veľkých otvorených projektoch.</em></p>
+<table style="width:54%;">
 <colgroup>
 <col style="width: 8%" />
-<col style="width: 23%" />
-<col style="width: 45%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Bc.,</td>
-<td>webová aplikácia</td>
-<td>HTML5, CSS3, JavaScript, Graphviz</td>
-</tr>
-</tbody>
-</table>
-</article>
-
-<article>
-    <h1 class="collapsible-heading" id="hash-functions">Porovnanie implementácií hešovacích funkcií pre tabuľky s rozptýlenými záznamami</h1>
-    <p>Abstraktný údajový typ (AUT) tabuľka patrí k často používaným údajovým typom. Charakteristickou operáciou tohto AUT je sprístupnenie prvku podľa kľúča. Jednou z najčastejšie používaných implementácií je tabuľka s rozptýlenými záznamami (hešovacia tabuľka), ktorá ponúka konštantné časové zložitosti operácií. Reálny výkon tabuľky je však podmienený mechanizmom riešenia kolízií a kvalitou hešovacej funkcie. Cieľom bakalárskej práce je porovnať rôzne implementácie hešovacích funkcií pre rôzne typy kľúčov (celé číslo, ukazovateľ, reťazec). Výsledky porovnania by sme chceli aplikovať do optimalizácie knižnice <a href="https://github.com/MichalMrena/DecisionDiagrams/">TeDDy</a>, v ktorej často využívame ukazovatele ako kľúče.</p>
-<table style="width:30%;">
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 13%" />
+<col style="width: 37%" />
 <col style="width: 7%" />
 </colgroup>
 <tbody>
 <tr class="odd">
 <td>Bc.,</td>
-<td>knižnica</td>
+<td>CLI aplikácia, dokumentácia</td>
 <td>C++</td>
 </tr>
 </tbody>
@@ -74,18 +74,23 @@
 </article>
 
 <article>
-    <h1 class="collapsible-heading" id="hash-table-comparison">Porovnanie implementácií tabuliek s rozptýlenými záznamami</h1>
-    <p>Abstraktný údajový typ (AUT) tabuľka patrí k často používaným údajovým typom. Charakteristickou operáciou tohto AUT je sprístupnenie prvku podľa kľúča. Jednou z najčastejšie používaných implementácií je tabuľka s rozptýlenými záznamami (hešovacia tabuľka), ktorá ponúka konštantné časové zložitosti operácií. Reálny výkon tabuľky je však podmienený mechanizmom riešenia kolízií a kvalitou hešovacej funkcie. Cieľom bakalárskej práce je porovnať riešenie kolízií otvorenou adresáciou a zreťazovaním.</p>
-<table style="width:30%;">
+    <h1 class="collapsible-heading" id="hash-table-comparison">
+        Porovnanie implementácií tabuliek s&nbsp;rozptýlenými záznamami v&nbsp;jazyku C++
+        <a href="#hash-table-comparison">
+            <img src="images/link.png" alt="Link icon">
+        </a>
+    </h1>
+    <p>Abstraktný údajový typ (AUT) tabuľka patrí k často používaným údajovým typom. Charakteristickou operáciou tohto AUT je sprístupnenie prvku podľa kľúča. Jednou z najčastejšie používaných implementácií je tabuľka s rozptýlenými záznamami (hešovacia tabuľka), ktorá ponúka konštantné časové zložitosti operácií. Reálny výkon tabuľky je však podmienený mechanizmom riešenia kolízií a kvalitou hešovacej funkcie. Cieľom bakalárskej práce je porovnať riešenie kolízií otvorenou adresáciou a zreťazovaním. Prakticky pôjde o porovnanie implementácie zo štandardnej knižnice (<a href="https://en.cppreference.com/w/cpp/container/unordered_map"><code>std::unordered_map</code></a>) s implementáciami z otvorených knižníc.</p>
+<table style="width:54%;">
 <colgroup>
 <col style="width: 8%" />
-<col style="width: 13%" />
+<col style="width: 37%" />
 <col style="width: 7%" />
 </colgroup>
 <tbody>
 <tr class="odd">
 <td>Bc.,</td>
-<td>knižnica</td>
+<td>CLI aplikácia, dokumentácia</td>
 <td>C++</td>
 </tr>
 </tbody>
@@ -93,34 +98,68 @@
 </article>
 
 <article>
-    <h1 class="collapsible-heading" id="adt-tester">Knižnica na testovanie a analýzu údajových štruktúr</h1>
-    <p>Cieľom práce je vytvoriť knižnicu, ktorá poskytne sadu testov pre základné abstraktné údajové typy (zoznam, zásobník, front, prioritný front, tabuľka). Testy budú naprogramované voči definovaným rozhraniam. Používateľ knižnice bude môcť zaregistrovať svoje implementácie údajových štruktúr prostredníctvom adaptéra poskytnutého knižnicou. Implementácia adaptéra skompiluje testy iba pre operácie, ktoré používateľova implementácia podporuje. Knižnica bude naprogramovaná v jazyku C++, pričom môže využívať nasledujúce techniky a nástroje jazyka:</p>
-<ul>
-<li><a href="https://stackoverflow.com/questions/982808/c-sfinae-examples">SFINE</a><br />
-</li>
-<li><a href="https://en.cppreference.com/w/cpp/language/constraints">koncepty (C++20)</a><br />
-</li>
-<li><a href="https://en.cppreference.com/w/cpp/language/modules">moduly (C++20)</a></li>
-</ul>
-<p>Na samotnú implementáciu testov môže knižnica využiť vlastnú implementáciu testovacích tried alebo môže využiť existujúce knižnice ako napr. <a href="https://www.boost.org/doc/libs/1_82_0/libs/test/doc/html/index.html">Boost.Test</a>, <a href="https://github.com/catchorg/Catch2">Catch2</a> alebo <a href="https://www.reddit.com/r/cpp/comments/b0umkk/what_c_testing_framework_do_you_use/">iné</a>. Výsledná implementácia knižnice bude voľne dostupná pod vybranou open source licenciou.</p>
-<table style="width:75%;">
+    <h1 class="collapsible-heading" id="cxx-compilers">
+        Nástroj na automatické testovanie preložiteľnosti kódu roznymi verziami kompilátora jazyka C++
+        <a href="#cxx-compilers">
+            <img src="images/link.png" alt="Link icon">
+        </a>
+    </h1>
+    <p>Štandard jazyka C++ definuje vlastnosti jazyka a obsah štandardnej knižnice. Nová verzia štandardu je vydávaná každé tri roky. Aktuálna verzia štandardu nesie označenie C++23 a pripravovaná verzia bude označená C++26. Existuje viacero implementácií jazyka (kompilátor + štandardná knižnica), z ktorých najrozšírenejšie sú <a href="https://gcc.gnu.org/">g++</a>, <a href="https://clang.llvm.org/">clang</a> a <a href="https://visualstudio.microsoft.com/cs/vs/features/cplusplus/">MSVC</a>. Tieto (a všetky ostatné) sa postupne snažia implementovať vlastnosti z nových štandardov, ako môžeme prehľadne vidieť na stránke <a href="https://en.cppreference.com/w/cpp/compiler_support">cppreference</a>. Z tohto prehľadu je zrejmé, že podpora nových vlastností sa naprieč kompilátormi líši.</p>
+<p>Pri vývoji a dokumentovaní knižníc je dôležité stanoviť minimálnu verziu kompilátora (ideálne všetkých troch vyššie uvedených), ktorá je potrebná na skompilovanie knižnice. Cieľom práce je vytvoriť nástroj, ktorý automatizuje kompilovanie projektu rôznymi kompilátormi a rôznymi verziami týchto kompilátorov. Výstupom práce bude klient-server aplikácica, ktorá bude nasadená zatiaľ iba interne na katedrovom serveri. Rozsah tejto práce je pomerne veľký. Presný obsah práce sa preto dohodne až na konzultácii.</p>
+<table style="width:64%;">
 <colgroup>
-<col style="width: 7%" />
-<col style="width: 13%" />
-<col style="width: 53%" />
+<col style="width: 15%" />
+<col style="width: 32%" />
+<col style="width: 16%" />
 </colgroup>
 <tbody>
 <tr class="odd">
-<td>Bc.</td>
-<td>knižnica</td>
-<td>C++; Boost.Test, Catch2, GoogleTest, …</td>
+<td>Bc., Ing.</td>
+<td>knižnica, CLI aplikácia</td>
+<td>C++, Linux</td>
 </tr>
 </tbody>
 </table>
 </article>
 
 <article>
-    <h1 class="collapsible-heading" id="teddy-zdd">Rozšírenie knižnice TeDDy pre binárne rozhodovacie diagramy s potlačenou nulou</h1>
+    <h1 class="collapsible-heading" id="cxx-tool-management">
+        Nástroj na správu nástrojov jazyka C++
+        <a href="#cxx-tool-management">
+            <img src="images/link.png" alt="Link icon">
+        </a>
+    </h1>
+    <p>Cieľom práce je implementovať nástroj podobný nástroju <a href="https://www.haskell.org/ghcup/">ghcup</a> pre ekosystém jazyka C++. Nástroj by mal umožniť inštalovať a spravovať verzie nástrojov:</p>
+<ul>
+<li>cmake,<br />
+</li>
+<li>gcc,<br />
+</li>
+<li>clang, clang-tidy, clang-format.</li>
+</ul>
+<table style="width:71%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 20%" />
+<col style="width: 36%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Bc., Ing.</td>
+<td>CLI aplikácia</td>
+<td>vybraný programovací jazyk</td>
+</tr>
+</tbody>
+</table>
+</article>
+
+<article>
+    <h1 class="collapsible-heading" id="teddy-zdd">
+        Rozšírenie knižnice TeDDy pre binárne rozhodovacie diagramy s&nbsp;potlačenou nulou
+        <a href="#teddy-zdd">
+            <img src="images/link.png" alt="Link icon">
+        </a>
+    </h1>
     <p>Binárny rozhodovací diagram (BDD z angl. “Binary Decision Diagram”) je orientovaný acyklický graf, pomocou ktorého pokážeme efektívne reprezentovať Boolovské funkcie. Boolovské funkcie nachádzajú uplatnenie v rôznych oblastiach matematiky a informatiky. Jedným z uplatnení je reprezentácia množín, kedy množinu popisujeme tzv. charakteristickou funkciou, ktorá má podobu Boolovskej funkcie. Charakteristickú funkciu teda môžeme reprezentovať pomocou BDD. Napriek tomu, že BDD je veľmi efektívnou reprezentáciou Boolovskej funkcie, dokážeme v špecifickom prípade reprezentácie množín reprezentáciu ešte viac zefektívniť použitím špeciálneho typu BDD a to binárneho rozhodovacieho diagramu s potlačenou nulou (ZDD z angl. “Zero-suppressed Decision Diagram”). V súčasnosti máme na katedre C++ knižnicu, v ktorej sú implementované klasické BDD. Cieľom práce je rozšíriť knižnicu o možnosť vytvárať a pracovať so ZDD. Rozšírenie bude postavené nad jadrom existujúcej knižnice a bude sa zameriavať na implementáciu základných množinových operácií ako napr. zjednotenie, prienik, rozdiel, …</p>
 <table style="width:36%;">
 <colgroup>
@@ -138,32 +177,6 @@
 </table>
 </article>
 
-<article>
-    <h1 class="collapsible-heading" id="cxx-tool-management">Nástroj na správu nástrojov jazyka C++</h1>
-    <p>Cieľom práce je implementovať nástroj podobný nástroju <a href="https://www.haskell.org/ghcup/">ghcup</a> pre ekosystém jazyka C++. Nástroj by mal umožniť inštalovať a spravovať verzie nástrojov:</p>
-<ul>
-<li>cmake,<br />
-</li>
-<li>gcc,<br />
-</li>
-<li>clang, clang-tidy, clang-format.</li>
-</ul>
-<table style="width:88%;">
-<colgroup>
-<col style="width: 15%" />
-<col style="width: 27%" />
-<col style="width: 45%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Bc., Ing.</td>
-<td>konzolová aplikácia</td>
-<td>Linux, vybraný programovací jazyk</td>
-</tr>
-</tbody>
-</table>
-</article>
-
         </main>
 
         <footer>
@@ -175,7 +188,7 @@
                 Also, it is proudly generated by <a href="http://jaspervdj.be/hakyll">Hakyll</a>.
             </p>
             <p>
-                Finally, the Slovak flag icon in the menu is provided by <a href="https://www.freeflagicons.com/">freeflagicons</a>.
+                Finally, the Slovak flag icon in the menu is provided by <a href="https://www.freeflagicons.com/">freeflagicons</a> and the link icon was created by <a href="https://www.flaticon.com/free-icons/copy-link" title="copy link icons">riajulislam - Flaticon</a>.
             </p>
         </footer>
         <button id="dark-mode-toggle">Lights off</button>
