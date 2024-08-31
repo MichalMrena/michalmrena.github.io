@@ -1,5 +1,7 @@
 <!doctype html>
-<html lang="en">
+
+<html lang="sk">
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +25,7 @@
             </nav>
         </header>
 
-        <main role="main">
+        <main>
             <p>
     Záverečné práce dostupné v aktuálnom akademickom roku. Ak máte o niektorú z nich záujem, kontaktujte ma prostredníctvom MS Teams. Témy je možné po dohode upraviť alebo tiež vymyslieť úplne novú tému.
 </p>
@@ -57,17 +59,47 @@
 </ul>
 <p>* <em>Nejde o AUT, ale z pohľadu jazyka C++ spĺňa definíciu kontajnera. Zároveň ide o jeden z najpoužívanejších kontajnerov, preto je v zozname zahrnutý.</em><br />
 ** <em>Porovnanie všetkých implementácií je nad rámec jednej práce. Preto je potrebné najprv vhodne vybrať porovnávané implementácie AUT. Výberu môže predchádzať napr. analýza početnosti použitia vo veľkých otvorených projektoch.</em></p>
-<table style="width:54%;">
+<table style="width:52%;">
 <colgroup>
-<col style="width: 8%" />
+<col style="width: 7%" />
 <col style="width: 37%" />
 <col style="width: 7%" />
 </colgroup>
 <tbody>
 <tr class="odd">
-<td>Bc.,</td>
+<td>Bc.</td>
 <td>CLI aplikácia, dokumentácia</td>
 <td>C++</td>
+</tr>
+</tbody>
+</table>
+</article>
+
+<article>
+    <h1 class="collapsible-heading" id="astfri-input">
+        Modul knižnice astfri na načítanie zdrojového kódu jazyka [podľa výberu]
+        <a href="#astfri-input">
+            <img src="images/link.png" alt="Link icon">
+        </a>
+    </h1>
+    <p>Knižnica <a href="https://github.com/Jancikos/astfri">astfri</a> slúži na abstraktnú reprezentáciu zdrojového kódu vo forme abstraktného syntaktického stromu (<a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">AST</a> z angl. “Abstract Syntax Tree”). Vznika v rámci riešenia <a href="https://opac.crzp.sk/?fn=detailBiblioFormChildW3ARP&amp;sid=46F337D26E70386BCF376E11D928&amp;seo=CRZP-detail-kniha">bakalárskej práce</a>, ktorá bola úspešne obhájená v roku 2024. V aktuálnej verzii obsahuje knižnica hlavný modul implementujúci AST a jednoduchý modul demonštrujúci transformáciu zdrojového kódu jazyka C++ do abstraktnej reprezentácie.</p>
+<figure>
+<img src="./images/theses/astfri-input.png" alt="Štruktúra knižnice astfri" />
+<figcaption aria-hidden="true">Štruktúra knižnice astfri</figcaption>
+</figure>
+<p>Počiatočnou motiváciou pre vývoj knižnice je ďalšia transformácia abstraktnej reprezetnácie do rôznych foriem výstpu, ako napríklad pseudokód alebo UML diagram. Cieľom práce je implementovať modul knižnice, ktorý umožní načítať zdrojový kód vybraného programovacieho jazyka (C++, Java, C#, Python, JavaScript, …) do štruktúr AST definovaných v hlavnom module knižnice. Autor vyššie uvedenej práce uvádza dva prístupy k implementácii takéhoto modulu. Prvý pracuje so serializáciou a druhý využíva knižnicu na generovanie parserov v jazyku C. Jedným z prvých krokov riešenia práce je preto oboznámiť sa s oboma prístupmi a jeden z nich vybrať.</p>
+<p><em>Táto práca rieši časť väčšieho projektu, v ktorom bude možné pokračovať v rámci projektovej výučby na inžinierskom štúdiu.</em></p>
+<table style="width:72%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 13%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Bc., Ing.</td>
+<td>knižnica</td>
+<td>Vybraný programovací jazyk / C++</td>
 </tr>
 </tbody>
 </table>
@@ -160,7 +192,7 @@
             <img src="images/link.png" alt="Link icon">
         </a>
     </h1>
-    <p>Binárny rozhodovací diagram (BDD z angl. “Binary Decision Diagram”) je orientovaný acyklický graf, pomocou ktorého pokážeme efektívne reprezentovať Boolovské funkcie. Boolovské funkcie nachádzajú uplatnenie v rôznych oblastiach matematiky a informatiky. Jedným z uplatnení je reprezentácia množín, kedy množinu popisujeme tzv. charakteristickou funkciou, ktorá má podobu Boolovskej funkcie. Charakteristickú funkciu teda môžeme reprezentovať pomocou BDD. Napriek tomu, že BDD je veľmi efektívnou reprezentáciou Boolovskej funkcie, dokážeme v špecifickom prípade reprezentácie množín reprezentáciu ešte viac zefektívniť použitím špeciálneho typu BDD a to binárneho rozhodovacieho diagramu s potlačenou nulou (ZDD z angl. “Zero-suppressed Decision Diagram”). V súčasnosti máme na katedre C++ knižnicu, v ktorej sú implementované klasické BDD. Cieľom práce je rozšíriť knižnicu o možnosť vytvárať a pracovať so ZDD. Rozšírenie bude postavené nad jadrom existujúcej knižnice a bude sa zameriavať na implementáciu základných množinových operácií ako napr. zjednotenie, prienik, rozdiel, …</p>
+    <p>Binárny rozhodovací diagram (BDD z angl. “Binary Decision Diagram”) je orientovaný acyklický graf, pomocou ktorého pokážeme efektívne reprezentovať Boolovské funkcie. Boolovské funkcie nachádzajú uplatnenie v rôznych oblastiach matematiky a informatiky. Jedným z uplatnení je reprezentácia množín, kedy množinu popisujeme tzv. charakteristickou funkciou, ktorá má podobu Boolovskej funkcie. Charakteristickú funkciu teda môžeme reprezentovať pomocou BDD. Napriek tomu, že BDD je veľmi efektívnou reprezentáciou Boolovskej funkcie, dokážeme v špecifickom prípade reprezentácie množín reprezentáciu ešte viac zefektívniť použitím špeciálneho typu BDD a to binárneho rozhodovacieho diagramu s potlačenou nulou (ZDD z angl. “Zero-suppressed Decision Diagram”). V súčasnosti máme na katedre C++ knižnicu <a href="https://github.com/MichalMrena/DecisionDiagrams/">TeDDy</a>, v ktorej sú implementované klasické BDD. Cieľom práce je rozšíriť knižnicu o možnosť vytvárať a pracovať so ZDD. Rozšírenie bude postavené nad jadrom existujúcej knižnice a bude sa zameriavať na implementáciu základných množinových operácií ako napr. zjednotenie, prienik, rozdiel, …</p>
 <table style="width:36%;">
 <colgroup>
 <col style="width: 15%" />

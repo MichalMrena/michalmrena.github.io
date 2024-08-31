@@ -41,3 +41,11 @@ article table td {
 code {
     font-size: calc(var(--font-size) - 2px);
 }
+
+figure {
+    text-align: center;
+}
+
+figure figcaption {
+    font-style: italic;
+}
