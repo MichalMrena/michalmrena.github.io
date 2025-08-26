@@ -27,13 +27,90 @@
 
         <main>
             <p>
-    Záverečné práce dostupné v aktuálnom akademickom roku. Ak máte o niektorú z nich záujem, kontaktujte ma prostredníctvom MS Teams. Témy je možné po dohode upraviť alebo tiež vymyslieť úplne novú tému.
+    Záverečné práce dostupné v aktuálnom akademickom roku. Ak máte o niektorú z nich záujem, kontaktujte ma prostredníctvom <a href="https://teams.microsoft.com/l/chat/0/0?users=mrena3@uniza.sk">MS Teams</a> alebo <a href="mailto:michal.mrena@fri.uniza.sk">emailom</a>. Témy je možné po dohode upraviť alebo vymyslieť novú tému.
 </p>
 
 
 <article>
+    <h1 class="collapsible-heading" id="astfri-input">
+        Knižnica projektu astfri na načítanie zdrojového kódu jazyka [Python|C#]
+        <a href="#astfri-input">
+            <img src="images/link.png" alt="Link icon">
+        </a>
+    </h1>
+    <p>Projekt <a href="https://github.com/kifriosse/astfri">astfri</a> poskytuje rôzne spôsoby načítania a transformácie zdrojového kódu rôznych programovacích jazykov. Ústrednou časťu projektu je abstraktná reprezentácia zdrojového kódu vo forme abstraktného syntaktického stromu (<a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">AST</a> z angl. “Abstract Syntax Tree”).
+Projekt je riešený v rámci <a href="https://www.fri.uniza.sk/ing-projekty/ing-projekty2/show/660">projektovej výučby</a> a vzniklo z neho viacero bakalarkych prác:</p>
+<ul>
+<li><a href="https://opac.crzp.sk/?fn=detailBiblioForm&amp;sid=46F337D26E70386BCF376E11D928">Univerzálna knižnica na reprezentáciu zdrojového kódu</a><br />
+</li>
+<li><a href="https://opac.crzp.sk/?fn=detailBiblioForm&amp;sid=D39A92077CB2E2E72943E5898013">Modul knižnice na načítanie zdrojového kódu jazyka Java</a><br />
+</li>
+<li><a href="https://opac.crzp.sk/?fn=detailBiblioForm&amp;sid=D39A92077CB2E2E72943E6898013">Modul knižnice na načítanie zdrojového kódu jazyka C++</a><br />
+</li>
+<li><a href="https://opac.crzp.sk/?fn=detailBiblioForm&amp;sid=DD67AA6236BE82C1E1189115B2AE">Modul exportu abstraktného syntaktického stromu programovacieho jazyka C++ do rôznych cieľových textových formátov</a><br />
+</li>
+<li><a href="https://opac.crzp.sk/?fn=detailBiblioForm&amp;sid=BBB70232DB8D19E5F220BEDCF3EF">Modul exportu abstraktného syntaktického stromu programovacieho jazyka C++ do UML diagramu tried</a></li>
+</ul>
+<p>V aktuálnej verzii obsahuje projekt hlavný modul implementujúci AST, modul vstupu (pre jazyky C++ a Java) a modul výstupu (do pseudokódu a UML diagramu).</p>
+<figure>
+<img src="./images/theses/astfri-modules.png" alt="Štruktúra projektu astfri" />
+<figcaption aria-hidden="true">Štruktúra projektu astfri</figcaption>
+</figure>
+<p>Cieľom práce je implementovať knižnicu pre načítanie zdrojového kódu jazyka C#|Python do abstraktnej reprezentácie poskytovanej modulom jadra. Výstupom práce bude knižnica, ktorá bude súčasťou modulu vstupu projektu astfri.</p>
+<p><em>Táto práca rieši časť väčšieho projektu, v ktorom bude možné pokračovať v rámci projektovej výučby na inžinierskom štúdiu.</em></p>
+<table style="width:72%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 13%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr>
+<td>Bc., Ing.</td>
+<td>knižnica</td>
+<td>Vybraný programovací jazyk a C++</td>
+</tr>
+</tbody>
+</table>
+</article>
+
+<article>
+    <h1 class="collapsible-heading" id="distcc">
+        Zjednodušenie distribuovanej kompilácie
+        <a href="#distcc">
+            <img src="images/link.png" alt="Link icon">
+        </a>
+    </h1>
+    <p>Preklad zdrojového kódu jazykov C a C++ je proces náročný na zdroje (pamäť, CPU, čas). Pri väčších projektoch môže tento proces trvať až niekoľko hodín. Povaha týchto jazykov však umožňuje jeho značnú paralelizáciu. Ani tá však pri výkonovo slabších zariadeniach nie je riešením. Efektívnym riešením je presunúť preklad na iné zariadenie s využím nástroja <a href="https://www.distcc.org/">distcc</a>.</p>
+<p>V rámci bakalárskej práce je potrebné oboznámiť sa s procesom prekladu jazykov C a C++, a s princípom fungovania nástroja distcc. Následne:</p>
+<ul>
+<li>zdokumentovať konfiguráciu klienta</li>
+<li>zdokumentovať konfiguráciu servera</li>
+<li>vytvoriť script automatizujúci konfiguráciu klienta</li>
+<li>vytvoriť script automatizujúci konfiguráciu servera</li>
+<li>popísať spôsob riešenia závislostí kompilovaného projektu</li>
+<li>popísať a pomocou scriptu automatizovať podporu rôznych kompilátorov vrátane tzv. cross-kompilácie</li>
+<li>demonštrovať svoje riešenie na preklade väčšieho projektu (napr. <a href="https://github.com/llvm/llvm-project">LLVM</a>)</li>
+</ul>
+<table style="width:52%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 27%" />
+<col style="width: 17%" />
+</colgroup>
+<tbody>
+<tr>
+<td>Bc.</td>
+<td>dokumentácia</td>
+<td>bash, shell</td>
+</tr>
+</tbody>
+</table>
+</article>
+
+<article>
     <h1 class="collapsible-heading" id="cxx-containers">
-        Porovnanie alternatívných implementácií kontajnerov zo štandardnej knižnice jazyka C++
+        Porovnanie alternatívnych implementácií AUT zo štandardnej knižnice jazyka C++
         <a href="#cxx-containers">
             <img src="images/link.png" alt="Link icon">
         </a>
@@ -50,7 +127,7 @@
 </li>
 <li><strong>reťazec</strong>*: <a href="https://en.cppreference.com/w/cpp/string/basic_string"><code>std::string</code></a>, <a href="https://en.cppreference.com/w/cpp/string/basic_string_view"><code>std::string_view</code></a>;</li>
 </ul>
-<p>ktoré pokrývajú väčšinu bežných prípadov použitia. Okrem vyššie uvedených existuje množstvo otvorených knižních, ktoré poskytujú alternatívne a rozšírené implementácie. Príkladom je súbor knižníc <a href="https://www.boost.org/">Boost</a> alebo knižnice väčších spoločností ako napr. <a href="https://github.com/facebook/folly">Facebook</a> a <a href="https://github.com/abseil/abseil-cpp">Google</a>. Cieľom práce je porovnať vybrané** implementácie AUT zo štandardnej knižnice s alternatívnymi implementáciami z uvedených (a iných) knižníc. Pri porovnaní je potrebné zamerať sa na:</p>
+<p>ktoré pokrývajú väčšinu bežných prípadov použitia. Okrem vyššie uvedených existuje množstvo otvorených knižníc, ktoré poskytujú alternatívne a rozšírené implementácie. Príkladom je súbor knižníc <a href="https://www.boost.org/">Boost</a> alebo knižnice väčších spoločností ako napr. <a href="https://github.com/facebook/folly">Facebook</a> a <a href="https://github.com/abseil/abseil-cpp">Google</a>. Cieľom práce je porovnať vybrané** implementácie AUT zo štandardnej knižnice s alternatívnymi implementáciami z uvedených (a iných) knižníc. Pri porovnaní je potrebné zamerať sa na:</p>
 <ul>
 <li><strong>rozhranie</strong> – určiť ako jednoduché je <em>vymeniť</em> štandardnú implementáciu za alternatívnu;<br />
 </li>
@@ -66,40 +143,10 @@
 <col style="width: 7%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Bc.</td>
 <td>CLI aplikácia, dokumentácia</td>
 <td>C++</td>
-</tr>
-</tbody>
-</table>
-</article>
-
-<article>
-    <h1 class="collapsible-heading" id="astfri-input">
-        Modul knižnice astfri na načítanie zdrojového kódu jazyka [podľa výberu]
-        <a href="#astfri-input">
-            <img src="images/link.png" alt="Link icon">
-        </a>
-    </h1>
-    <p>Knižnica <a href="https://github.com/Jancikos/astfri">astfri</a> slúži na abstraktnú reprezentáciu zdrojového kódu vo forme abstraktného syntaktického stromu (<a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">AST</a> z angl. “Abstract Syntax Tree”). Vznika v rámci riešenia <a href="https://opac.crzp.sk/?fn=detailBiblioFormChildW3ARP&amp;sid=46F337D26E70386BCF376E11D928&amp;seo=CRZP-detail-kniha">bakalárskej práce</a>, ktorá bola úspešne obhájená v roku 2024. V aktuálnej verzii obsahuje knižnica hlavný modul implementujúci AST a jednoduchý modul demonštrujúci transformáciu zdrojového kódu jazyka C++ do abstraktnej reprezentácie.</p>
-<figure>
-<img src="./images/theses/astfri-input.png" alt="Štruktúra knižnice astfri" />
-<figcaption aria-hidden="true">Štruktúra knižnice astfri</figcaption>
-</figure>
-<p>Počiatočnou motiváciou pre vývoj knižnice je ďalšia transformácia abstraktnej reprezetnácie do rôznych foriem výstpu, ako napríklad pseudokód alebo UML diagram. Cieľom práce je implementovať modul knižnice, ktorý umožní načítať zdrojový kód vybraného programovacieho jazyka (C++, Java, C#, Python, JavaScript, …) do štruktúr AST definovaných v hlavnom module knižnice. Autor vyššie uvedenej práce uvádza dva prístupy k implementácii takéhoto modulu. Prvý pracuje so serializáciou a druhý využíva knižnicu na generovanie parserov v jazyku C. Jedným z prvých krokov riešenia práce je preto oboznámiť sa s oboma prístupmi a jeden z nich vybrať.</p>
-<p><em>Táto práca rieši časť väčšieho projektu, v ktorom bude možné pokračovať v rámci projektovej výučby na inžinierskom štúdiu.</em></p>
-<table style="width:72%;">
-<colgroup>
-<col style="width: 15%" />
-<col style="width: 13%" />
-<col style="width: 43%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Bc., Ing.</td>
-<td>knižnica</td>
-<td>Vybraný programovací jazyk / C++</td>
 </tr>
 </tbody>
 </table>
@@ -120,7 +167,7 @@
 <col style="width: 7%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Bc.,</td>
 <td>CLI aplikácia, dokumentácia</td>
 <td>C++</td>
@@ -130,25 +177,24 @@
 </article>
 
 <article>
-    <h1 class="collapsible-heading" id="cxx-compilers">
-        Nástroj na automatické testovanie preložiteľnosti kódu roznymi verziami kompilátora jazyka C++
-        <a href="#cxx-compilers">
+    <h1 class="collapsible-heading" id="teddy-zdd">
+        Rozšírenie knižnice TeDDy pre binárne rozhodovacie diagramy s&nbsp;potlačenou nulou
+        <a href="#teddy-zdd">
             <img src="images/link.png" alt="Link icon">
         </a>
     </h1>
-    <p>Štandard jazyka C++ definuje vlastnosti jazyka a obsah štandardnej knižnice. Nová verzia štandardu je vydávaná každé tri roky. Aktuálna verzia štandardu nesie označenie C++23 a pripravovaná verzia bude označená C++26. Existuje viacero implementácií jazyka (kompilátor + štandardná knižnica), z ktorých najrozšírenejšie sú <a href="https://gcc.gnu.org/">g++</a>, <a href="https://clang.llvm.org/">clang</a> a <a href="https://visualstudio.microsoft.com/cs/vs/features/cplusplus/">MSVC</a>. Tieto (a všetky ostatné) sa postupne snažia implementovať vlastnosti z nových štandardov, ako môžeme prehľadne vidieť na stránke <a href="https://en.cppreference.com/w/cpp/compiler_support">cppreference</a>. Z tohto prehľadu je zrejmé, že podpora nových vlastností sa naprieč kompilátormi líši.</p>
-<p>Pri vývoji a dokumentovaní knižníc je dôležité stanoviť minimálnu verziu kompilátora (ideálne všetkých troch vyššie uvedených), ktorá je potrebná na skompilovanie knižnice. Cieľom práce je vytvoriť nástroj, ktorý automatizuje kompilovanie projektu rôznymi kompilátormi a rôznymi verziami týchto kompilátorov. Výstupom práce bude klient-server aplikácica, ktorá bude nasadená zatiaľ iba interne na katedrovom serveri. Rozsah tejto práce je pomerne veľký. Presný obsah práce sa preto dohodne až na konzultácii.</p>
-<table style="width:64%;">
+    <p>Binárny rozhodovací diagram (BDD z angl. “Binary Decision Diagram”) je orientovaný acyklický graf, pomocou ktorého pokážeme efektívne reprezentovať Boolovské funkcie. Boolovské funkcie nachádzajú uplatnenie v rôznych oblastiach matematiky a informatiky. Jedným z uplatnení je reprezentácia množín, kedy množinu popisujeme tzv. charakteristickou funkciou, ktorá má podobu Boolovskej funkcie. Charakteristickú funkciu teda môžeme reprezentovať pomocou BDD. Napriek tomu, že BDD je veľmi efektívnou reprezentáciou Boolovskej funkcie, dokážeme v špecifickom prípade reprezentácie množín reprezentáciu ešte viac zefektívniť použitím špeciálneho typu BDD a to binárneho rozhodovacieho diagramu s potlačenou nulou (ZDD z angl. “Zero-suppressed Decision Diagram”). V súčasnosti máme na katedre C++ knižnicu <a href="https://github.com/MichalMrena/DecisionDiagrams/">TeDDy</a>, v ktorej sú implementované klasické BDD. Cieľom práce je rozšíriť knižnicu o možnosť vytvárať a pracovať so ZDD. Rozšírenie bude postavené nad jadrom existujúcej knižnice a bude sa zameriavať na implementáciu základných množinových operácií ako napr. zjednotenie, prienik, rozdiel, …</p>
+<table style="width:36%;">
 <colgroup>
 <col style="width: 15%" />
-<col style="width: 32%" />
-<col style="width: 16%" />
+<col style="width: 13%" />
+<col style="width: 7%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Bc., Ing.</td>
-<td>knižnica, CLI aplikácia</td>
-<td>C++, Linux</td>
+<td>knižnica</td>
+<td>C++</td>
 </tr>
 </tbody>
 </table>
@@ -176,34 +222,10 @@
 <col style="width: 36%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Bc., Ing.</td>
 <td>CLI aplikácia</td>
 <td>vybraný programovací jazyk</td>
-</tr>
-</tbody>
-</table>
-</article>
-
-<article>
-    <h1 class="collapsible-heading" id="teddy-zdd">
-        Rozšírenie knižnice TeDDy pre binárne rozhodovacie diagramy s&nbsp;potlačenou nulou
-        <a href="#teddy-zdd">
-            <img src="images/link.png" alt="Link icon">
-        </a>
-    </h1>
-    <p>Binárny rozhodovací diagram (BDD z angl. “Binary Decision Diagram”) je orientovaný acyklický graf, pomocou ktorého pokážeme efektívne reprezentovať Boolovské funkcie. Boolovské funkcie nachádzajú uplatnenie v rôznych oblastiach matematiky a informatiky. Jedným z uplatnení je reprezentácia množín, kedy množinu popisujeme tzv. charakteristickou funkciou, ktorá má podobu Boolovskej funkcie. Charakteristickú funkciu teda môžeme reprezentovať pomocou BDD. Napriek tomu, že BDD je veľmi efektívnou reprezentáciou Boolovskej funkcie, dokážeme v špecifickom prípade reprezentácie množín reprezentáciu ešte viac zefektívniť použitím špeciálneho typu BDD a to binárneho rozhodovacieho diagramu s potlačenou nulou (ZDD z angl. “Zero-suppressed Decision Diagram”). V súčasnosti máme na katedre C++ knižnicu <a href="https://github.com/MichalMrena/DecisionDiagrams/">TeDDy</a>, v ktorej sú implementované klasické BDD. Cieľom práce je rozšíriť knižnicu o možnosť vytvárať a pracovať so ZDD. Rozšírenie bude postavené nad jadrom existujúcej knižnice a bude sa zameriavať na implementáciu základných množinových operácií ako napr. zjednotenie, prienik, rozdiel, …</p>
-<table style="width:36%;">
-<colgroup>
-<col style="width: 15%" />
-<col style="width: 13%" />
-<col style="width: 7%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Bc., Ing.</td>
-<td>knižnica</td>
-<td>C++</td>
 </tr>
 </tbody>
 </table>
@@ -217,7 +239,7 @@
                 which more people should consider doing. The Internet would be much more informative and pleasant experience.
             </p>
             <p>
-                Also, it is proudly generated by <a href="http://jaspervdj.be/hakyll">Hakyll</a>.
+                Also, it is generated by <a href="http://jaspervdj.be/hakyll">Hakyll</a>.
             </p>
             <p>
                 Finally, the Slovak flag icon in the menu is provided by <a href="https://www.freeflagicons.com/">freeflagicons</a> and the link icon was created by <a href="https://www.flaticon.com/free-icons/copy-link" title="copy link icons">riajulislam - Flaticon</a>.

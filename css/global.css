@@ -1,7 +1,7 @@
 :root {
-  --font-size-menu: 22px;
-  --font-size: 18px;
-  --font-size-footer: 14px;
+  --font-size-menu: large;
+  --font-size: medium;
+  --font-size-footer: small;
   --serif-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   --sans-serif-font: 'Trebuchet MS', Calibri, sans-serif;
 }
@@ -57,6 +57,10 @@ body a {
 
 body a:hover {
   color: var(--link-hover-color);
+}
+
+body h1 {
+  font-size: x-large;
 }
 
 body p {
